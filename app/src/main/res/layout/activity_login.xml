@@ -10,11 +10,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="440dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginBottom="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        android:layout_width="490dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,32 +24,33 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="90dp"
-        android:background="@drawable/edittext_fondo"
+        android:layout_width="241dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="245dp"
+        android:layout_marginTop="298dp"
+        android:layout_marginEnd="245dp"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/inputname"
         android:ems="10"
         android:hint="@string/hint_name"
         android:inputType="text"
-        android:padding="12dp"
-        android:textColorHint="#888888"
+        android:padding="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
+        android:layout_marginTop="46dp"
         android:text="@string/textlogin1"
         android:textColor="#F8F5F5"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -56,6 +59,7 @@
         android:text="@string/textlogin2"
         android:textColor="@color/white"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="133dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

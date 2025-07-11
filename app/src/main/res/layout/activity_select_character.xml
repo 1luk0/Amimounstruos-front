@@ -72,12 +72,15 @@
 
     <ImageButton
         android:id="@+id/btcheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginBottom="26dp"
+        android:layout_width="51dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="317dp"
+        android:layout_marginEnd="340dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/ckbt"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btizquierda"
-        app:layout_constraintTop_toBottomOf="@+id/btderecha"
-        app:srcCompat="@drawable/checkbt" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
