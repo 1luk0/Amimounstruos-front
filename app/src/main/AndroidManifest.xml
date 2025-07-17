@@ -13,6 +13,33 @@
         android:theme="@style/Theme.Amimounstruos"
         tools:targetApi="31">
         <activity
+            android:name=".HistoriaAgua3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GuardianAguaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AprendamosAguaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoriaAguaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AjustesPrivacidadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CentroAyudaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificacionesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".configuracionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user_activity"
+            android:exported="false" />
+        <activity
             android:name=".MapActivity"
             android:exported="false" />
         <activity
