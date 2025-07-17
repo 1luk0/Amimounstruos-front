@@ -3,6 +3,8 @@ plugins {
 }
 
 android {
+
+
     namespace = "com.app.amimounstruos"
     compileSdk = 35
 
@@ -14,7 +16,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "API_BASE_URL", "\"${property("API_BASE_URL")}\"")
     }
+
+  buildFeatures {
+    buildConfig = true
+  }
 
     buildTypes {
         release {
@@ -29,6 +36,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
 }
 
 dependencies {
@@ -40,4 +48,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
 }
+
