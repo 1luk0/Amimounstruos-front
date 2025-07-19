@@ -10,17 +10,47 @@
 
     <ImageButton
         android:id="@+id/imageButton36"
-        android:layout_width="57dp"
-        android:layout_height="52dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/mapbutt"
-        tools:layout_editor_absoluteX="792dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toStartOf="@+id/guideline42"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.06" />
 
     <ImageButton
         android:id="@+id/imageButton37"
-        android:layout_width="95dp"
-        android:layout_height="59dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/flecharoja"
-        tools:layout_editor_absoluteX="723dp"
-        tools:layout_editor_absoluteY="326dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline33"
+        app:layout_constraintEnd_toStartOf="@+id/guideline42"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintWidth_percent="0.13"
+        tools:layout_constraintHeight_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.94" />
 </androidx.constraintlayout.widget.ConstraintLayout>
