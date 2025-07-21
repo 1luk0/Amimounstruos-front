@@ -5,6 +5,50 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Screens.Games.HistoriaAgua3Activity">
+    android:background="@drawable/agua3bk"
+    tools:context=".HistoriaAgua3Activity">
 
+    <ImageButton
+        android:id="@+id/imageButton41"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/mapbutt"
+        app:layout_constraintBottom_toTopOf="@+id/guideline77"
+        app:layout_constraintEnd_toStartOf="@+id/guideline76"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="51dp"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="865dp"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <ImageButton
+        android:id="@+id/imageButton40"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/vamosbt"
+        app:layout_constraintBottom_toTopOf="@+id/guideline75"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintWidth_percent="0.23"
+        tools:layout_editor_absoluteX="343dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.98" />
 </androidx.constraintlayout.widget.ConstraintLayout>

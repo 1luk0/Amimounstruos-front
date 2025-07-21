@@ -1,109 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:id="@+id/main"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="@drawable/configuracionbk">
-
-  <!-- Contenedor vertical de botones -->
-  <LinearLayout
-    android:id="@+id/botones_config"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginTop="65dp"
-    android:gravity="center">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/configuracionbk"
+    tools:context=".configuracionActivity">
 
     <ImageButton
-      android:id="@+id/btn_notificaciones"
-      android:layout_width="200dp"
-      android:layout_height="40dp"
-      android:layout_marginTop="6dp"
-      android:background="@drawable/notificaciones"
-      android:contentDescription="Notificaciones" />
+        android:id="@+id/imageButton13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/notificaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline54"
+        app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-      android:id="@+id/btn_sonido"
-      android:layout_width="200dp"
-      android:layout_height="40dp"
-      android:layout_marginTop="6dp"
-      android:background="@drawable/sonido"
-      android:contentDescription="Sonido" />
+        android:id="@+id/imageButton14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/sonido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline55"
+        app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-      android:id="@+id/btn_ayuda"
-      android:layout_width="200dp"
-      android:layout_height="40dp"
-      android:layout_marginTop="6dp"
-      android:background="@drawable/centroayuda"
-      android:contentDescription="Centro de Ayuda" />
+        android:id="@+id/imageButton15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/centroayuda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline56"
+        app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-      android:id="@+id/btn_privacidad"
-      android:layout_width="200dp"
-      android:layout_height="40dp"
-      android:layout_marginTop="6dp"
-      android:background="@drawable/ajuspriv"
-      android:contentDescription="Privacidad" />
+        android:id="@+id/imageButton16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ajuspriv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline57"
+        app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-      android:id="@+id/btn_cerrar_sesion"
-      android:layout_width="200dp"
-      android:layout_height="40dp"
-      android:layout_marginTop="6dp"
-      android:background="@drawable/cerrarsesion"
-      android:contentDescription="Cerrar sesión" />
-  </LinearLayout>
-
-
-
-
-  <!-- Barra inferior organizada -->
-  <LinearLayout
-    android:id="@+id/barra_inferior"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginBottom="20dp"
-    android:paddingHorizontal="16dp"
-    android:baselineAligned="false"
-    android:weightSum="3">
-
-    <ImageButton
-      android:id="@+id/btn_map"
-      android:layout_width="0dp"
-      android:layout_height="60dp"
-      android:layout_weight="1"
-      android:background="@null"
-    android:contentDescription="Mapa" />
+        android:id="@+id/imageButton17"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cerrarsesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline58"
+        app:layout_constraintWidth_percent="0.25" />
 
     <ImageView
-      android:id="@+id/image_menu"
-      android:layout_width="0dp"
-      android:layout_height="50dp"
-      android:layout_weight="1"
-      android:src="@drawable/menu"
-      android:contentDescription="Decoración"
-      android:scaleType="fitCenter" />
+        android:id="@+id/imageView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/menu"
+        app:layout_constraintBottom_toTopOf="@+id/guideline59"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.24" />
 
     <ImageButton
-      android:id="@+id/btn_perfil"
-      android:layout_width="0dp"
-      android:layout_height="60dp"
-      android:layout_weight="1"
-      android:background="@null"
-      android:src="@drawable/perfil"
-      android:contentDescription="Perfil" />
-  </LinearLayout>
+        android:id="@+id/imageButton18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/mapbutt"
+        app:layout_constraintBottom_toTopOf="@+id/guideline61"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintWidth_percent="0.04" />
 
+    <ImageButton
+        android:id="@+id/imageButton20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/perfil"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton18"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toEndOf="@+id/imageButton18"
+        app:layout_constraintTop_toTopOf="@+id/imageButton18"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

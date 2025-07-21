@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/platasbk"
+    tools:context=".PlantasActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="865dp"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="865dp"
+        app:layout_constraintGuide_percent="0.045" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="865dp"
+        app:layout_constraintGuide_percent="0.955" />
+
+    <ImageButton
+        android:id="@+id/imageButton48"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/mapbutt"
+        app:layout_constraintBottom_toTopOf="@+id/guideline90"
+        app:layout_constraintEnd_toStartOf="@+id/guideline89"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="38dp"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <ImageButton
+        android:id="@+id/imageButton46"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/plantas1bt"
+        app:layout_constraintBottom_toTopOf="@+id/guideline88"
+        app:layout_constraintEnd_toStartOf="@+id/guideline92"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintWidth_percent="0.38" />
+
+    <ImageButton
+        android:id="@+id/imageButton47"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/plantas2bt"
+        app:layout_constraintBottom_toTopOf="@+id/guideline88"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="@+id/guideline91"
+        app:layout_constraintWidth_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.96" />
+</androidx.constraintlayout.widget.ConstraintLayout>

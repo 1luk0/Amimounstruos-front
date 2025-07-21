@@ -1,35 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/main"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="@drawable/apraguabk"
-  tools:context=".Screens.Games.AprendamosAguaActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/apraguabk"
+    tools:context=".AprendamosAguaActivity">
 
-  <!-- Botón de mapa (arriba a la izquierda) -->
-  <ImageButton
-    android:id="@+id/mapButton"
-    android:layout_width="57dp"
-    android:layout_height="52dp"
-    android:background="@drawable/mapbutt"
-    android:contentDescription="Mapa"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    android:layout_marginTop="16dp"
-    android:layout_marginStart="16dp" />
+    <ImageButton
+        android:id="@+id/imageButton36"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/mapbutt"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toStartOf="@+id/guideline42"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.06" />
 
-  <!-- Flecha roja (abajo a la derecha) -->
-  <ImageButton
-    android:id="@+id/continueArrow"
-    android:layout_width="95dp"
-    android:layout_height="59dp"
-    android:background="@drawable/flecharoja"
-    android:contentDescription="Continuar"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginBottom="16dp"
-    android:layout_marginEnd="16dp" />
+    <ImageButton
+        android:id="@+id/imageButton37"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/flecharoja"
+        app:layout_constraintBottom_toTopOf="@+id/guideline33"
+        app:layout_constraintEnd_toStartOf="@+id/guideline42"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintWidth_percent="0.13"
+        tools:layout_constraintHeight_percent="0.18" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.94" />
 </androidx.constraintlayout.widget.ConstraintLayout>
