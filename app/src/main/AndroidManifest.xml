@@ -16,6 +16,24 @@
         android:theme="@style/Theme.Amimounstruos"
         tools:targetApi="31">
         <activity
+            android:name=".IncorrectoPlantasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CorrectoPlantasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlantasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoriaAguaActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".HistoriaAgua4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".ExampleActivity"
             android:exported="false" />
         <activity
