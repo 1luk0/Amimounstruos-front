@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens;
+package com.app.amimounstruos.Screens.Login;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

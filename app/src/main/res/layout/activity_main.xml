@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main"
-    tools:context=".Screens.MainActivity">
+    tools:context=".Screens.Login.MainActivity">
 
     <ImageButton
         android:id="@+id/imageButton"

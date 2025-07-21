@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens;
+package com.app.amimounstruos.Screens.Login;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.amimounstruos.Models.User;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.MapActivity;
 import com.app.amimounstruos.Services.APIService;
 
 import retrofit2.Call;

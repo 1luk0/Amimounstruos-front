@@ -17,23 +17,42 @@
     android:networkSecurityConfig="@xml/network_security_config"
     tools:targetApi="31">
 
+    <!-- ✅ Ahora esta es la pantalla que se abre al iniciar -->
     <activity
-      android:name=".Screens.MapActivity"
-      android:exported="false" />
-    <activity
-      android:name=".Screens.SelectCharacterActivity"
-      android:exported="false" />
-    <activity
-      android:name=".Screens.LoginActivity"
-      android:exported="false" />
-    <activity
-      android:name=".Screens.MainActivity"
+      android:name=".Screens.Login.MainActivity"
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
+    <!-- Las demás actividades quedan sin el intent-filter -->
+    <activity
+      android:name=".Screens.MapActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Login.SelectCharacterActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Login.LoginActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Configurations.configuracionActivity"
+      android:exported="true" />
+    <activity android:name=".Screens.Games.AprendamosAguaActivity"
+      android:exported="true" />
+    <activity android:name=".Screens.Games.HistoriaAguaActivity"
+      android:exported="true" />
+    <activity android:name=".Screens.Games.GuardianAguaActivity"
+      android:exported="true"/>
+    <activity android:name=".Screens.Configurations.AjustesPrivacidadActivity"
+      android:exported="true"/>
+    <activity android:name=".Screens.Configurations.NotificacionesActivity"
+      android:exported="true" />
+    <activity android:name=".Screens.Configurations.CentroAyudaActivity"
+      android:exported="true" />
+
   </application>
 
 </manifest>

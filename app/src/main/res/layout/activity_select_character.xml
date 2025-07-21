@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/selctcharbk"
-    tools:context=".Screens.SelectCharacterActivity">
+    tools:context=".Screens.Login.SelectCharacterActivity">
 
     <TextView
         android:id="@+id/textView3"
