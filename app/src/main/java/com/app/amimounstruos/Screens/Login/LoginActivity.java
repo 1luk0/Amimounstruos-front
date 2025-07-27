@@ -15,7 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
-import com.app.amimounstruos.Services.APIService;
+import com.app.amimounstruos.Services.UserService;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -27,7 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class LoginActivity extends AppCompatActivity {
 
   private EditText editTextNombre;
-  private APIService api;
+  private UserService api;
 
   @SuppressLint("MissingInflatedId")
   @Override
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
       .addConverterFactory(GsonConverterFactory.create())
       .build();
 
-    api = retrofit.create(APIService.class);
+    api = retrofit.create(UserService.class);
 
     editTextNombre = findViewById(R.id.nameInput);
 

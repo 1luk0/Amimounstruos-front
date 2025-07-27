@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.app.amimounstruos.Models.User;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.MapActivity;
-import com.app.amimounstruos.Services.APIService;
+import com.app.amimounstruos.Services.UserService;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -83,7 +83,7 @@ public class SelectCharacterActivity extends AppCompatActivity {
       .addConverterFactory(GsonConverterFactory.create())
       .build();
 
-    APIService api = retrofit.create(APIService.class);
+    UserService api = retrofit.create(UserService.class);
     Call<Void> call = api.registrarUsuario(user);
 
     call.enqueue(new Callback<Void>() {
