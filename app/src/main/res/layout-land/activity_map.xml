@@ -13,6 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/cultura"
+      android:contentDescription="@string/desc_boton_amigos"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintHeight_percent="0.2"
@@ -20,10 +21,11 @@
         app:layout_constraintWidth_percent="0.15" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/medioAmbiente"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/medioambiente"
+      android:contentDescription="@string/desc_boton_amigos"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintHeight_percent="0.3"
@@ -35,17 +37,19 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/amigos"
+      android:contentDescription="@string/desc_boton_amigos"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintHeight_percent="0.3"
         app:layout_constraintStart_toStartOf="@+id/guideline15"
         app:layout_constraintWidth_percent="0.2" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/btn_memoria"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/memoria"
+      android:contentDescription="@string/desc_boton_amigos"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
         app:layout_constraintHeight_percent="0.25"
@@ -56,6 +60,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/modales"
+      android:contentDescription="@string/desc_boton_amigos"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintHeight_percent="0.25"
@@ -74,10 +79,11 @@
         app:srcCompat="@drawable/menu" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/configurations"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:background="@drawable/ajustes"
+      android:contentDescription="@string/desc_boton_amigos"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintHeight_percent="0.08"
@@ -86,10 +92,11 @@
         app:layout_constraintWidth_percent="0.05" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/btn_perfil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@drawable/perfil"
+      android:contentDescription="@string/desc_boton_amigos"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHeight_percent="0.08"
@@ -101,7 +108,7 @@
         android:id="@+id/group3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="imageView2,imageButton2,imageButton7"
+        app:constraint_referenced_ids="btn_perfil,btn_memoria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />

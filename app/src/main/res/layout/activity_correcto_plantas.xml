@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/correctoplantasbk"
-    tools:context=".CorrectoPlantasActivity">
+    tools:context=".Screens.Games.MedioAmbiente.Nivel1.CorrectoPlantasActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline93"
@@ -35,7 +35,7 @@
         app:layout_constraintGuide_percent="0.13" />
 
     <ImageButton
-        android:id="@+id/imageButton50"
+        android:id="@+id/botonContinuar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/continuarbt"

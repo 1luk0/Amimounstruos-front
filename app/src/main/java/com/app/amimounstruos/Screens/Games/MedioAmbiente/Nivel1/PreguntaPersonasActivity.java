@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Games;
+package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,27 +11,31 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
-import com.app.amimounstruos.Screens.MapActivity;
 
-public class HistoriaAguaActivity extends AppCompatActivity {
+public class PreguntaPersonasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_historia_agua);
+        setContentView(R.layout.activity_pregunta_personas);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-      ImageButton botonContinue = findViewById(R.id.botonContinuar);
+      ImageButton botonCorrecto = findViewById(R.id.opcion1);
 
-      botonContinue.setOnClickListener(v -> {
-        Intent intent = new Intent(HistoriaAguaActivity.this, GuardianAguaActivity.class);
+      botonCorrecto.setOnClickListener(v -> {
+        Intent intent = new Intent(PreguntaPersonasActivity.this, CorrectoPersonasActivity.class);
+        startActivity(intent);
+      });
+
+      ImageButton botonInCorrecto = findViewById(R.id.opcion2);
+
+      botonInCorrecto.setOnClickListener(v -> {
+        Intent intent = new Intent(PreguntaPersonasActivity.this, IncorrectoPersonasActivity.class);
         startActivity(intent);
       });
     }
-
-
 }

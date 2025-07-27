@@ -76,22 +76,30 @@
     android:layout_width="229dp"
     android:layout_height="51dp"
     app:srcCompat="@drawable/menu"
-    tools:layout_editor_absoluteX="112dp"
-    tools:layout_editor_absoluteY="658dp" />
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHorizontal_bias="0.45"
+    app:layout_constraintVertical_bias="0.9" />
 
   <ImageButton
     android:id="@+id/imageButton2"
     android:layout_width="44dp"
     android:layout_height="37dp"
     android:background="@drawable/ajustes"
-    tools:layout_editor_absoluteX="152dp"
-    tools:layout_editor_absoluteY="665dp" />
+    android:contentDescription="@string/ap2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHorizontal_bias="0.31"
+    app:layout_constraintVertical_bias="0.91" />
 
   <ImageButton
     android:id="@+id/imageButton7"
     android:layout_width="44dp"
     android:layout_height="37dp"
     android:background="@drawable/perfil"
-    tools:layout_editor_absoluteX="227dp"
-    tools:layout_editor_absoluteY="665dp" />
+    android:contentDescription="@string/cursos"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHorizontal_bias="0.47"
+    app:layout_constraintVertical_bias="0.91" />
 </androidx.constraintlayout.widget.ConstraintLayout>

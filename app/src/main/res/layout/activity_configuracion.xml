@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/configuracionbk"
-    tools:context=".configuracionActivity">
+    tools:context=".Screens.Configurations.configuracionActivity">
 
     <ImageButton
-        android:id="@+id/imageButton13"
+        android:id="@+id/btn_notificaciones"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/notificaciones"
@@ -33,7 +33,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-        android:id="@+id/imageButton15"
+        android:id="@+id/btn_ayuda"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/centroayuda"
@@ -45,7 +45,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-        android:id="@+id/imageButton16"
+        android:id="@+id/btn_privacidad"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/ajuspriv"

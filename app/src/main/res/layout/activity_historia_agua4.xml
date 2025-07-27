@@ -6,13 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/agua4bk"
-    tools:context=".HistoriaAgua4Activity">
+    tools:context=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua4Activity">
 
     <ImageButton
-        android:id="@+id/imageButton43"
+        android:id="@+id/botonContinuar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/continuarbt"
+      android:contentDescription="@string/ap2"
         app:layout_constraintBottom_toTopOf="@+id/guideline82"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.15"
@@ -53,11 +54,12 @@
 
     <ImageButton
         android:id="@+id/imageButton42"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@drawable/mapbutt"
         app:layout_constraintBottom_toTopOf="@+id/guideline80"
         app:layout_constraintEnd_toStartOf="@+id/guideline81"
+      android:contentDescription="@string/ap2"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintWidth_percent="0.06" />
 

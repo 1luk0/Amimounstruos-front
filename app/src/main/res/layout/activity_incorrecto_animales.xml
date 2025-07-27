@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/incorrectoplantasbk"
-    tools:context=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoPlantasActivity">
+  android:background="@drawable/incorrectoanimales"
+    tools:context=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoAnimalesActivity">
 
   <ImageButton
     android:id="@+id/volverAIntentar"
@@ -17,4 +17,5 @@
     app:layout_constraintWidth_percent="0.38"
     tools:layout_editor_absoluteX="219dp"
     tools:layout_editor_absoluteY="264dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
       return insets;
     });
 
-    ImageButton boton = findViewById(R.id.imageButton);
+    ImageButton boton = findViewById(R.id.starbt);
     boton.setOnClickListener(v -> {
       Intent intent = new Intent(MainActivity.this, LoginActivity.class);
       startActivity(intent);

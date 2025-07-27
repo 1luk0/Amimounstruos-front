@@ -1,59 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-    <!-- 🔐 Permiso para acceso a internet -->
-    <uses-permission android:name="android.permission.INTERNET" />
+  xmlns:tools="http://schemas.android.com/tools">
 
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Amimounstruos"
-        tools:targetApi="31">
-        <activity
-            android:name=".IncorrectoPlantasActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CorrectoPlantasActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PlantasActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HistoriaAguaActivity5"
-            android:exported="false" />
-        <activity
-            android:name=".HistoriaAgua4Activity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ExampleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.MapActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.SelectCharacterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+  <!-- 🔐 Permiso para acceso a internet -->
+  <uses-permission android:name="android.permission.INTERNET" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+  <application
+    android:allowBackup="true"
+    android:dataExtractionRules="@xml/data_extraction_rules"
+    android:fullBackupContent="@xml/backup_rules"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:networkSecurityConfig="@xml/network_security_config"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.Amimounstruos"
+    tools:targetApi="31">
+    <service
+      android:name=".Services.CursosService"
+      android:enabled="true"
+      android:exported="true"></service>
+
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua7Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua6Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoPersonasActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoPersonasActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.PreguntaPersonasActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoAnimalesActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoAnimalesActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.PreguntaAnimalesActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoPlantasActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoPlantasActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.PlantasActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua3Activity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.GuardianAguaActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity5"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua4Activity"
+      android:exported="true" /> <!-- <activity -->
+    <!-- android:name=".Screens.MapActivity" -->
+    <!-- android:exported="true" /> -->
+    <activity
+      android:name=".Screens.Login.SelectCharacterActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Login.LoginActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.MapActivity"
+      android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
 
 </manifest>

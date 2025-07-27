@@ -1,6 +1,8 @@
-package com.app.amimounstruos;
+package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,17 +10,25 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class HistoriaAguaActivity5 extends AppCompatActivity {
+import com.app.amimounstruos.R;
+
+public class HistoriaAgua3Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_historia_agua5);
+        setContentView(R.layout.activity_historia_agua3);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+      ImageButton botonContinue = findViewById(R.id.botonContinuar);
+
+      botonContinue.setOnClickListener(v -> {
+        Intent intent = new Intent(HistoriaAgua3Activity.this, HistoriaAgua4Activity.class);
+        startActivity(intent);
+      });
     }
 }

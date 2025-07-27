@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/historiagua5bk"
-    tools:context=".HistoriaAguaActivity5">
+    tools:context=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity5">
 
     <ImageButton
-        android:id="@+id/imageButton44"
+        android:id="@+id/botonContinuar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/continuarbt"

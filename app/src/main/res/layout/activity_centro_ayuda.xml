@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/cenayubk"
-    tools:context=".CentroAyudaActivity">
+    tools:context=".Screens.Configurations.CentroAyudaActivity">
 
     <ImageView
         android:id="@+id/imageView12"
@@ -99,12 +99,14 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline48"
         app:layout_constraintStart_toStartOf="@+id/guideline50" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="356dp"
-        tools:layout_editor_absoluteY="124dp" />
+  <ImageView
+    android:id="@+id/imageView15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHorizontal_bias="0.85"
+    app:layout_constraintVertical_bias="0.2" />
 
     <ImageButton
         android:id="@+id/imageButton26"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/guaragua"
-    tools:context=".GuardianAguaActivity">
+    tools:context=".Screens.Games.MedioAmbiente.Nivel1.GuardianAguaActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline65"
@@ -35,7 +35,7 @@
         app:layout_constraintWidth_percent="0.06" />
 
     <ImageButton
-        android:id="@+id/imageButton38"
+        android:id="@+id/botonContinuar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/continuarbt"

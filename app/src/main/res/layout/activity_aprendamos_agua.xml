@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/apraguabk"
-    tools:context=".AprendamosAguaActivity">
+    tools:context=".Screens.Games.MedioAmbiente.Nivel1.AprendamosAguaActivity">
 
     <ImageButton
-        android:id="@+id/imageButton36"
+        android:id="@+id/mapButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="4dp"
@@ -20,7 +20,7 @@
         app:layout_constraintWidth_percent="0.06" />
 
     <ImageButton
-        android:id="@+id/imageButton37"
+        android:id="@+id/continueArrow"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/flecharoja"
