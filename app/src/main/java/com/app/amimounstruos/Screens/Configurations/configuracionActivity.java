@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Login.LoginActivity;
 import com.app.amimounstruos.Screens.Login.MainActivity;
+import com.app.amimounstruos.Screens.MapActivity;
 
 public class configuracionActivity extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class configuracionActivity extends AppCompatActivity {
       ImageButton botonAjustesPrivacidad = findViewById(R.id.btn_privacidad);
       ImageButton botonNotificaciones = findViewById(R.id.btn_notificaciones);
       ImageButton botonCentroAyuda = findViewById(R.id.btn_ayuda);
+      ImageButton botonMapa = findViewById(R.id.mapButton);
 
       botonCentroAyuda.setOnClickListener(v -> {
         Intent intent = new Intent(configuracionActivity.this, CentroAyudaActivity.class);
@@ -45,5 +47,11 @@ public class configuracionActivity extends AppCompatActivity {
         Intent intent = new Intent(configuracionActivity.this, AjustesPrivacidadActivity.class);
         startActivity(intent);
       });
+
+      botonMapa.setOnClickListener(v -> {
+        Intent intent = new Intent(configuracionActivity.this, MapActivity.class);
+        startActivity(intent);
+      });
+
     }
 }

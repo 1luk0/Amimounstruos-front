@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1;
+package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,30 +11,25 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
-import com.app.amimounstruos.Screens.MapActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua6Activity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua7Activity;
 
-public class GuardianAguaActivity extends AppCompatActivity {
+public class AprendisteCerrarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_guardian_agua);
+        setContentView(R.layout.activity_aprendiste_cerrar);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
       ImageButton botonContinue = findViewById(R.id.botonContinuar);
-      ImageButton botonMapa = findViewById(R.id.mapButton);
 
       botonContinue.setOnClickListener(v -> {
-        Intent intent = new Intent(GuardianAguaActivity.this, HistoriaAgua3Activity.class);
-        startActivity(intent);
-      });
-
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(GuardianAguaActivity.this, MapActivity.class);
+        Intent intent = new Intent(AprendisteCerrarActivity.this, HistoriaAgua7Activity.class);
         startActivity(intent);
       });
     }

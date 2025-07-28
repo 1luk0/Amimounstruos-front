@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1;
+package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 
 public class AprendamosAguaActivity extends AppCompatActivity {

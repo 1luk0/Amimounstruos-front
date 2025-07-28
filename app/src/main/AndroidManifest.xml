@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools">
-
   <!-- 🔐 Permiso para acceso a internet -->
   <uses-permission android:name="android.permission.INTERNET" />
 
@@ -16,11 +15,15 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.Amimounstruos"
     tools:targetApi="31">
-    <service
-      android:name=".Services.CursosService"
-      android:enabled="true"
-      android:exported="true"></service>
-
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.AprendisteCerrarActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.LlaveCerradaActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.LlaveAbiertaActivity"
+      android:exported="false" />
     <activity
       android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua7Activity"
       android:exported="false" />
@@ -67,6 +70,9 @@
       android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity5"
       android:exported="true" />
     <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity"
+      android:exported="true" />
+    <activity
       android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua4Activity"
       android:exported="true" /> <!-- <activity -->
     <!-- android:name=".Screens.MapActivity" -->
@@ -75,10 +81,25 @@
       android:name=".Screens.Login.SelectCharacterActivity"
       android:exported="true" />
     <activity
-      android:name=".Screens.Login.LoginActivity"
+      android:name=".Screens.Configurations.configuracionActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Configurations.CentroAyudaActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Configurations.AjustesPrivacidadActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Configurations.NotificacionesActivity"
       android:exported="true" />
     <activity
       android:name=".Screens.MapActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Login.LoginActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Login.MainActivity"
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

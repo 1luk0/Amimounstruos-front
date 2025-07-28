@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.MapActivity;
 
 public class HistoriaAgua7Activity extends AppCompatActivity {
 
@@ -25,9 +26,14 @@ public class HistoriaAgua7Activity extends AppCompatActivity {
             return insets;
         });
       ImageButton botonContinue = findViewById(R.id.botonContinuar);
+      ImageButton botonMapa = findViewById(R.id.mapButton);
 
       botonContinue.setOnClickListener(v -> {
-        Intent intent = new Intent(HistoriaAgua7Activity.this, HistoriaAgua7Activity.class);
+        Intent intent = new Intent(HistoriaAgua7Activity.this, MapActivity.class);
+        startActivity(intent);
+      });
+      botonMapa.setOnClickListener(v -> {
+        Intent intent = new Intent(HistoriaAgua7Activity.this, MapActivity.class);
         startActivity(intent);
       });
     }

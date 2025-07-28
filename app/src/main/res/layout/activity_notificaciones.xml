@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/menu" />
 
     <ImageButton
-        android:id="@+id/imageButton23"
+        android:id="@+id/mapButton"
         android:layout_width="40dp"
         android:layout_height="37dp"
         android:layout_marginStart="303dp"

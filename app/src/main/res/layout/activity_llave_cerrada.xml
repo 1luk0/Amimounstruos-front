@@ -5,27 +5,28 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/incorrectoplantasbk"
-    tools:context=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoPlantasActivity">
+  android:background="@drawable/llavecerrada"
+    tools:context=".Screens.Games.MedioAmbiente.Nivel2.LlaveCerradaActivity">
 
   <ImageButton
-    android:id="@+id/volverAIntentar"
-    android:layout_width="292dp"
-    android:layout_height="68dp"
-    android:background="@drawable/volverintentar"
-    app:layout_constraintHeight_percent="0.2"
-    app:layout_constraintWidth_percent="0.38"
-    tools:layout_editor_absoluteX="219dp"
-    tools:layout_editor_absoluteY="264dp" />
+    android:id="@+id/continueArrow"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/flecharoja"
+    app:layout_constraintHeight_percent="0.13"
+    app:layout_constraintWidth_percent="0.13"
+    tools:layout_constraintHeight_percent="0.18"
+    tools:layout_editor_absoluteX="605dp"
+    tools:layout_editor_absoluteY="168dp" />
 
   <ImageButton
     android:id="@+id/mapButton"
-    android:layout_width="67dp"
-    android:layout_height="48dp"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
     android:background="@drawable/mapbutt"
-    android:contentDescription="@string/ap2"
     app:layout_constraintHeight_percent="0.1"
     app:layout_constraintWidth_percent="0.06"
-    tools:layout_editor_absoluteX="648dp"
+    tools:layout_editor_absoluteX="671dp"
     tools:layout_editor_absoluteY="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

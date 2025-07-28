@@ -25,7 +25,7 @@
         app:layout_constraintGuide_percent="0.13" />
 
     <ImageButton
-        android:id="@+id/imageButton22"
+        android:id="@+id/mapButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/mapbutt"

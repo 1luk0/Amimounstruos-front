@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.MapActivity;
 
 public class IncorrectoPersonasActivity extends AppCompatActivity {
 
@@ -25,9 +26,15 @@ public class IncorrectoPersonasActivity extends AppCompatActivity {
             return insets;
         });
       ImageButton botonVolverAIntentar = findViewById(R.id.volverAIntentar);
+      ImageButton botonMapa = findViewById(R.id.mapButton);
 
       botonVolverAIntentar.setOnClickListener(v -> {
         Intent intent = new Intent(IncorrectoPersonasActivity.this, PreguntaPersonasActivity.class);
+        startActivity(intent);
+      });
+
+      botonMapa.setOnClickListener(v -> {
+        Intent intent = new Intent(IncorrectoPersonasActivity.this, MapActivity.class);
         startActivity(intent);
       });
     }

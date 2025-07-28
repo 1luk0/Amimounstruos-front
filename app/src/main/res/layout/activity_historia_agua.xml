@@ -8,18 +8,20 @@
     android:background="@drawable/hisaguabk"
     tools:context=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton39"
-        android:layout_width="100dp"
-        android:layout_height="1000dp"
-        android:background="@drawable/mapbutt"
-        android:contentDescription="@string/ajuspriv"
-        app:layout_constraintBottom_toTopOf="@+id/guideline66"
-        app:layout_constraintEnd_toStartOf="@+id/guideline67"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintWidth_percent="0.06" />
+  <ImageButton
+    android:id="@+id/mapButton"
+    android:layout_width="44dp"
+    android:layout_height="36dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/mapbutt"
+    android:contentDescription="@string/ajuspriv"
+    app:layout_constraintBottom_toTopOf="@+id/guideline66"
+    app:layout_constraintEnd_toStartOf="@+id/guideline67"
+    app:layout_constraintHeight_percent="0.1"
+    app:layout_constraintWidth_percent="0.06" />
 
-    <androidx.constraintlayout.widget.Guideline
+  <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline66"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,28 +29,27 @@
         app:layout_constraintGuide_begin="0dp"
         app:layout_constraintGuide_percent="0.13" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline67"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="0dp"
-        app:layout_constraintGuide_percent="0.97" />
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline67"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="573dp"
+    app:layout_constraintGuide_percent="0.97" />
 
-    <ImageButton
-        android:id="@+id/botonContinuar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/continuarbt"
-        app:layout_constraintBottom_toTopOf="@+id/guideline63"
-        android:contentDescription="@string/ajuspriv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.15"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent="0.25" />
+  <ImageButton
+    android:id="@+id/botonContinuar"
+    android:layout_width="186dp"
+    android:layout_height="55dp"
+    android:background="@drawable/continuarbt"
+    android:contentDescription="@string/ajuspriv"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.15"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintWidth_percent="0.25"
+    tools:layout_editor_absoluteY="350dp" />
 
-    <androidx.constraintlayout.widget.Guideline
+  <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline63"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

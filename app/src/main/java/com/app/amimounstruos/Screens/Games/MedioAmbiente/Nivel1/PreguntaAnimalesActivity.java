@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.MapActivity;
 
 public class PreguntaAnimalesActivity extends AppCompatActivity {
 
@@ -25,16 +26,23 @@ public class PreguntaAnimalesActivity extends AppCompatActivity {
             return insets;
         });
       ImageButton botonCorrecto = findViewById(R.id.opcion2);
+      ImageButton botonInCorrecto = findViewById(R.id.opcion1);
+      ImageButton botonMapa = findViewById(R.id.mapButton);
 
       botonCorrecto.setOnClickListener(v -> {
         Intent intent = new Intent(PreguntaAnimalesActivity.this, CorrectoAnimalesActivity.class);
         startActivity(intent);
       });
 
-      ImageButton botonInCorrecto = findViewById(R.id.opcion1);
+
 
       botonInCorrecto.setOnClickListener(v -> {
         Intent intent = new Intent(PreguntaAnimalesActivity.this, IncorrectoAnimalesActivity.class);
+        startActivity(intent);
+      });
+
+      botonMapa.setOnClickListener(v -> {
+        Intent intent = new Intent(PreguntaAnimalesActivity.this, MapActivity.class);
         startActivity(intent);
       });
     }
