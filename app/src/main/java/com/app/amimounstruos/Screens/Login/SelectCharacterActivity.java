@@ -25,10 +25,10 @@ public class SelectCharacterActivity extends AppCompatActivity {
   private ImageView imgPersonaje;
   private int personajeActual = 0;
   private int[] personajes = {
-    R.drawable.monster1,
-    R.drawable.monster2,
-    R.drawable.monster3,
-    R.drawable.monster4
+          R.drawable.monster1,
+          R.drawable.monster2,
+          R.drawable.monster3,
+          R.drawable.monster4
   };
 
   @Override
@@ -79,19 +79,26 @@ public class SelectCharacterActivity extends AppCompatActivity {
     User user = new User(nombre, personajeSeleccionado);
 
     Retrofit retrofit = new Retrofit.Builder()
-      .baseUrl("http://10.0.2.2:3333/") // Reemplaza con tu endpoint real
-      .addConverterFactory(GsonConverterFactory.create())
-      .build();
+            .baseUrl("http://10.0.2.2:3333/") // Reemplaza con tu endpoint real
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
 
     UserService api = retrofit.create(UserService.class);
-    Call<Void> call = api.registrarUsuario(user);
-
-    call.enqueue(new Callback<Void>() {
+    Call<User> call = api.registrarUsuario(user);
+    call.enqueue(new Callback<User>() {
       @Override
-      public void onResponse(Call<Void> call, Response<Void> response) {
-        if (response.isSuccessful()) {
+      public void onResponse(Call<User> call, Response<User> response) {
+        if (response.isSuccessful() && response.body() != null) {
+          User userResponse = response.body();
+
+          // Guardar el ID globalmente
+          SharedPreferences.Editor editor = prefs.edit();
+          editor.putInt("user_id", userResponse.getId());
+          editor.apply();
+
           Toast.makeText(SelectCharacterActivity.this, "Personaje registrado", Toast.LENGTH_SHORT).show();
 
+          // Ir a la siguiente pantalla
           Intent intent = new Intent(SelectCharacterActivity.this, MapActivity.class);
           startActivity(intent);
           finish();
@@ -101,7 +108,7 @@ public class SelectCharacterActivity extends AppCompatActivity {
       }
 
       @Override
-      public void onFailure(Call<Void> call, Throwable t) {
+      public void onFailure(Call<User> call, Throwable t) {
         Toast.makeText(SelectCharacterActivity.this, "Error de red: " + t.getMessage(), Toast.LENGTH_SHORT).show();
       }
     });

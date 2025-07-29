@@ -1,8 +1,11 @@
 package com.app.amimounstruos.Models;
 
 public class User {
+  private int id;
   private String nombre;
   private Number amimounstruo;
+
+
 
   public User(String nombre, Number amimounstruo) {
     this.nombre = nombre;
@@ -16,5 +19,10 @@ public class User {
   public Number getAmimounstruo() {
     return amimounstruo;
   }
+
+  public int getId() {
+    return id;
+  }
+
 
 }

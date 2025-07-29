@@ -11,7 +11,7 @@ import retrofit2.http.Path;
 
 public interface UserService {
   @POST("/usuarios") // cambia esto por la ruta real de tu backend
-  Call<Void> registrarUsuario(@Body User user);
+  Call<User> registrarUsuario(@Body User user);
 
   @GET("/usuarios/nombre/{nombre}")
   Call<ResponseBody> verificarNombre(@Path("nombre") String nombre);
