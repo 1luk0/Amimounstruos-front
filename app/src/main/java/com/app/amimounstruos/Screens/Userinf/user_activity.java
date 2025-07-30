@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens;
+package com.app.amimounstruos.Screens.Userinf;
 
 import android.os.Bundle;
 

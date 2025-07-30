@@ -16,6 +16,15 @@
         android:theme="@style/Theme.Amimounstruos"
         tools:targetApi="31">
         <activity
+            android:name=".Screens.Userinf.AmigosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.Userinf.unAmigoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.Userinf.AmigosAdapter"
+            android:exported="false" />
+        <activity
             android:name=".Screens.Games.MedioAmbiente.Niveles.NivelesActivity"
             android:exported="false" />
         <activity
