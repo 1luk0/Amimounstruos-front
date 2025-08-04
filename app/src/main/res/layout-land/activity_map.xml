@@ -33,7 +33,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/amigos"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/amigos"

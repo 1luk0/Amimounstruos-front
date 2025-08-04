@@ -6,20 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/userbk"
-    tools:context=".Screens.Userinf.user_activity">
+    tools:context=".Screens.Userinf.UserActivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline20"
-        app:layout_constraintWidth_percent="2"
-        app:srcCompat="@drawable/opcidad" />
+  <ImageView
+    android:id="@+id/imageView3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline20"
+    app:layout_constraintWidth_percent="2"
+    app:srcCompat="@drawable/opcidad" />
 
-    <ImageView
+  <ImageView
         android:id="@+id/imageView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -92,7 +92,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline38" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/amigosButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/amigosbt"
@@ -135,7 +135,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/mapButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/mapbutt"
@@ -148,15 +148,15 @@
         tools:layout_constraintHeight_percent="0.08" />
 
     <ImageButton
-        android:id="@+id/imageButton12"
+        android:id="@+id/configurations"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/ajustes"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toEndOf="@+id/imageView8"
         app:layout_constraintHeight_percent="0.08"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:layout_constraintTop_toTopOf="@+id/imageButton11"
+        app:layout_constraintStart_toEndOf="@+id/mapButton"
+        app:layout_constraintTop_toTopOf="@+id/mapButton"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent="0.05"
         tools:layout_constraintHeight_percent="0.08" />
@@ -268,7 +268,7 @@
         android:id="@+id/group4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="imageButton11,imageButton12,guideline26" />
+        app:constraint_referenced_ids="mapButton,configurations,guideline26" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline34"

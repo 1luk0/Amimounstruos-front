@@ -1,6 +1,7 @@
 package com.app.amimounstruos.Screens;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
@@ -12,8 +13,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
-import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesActivity;
+import com.app.amimounstruos.Screens.Userinf.AmigosActivity;
+import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
 public class MapActivity extends AppCompatActivity {
 
@@ -34,13 +37,30 @@ public class MapActivity extends AppCompatActivity {
 
       ImageButton botonModales = findViewById(R.id.modales);
 
+      ImageButton botonPerfil = findViewById(R.id.btn_perfil);
+
+      ImageButton botonAmigos = findViewById(R.id.amigos);
+
+      botonAmigos.setOnClickListener(v -> {
+        Intent intent = new Intent(MapActivity.this, AmigosActivity.class);
+        startActivity(intent);
+      });
+
+
+
+      botonPerfil.setOnClickListener(v -> {
+        Intent intent = new Intent(MapActivity.this, UserActivity.class);
+        startActivity(intent);
+      });
+
+
       botonModales.setOnClickListener(v -> {
         Intent intent = new Intent(MapActivity.this, AprendamosAguaActivity.class);
         startActivity(intent);
       });
 
       botonMedioAmbiente.setOnClickListener(v -> {
-        Intent intent = new Intent(MapActivity.this, HistoriaAguaActivity.class);
+        Intent intent = new Intent(MapActivity.this, NivelesActivity.class);
         startActivity(intent);
       });
 

@@ -10,7 +10,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 public interface AmigoService {
-  @GET("/amigos/{id}")
+  @GET("/amigos/usuario/{id}")
   Call<ResponseBody> getAmigoByUserId(@Path("id") Number id);
 
   @POST("/amigos") // cambia esto por la ruta real de tu backend

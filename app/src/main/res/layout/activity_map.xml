@@ -29,13 +29,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="87dp"
         android:background="@drawable/medioambiente"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+        app:layout_constraintBottom_toBottomOf="@+id/amigos"
         app:layout_constraintEnd_toStartOf="@+id/imageButton5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageButton5" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/amigos"
         android:layout_width="164dp"
         android:layout_height="0dp"
         android:layout_marginEnd="69dp"
@@ -53,7 +53,7 @@
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="57dp"
         android:background="@drawable/memoria"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/amigos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="parent" />
@@ -66,7 +66,7 @@
         android:layout_marginEnd="116dp"
         android:layout_marginBottom="107dp"
         android:background="@drawable/modales"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+        app:layout_constraintBottom_toBottomOf="@+id/amigos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cultura"
         app:layout_constraintTop_toTopOf="@+id/imageButton5" />
