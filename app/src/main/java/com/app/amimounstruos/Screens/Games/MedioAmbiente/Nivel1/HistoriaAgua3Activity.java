@@ -26,7 +26,7 @@ public class HistoriaAgua3Activity extends AppCompatActivity {
             return insets;
         });
       ImageButton botonContinue = findViewById(R.id.botonContinuar);
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonMapa = findViewById(R.id.configurationsButton);
 
       botonContinue.setOnClickListener(v -> {
         Intent intent = new Intent(HistoriaAgua3Activity.this, HistoriaAgua4Activity.class);

@@ -27,7 +27,7 @@ public class IncorrectoPlantasActivity extends AppCompatActivity {
         });
 
       ImageButton botonVolverAIntentar = findViewById(R.id.volverAIntentar);
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonMapa = findViewById(R.id.configurationsButton);
 
       botonVolverAIntentar.setOnClickListener(v -> {
         Intent intent = new Intent(IncorrectoPlantasActivity.this, PlantasActivity.class);

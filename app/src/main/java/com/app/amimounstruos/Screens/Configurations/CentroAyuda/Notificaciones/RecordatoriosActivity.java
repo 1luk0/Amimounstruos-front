@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Userinf;
+package com.app.amimounstruos.Screens.Configurations.CentroAyuda.Notificaciones;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,40 +12,43 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
-import com.app.amimounstruos.Screens.MapActivity;
+import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
-public class UserActivity extends AppCompatActivity {
+public class RecordatoriosActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_user);
+        setContentView(R.layout.activity_recordatorios);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-      ImageButton botonConfiguracion = findViewById(R.id.configurations);
+      ImageButton botonRegreso = findViewById(R.id.returnButton);
 
-      ImageButton botonMapa = findViewById(R.id.configurationsButton);
+      ImageButton botonAjustes = findViewById(R.id.configurationsButton);
 
-      ImageButton botonAmigos = findViewById(R.id.amigosButton);
+      ImageButton botonPerfil = findViewById(R.id.perfilButton);
 
-      botonConfiguracion.setOnClickListener(v -> {
-        Intent intent = new Intent(UserActivity.this, configuracionActivity.class);
+
+      botonPerfil.setOnClickListener(v -> {
+        Intent intent = new Intent(RecordatoriosActivity.this, UserActivity.class);
         startActivity(intent);
       });
 
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(UserActivity.this, MapActivity.class);
+
+      botonAjustes.setOnClickListener(v -> {
+        Intent intent = new Intent(RecordatoriosActivity.this, configuracionActivity.class);
         startActivity(intent);
       });
 
-      botonAmigos.setOnClickListener(v -> {
-        Intent intent = new Intent(UserActivity.this, AmigosActivity.class);
+      botonRegreso.setOnClickListener(v -> {
+        Intent intent = new Intent(RecordatoriosActivity.this, NotificacionesActivity.class);
         startActivity(intent);
       });
+
     }
 }

@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Configurations;
+package com.app.amimounstruos.Screens.Configurations.CentroAyuda;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,22 +13,22 @@ import androidx.core.view.WindowInsetsCompat;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.MapActivity;
 
-public class NotificacionesActivity extends AppCompatActivity {
+public class CentroAyudaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_notificaciones);
+        setContentView(R.layout.activity_centro_ayuda);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonMapa = findViewById(R.id.configurationsButton);
 
       botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(NotificacionesActivity.this, MapActivity.class);
+        Intent intent = new Intent(CentroAyudaActivity.this, MapActivity.class);
         startActivity(intent);
       });
     }

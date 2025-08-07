@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1;
+package com.app.amimounstruos.Screens.Configurations.CentroAyuda.Notificaciones;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,36 +11,41 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
-import com.app.amimounstruos.Screens.MapActivity;
+import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
+import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
-public class PreguntaPersonasActivity extends AppCompatActivity {
+public class NovedadesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_pregunta_personas);
+        setContentView(R.layout.activity_novedades);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-      ImageButton botonCorrecto = findViewById(R.id.opcion1);
-      ImageButton botonInCorrecto = findViewById(R.id.opcion2);
-      ImageButton botonMapa = findViewById(R.id.configurationsButton);
+      ImageButton botonRegreso = findViewById(R.id.returnButton);
 
-      botonCorrecto.setOnClickListener(v -> {
-        Intent intent = new Intent(PreguntaPersonasActivity.this, CorrectoPersonasActivity.class);
+      ImageButton botonAjustes = findViewById(R.id.configurationsButton);
+
+      ImageButton botonPerfil = findViewById(R.id.perfilButton);
+
+
+      botonPerfil.setOnClickListener(v -> {
+        Intent intent = new Intent(NovedadesActivity.this, UserActivity.class);
         startActivity(intent);
       });
 
-      botonInCorrecto.setOnClickListener(v -> {
-        Intent intent = new Intent(PreguntaPersonasActivity.this, IncorrectoPersonasActivity.class);
+
+      botonAjustes.setOnClickListener(v -> {
+        Intent intent = new Intent(NovedadesActivity.this, configuracionActivity.class);
         startActivity(intent);
       });
 
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(PreguntaPersonasActivity.this, MapActivity.class);
+      botonRegreso.setOnClickListener(v -> {
+        Intent intent = new Intent(NovedadesActivity.this, NotificacionesActivity.class);
         startActivity(intent);
       });
     }

@@ -16,10 +16,20 @@
         android:theme="@style/Theme.Amimounstruos"
         tools:targetApi="31">
         <activity
+            android:name=".Screens.Configurations.CentroAyuda.Notificaciones.NovedadesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.Configurations.CentroAyuda.Notificaciones.RecordatoriosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.Configurations.CentroAyuda.PreguntasFrecuentesActivity"
+            android:exported="false" />
+        <activity
             android:name=".Screens.Userinf.AmigosActivity"
             android:exported="false" />
-        <activity android:name=".Screens.Userinf.UserActivity"
-          android:exported="false"/>
+        <activity
+            android:name=".Screens.Userinf.UserActivity"
+            android:exported="false" />
         <activity
             android:name=".Screens.Games.MedioAmbiente.Niveles.NivelesActivity"
             android:exported="false" />
@@ -92,13 +102,13 @@
             android:name=".Screens.Configurations.configuracionActivity"
             android:exported="true" />
         <activity
-            android:name=".Screens.Configurations.CentroAyudaActivity"
+            android:name=".Screens.Configurations.CentroAyuda.CentroAyudaActivity"
             android:exported="true" />
         <activity
             android:name=".Screens.Configurations.AjustesPrivacidadActivity"
             android:exported="true" />
         <activity
-            android:name=".Screens.Configurations.NotificacionesActivity"
+            android:name=".Screens.Configurations.CentroAyuda.Notificaciones.NotificacionesActivity"
             android:exported="true" />
         <activity
             android:name=".Screens.MapActivity"

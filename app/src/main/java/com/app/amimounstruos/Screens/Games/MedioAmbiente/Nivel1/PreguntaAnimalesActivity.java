@@ -27,7 +27,7 @@ public class PreguntaAnimalesActivity extends AppCompatActivity {
         });
       ImageButton botonCorrecto = findViewById(R.id.opcion2);
       ImageButton botonInCorrecto = findViewById(R.id.opcion1);
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonMapa = findViewById(R.id.configurationsButton);
 
       botonCorrecto.setOnClickListener(v -> {
         Intent intent = new Intent(PreguntaAnimalesActivity.this, CorrectoAnimalesActivity.class);

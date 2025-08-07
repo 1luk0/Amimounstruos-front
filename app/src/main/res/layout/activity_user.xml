@@ -135,7 +135,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-        android:id="@+id/mapButton"
+        android:id="@+id/configurationsButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/mapbutt"
@@ -155,8 +155,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toEndOf="@+id/imageView8"
         app:layout_constraintHeight_percent="0.08"
-        app:layout_constraintStart_toEndOf="@+id/mapButton"
-        app:layout_constraintTop_toTopOf="@+id/mapButton"
+        app:layout_constraintStart_toEndOf="@+id/configurationsButton"
+        app:layout_constraintTop_toTopOf="@+id/configurationsButton"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent="0.05"
         tools:layout_constraintHeight_percent="0.08" />
@@ -268,7 +268,7 @@
         android:id="@+id/group4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="mapButton,configurations,guideline26" />
+        app:constraint_referenced_ids="configurationsButton,configurations,guideline26" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline34"

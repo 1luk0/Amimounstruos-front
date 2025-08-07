@@ -26,7 +26,7 @@ public class AprendamosAguaActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonMapa = findViewById(R.id.configurationsButton);
       ImageButton botonContinuar = findViewById(R.id.continueArrow);
 
       botonContinuar.setOnClickListener(v -> {

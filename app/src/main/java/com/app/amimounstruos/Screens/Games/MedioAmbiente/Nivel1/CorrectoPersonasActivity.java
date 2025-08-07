@@ -26,7 +26,7 @@ public class CorrectoPersonasActivity extends AppCompatActivity {
             return insets;
         });
       ImageButton botonContinue = findViewById(R.id.botonContinuar);
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonMapa = findViewById(R.id.configurationsButton);
 
       botonContinue.setOnClickListener(v -> {
         Intent intent = new Intent(CorrectoPersonasActivity.this, HistoriaAgua6Activity.class);

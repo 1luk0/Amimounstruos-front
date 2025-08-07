@@ -15,12 +15,13 @@
     android:background="@drawable/continuarbt"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHeight_percent="0.18"
+    app:layout_constraintHorizontal_bias="0.509"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintWidth_percent="0.3"
-    tools:layout_editor_absoluteY="269dp" />
+    tools:layout_editor_absoluteY="498dp" />
 
   <ImageButton
-    android:id="@+id/mapButton"
+    android:id="@+id/configurationsButton"
     android:layout_width="67dp"
     android:layout_height="48dp"
     android:background="@drawable/mapbutt"

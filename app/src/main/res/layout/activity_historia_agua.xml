@@ -9,7 +9,7 @@
     tools:context=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity">
 
   <ImageButton
-    android:id="@+id/mapButton"
+    android:id="@+id/configurationsButton"
     android:layout_width="44dp"
     android:layout_height="36dp"
     android:layout_marginEnd="4dp"

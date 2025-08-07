@@ -20,7 +20,7 @@
     tools:layout_editor_absoluteY="271dp" />
 
   <ImageButton
-    android:id="@+id/mapButton"
+    android:id="@+id/configurationsButton"
     android:layout_width="67dp"
     android:layout_height="48dp"
     android:background="@drawable/mapbutt"
