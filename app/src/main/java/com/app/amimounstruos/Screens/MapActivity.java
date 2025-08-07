@@ -1,7 +1,6 @@
 package com.app.amimounstruos.Screens;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
@@ -14,7 +13,6 @@ import androidx.core.view.WindowInsetsCompat;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity;
-import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesActivity;
 import com.app.amimounstruos.Screens.Userinf.AmigosActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
 

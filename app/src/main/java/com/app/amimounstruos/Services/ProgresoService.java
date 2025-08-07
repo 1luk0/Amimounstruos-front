@@ -17,4 +17,7 @@ public interface ProgresoService {
   Call<Void> registrarProgreso(@Body Progreso progreso);
   @GET("/progresos/{id}")
   Call<ResponseBody> getProgresoByUserId(@Path("id") Number id);
+  @GET("/progresos/usuario/{usuarioId}/curso/{cursoId}")
+  Call<Progreso> getProgresoByUsuarioYCurso(@Path("usuarioId") int usuarioId, @Path("cursoId") int cursoId);
+
 }
