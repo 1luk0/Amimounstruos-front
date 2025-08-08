@@ -35,4 +35,15 @@
   <string name="progresosemanal">Progreso Semanal</string>
   <string name="campmark">Campaña de Marketing</string>
   <string name="actprodu">Actualización de productos y tips para aprender</string>
+  <string name="continuar">Continuar</string>
+  <string name="mapa">Mapa</string>
+  <string name="vamos">vamos</string>
+  <string name="volverintentar">Volver a intentar</string>
+  <string name="plantas1">Se merchitan y no crecen </string>
+  <string name="plantas2">Empiezan a bailar </string>
+  <string name="animales1">Se vuelven invisibles</string>
+  <string name="animales2">se enferman </string>
+  <string name="personas1">nos enfermamos</string>
+  <string name="personas2">podemos vivir sin agua</string>
+
 </resources>
