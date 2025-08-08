@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:background="@drawable/reparartuberia"
+    tools:context=".Screens.Games.MedioAmbiente.Nivel2.TuberiaActivity">
+
+  <ImageButton
+    android:id="@+id/tuberia5Button2"
+    android:layout_width="75dp"
+    android:layout_height="61dp"
+    android:background="@drawable/tuberia1"
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintWidth_percent="0.05"
+    tools:layout_constraintHeight_percent="0.08"
+    tools:layout_editor_absoluteX="499dp"
+    tools:layout_editor_absoluteY="83dp" />
+
+  <ImageButton
+    android:id="@+id/tuberia4Button"
+    android:layout_width="75dp"
+    android:layout_height="61dp"
+    android:background="@drawable/tuberia1"
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintWidth_percent="0.05"
+    tools:layout_constraintHeight_percent="0.08"
+    tools:layout_editor_absoluteX="591dp"
+    tools:layout_editor_absoluteY="16dp" />
+
+  <ImageButton
+    android:id="@+id/tuberia1Button"
+    android:layout_width="84dp"
+    android:layout_height="67dp"
+    android:background="@drawable/tuberia1"
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintWidth_percent="0.05"
+    tools:layout_constraintHeight_percent="0.08"
+    tools:layout_editor_absoluteX="203dp"
+    tools:layout_editor_absoluteY="16dp" />
+
+  <ImageButton
+    android:id="@+id/tuberia2Button"
+    android:layout_width="32dp"
+    android:layout_height="65dp"
+    android:background="@drawable/tuberia2"
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintWidth_percent="0.05"
+    tools:layout_constraintHeight_percent="0.08"
+    tools:layout_editor_absoluteX="591dp"
+    tools:layout_editor_absoluteY="278dp" />
+
+  <ImageButton
+    android:id="@+id/tuberia3Button"
+    android:layout_width="137dp"
+    android:layout_height="120dp"
+    android:background="@drawable/tuberia3"
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintWidth_percent="0.05"
+    tools:layout_constraintHeight_percent="0.08"
+    tools:layout_editor_absoluteX="313dp"
+    tools:layout_editor_absoluteY="51dp" />
+
+  <ImageButton
+    android:id="@+id/tuberia5Button"
+    android:layout_width="75dp"
+    android:layout_height="61dp"
+    android:background="@drawable/tuberia1"
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintWidth_percent="0.05"
+    tools:layout_constraintHeight_percent="0.08"
+    tools:layout_editor_absoluteX="341dp"
+    tools:layout_editor_absoluteY="160dp" />
+
+  <ImageButton
+    android:id="@+id/continueArrow"
+    android:layout_width="83dp"
+    android:layout_height="53dp"
+    android:background="@drawable/flecharoja"
+    app:layout_constraintHeight_percent="0.13"
+    app:layout_constraintWidth_percent="0.13"
+    tools:layout_constraintHeight_percent="0.18"
+    tools:layout_editor_absoluteX="770dp"
+    tools:layout_editor_absoluteY="77dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

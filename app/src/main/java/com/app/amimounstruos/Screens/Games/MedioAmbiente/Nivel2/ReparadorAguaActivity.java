@@ -11,30 +11,31 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.R;
-import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity;
-import com.app.amimounstruos.Screens.MapActivity;
 
-public class AprendamosAguaActivity extends AppCompatActivity {
+public class ReparadorAguaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_aprendamos_agua);
+        setContentView(R.layout.activity_reparador_agua);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-      ImageButton botonMapa = findViewById(R.id.configurationsButton);
-      ImageButton botonContinuar = findViewById(R.id.continueArrow);
 
-      botonContinuar.setOnClickListener(v -> {
-        Intent intent = new Intent(AprendamosAguaActivity.this, LlaveAbiertaActivity.class);
+      ImageButton mapButton = findViewById(R.id.mapButton);
+
+      mapButton.setOnClickListener(v -> {
+        Intent intent = new Intent(ReparadorAguaActivity.this, Banera1Activity.class);
         startActivity(intent);
       });
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(AprendamosAguaActivity.this, MapActivity.class);
+
+      ImageButton botonContinuar = findViewById(R.id.botonContinuar);
+
+      botonContinuar.setOnClickListener(v -> {
+        Intent intent = new Intent(ReparadorAguaActivity.this, Banera1Activity.class);
         startActivity(intent);
       });
     }

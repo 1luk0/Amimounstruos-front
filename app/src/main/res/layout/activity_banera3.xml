@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:background="@drawable/banerabk3"
+    tools:context=".Screens.Games.MedioAmbiente.Nivel2.Banera3Activity">
+
+  <ImageButton
+    android:id="@+id/baneraButton"
+    android:layout_width="91dp"
+    android:layout_height="194dp"
+    android:background="@drawable/banera"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.18"
+    app:layout_constraintHorizontal_bias="0.347"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintWidth_percent="0.3"
+    tools:layout_editor_absoluteY="47dp" />
+
+  <ImageView
+    android:id="@+id/jabonButton"
+    android:layout_width="80dp"
+    android:layout_height="84dp"
+    android:background="@drawable/jabonbanera"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.18"
+    app:layout_constraintHorizontal_bias="0.598"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintWidth_percent="0.3"
+    tools:layout_editor_absoluteY="40dp" />
+
+  <ImageView
+    android:id="@+id/toallaButton"
+    android:layout_width="128dp"
+    android:layout_height="131dp"
+    android:background="@drawable/toallabanera"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.18"
+    app:layout_constraintHorizontal_bias="0.8"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintWidth_percent="0.3"
+    tools:layout_editor_absoluteY="73dp" />
+
+  <ImageView
+    android:id="@+id/flechaindicadora"
+    android:layout_width="39dp"
+    android:layout_height="38dp"
+    android:background="@drawable/flechaindicadora"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.18"
+    app:layout_constraintHorizontal_bias="0.266"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintWidth_percent="0.3"
+    tools:layout_editor_absoluteY="73dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

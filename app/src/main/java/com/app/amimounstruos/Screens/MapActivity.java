@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 import com.app.amimounstruos.Screens.Userinf.AmigosActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
@@ -58,7 +59,7 @@ public class MapActivity extends AppCompatActivity {
       });
 
       botonMedioAmbiente.setOnClickListener(v -> {
-        Intent intent = new Intent(MapActivity.this, NivelesActivity.class);
+        Intent intent = new Intent(MapActivity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
 

@@ -1,14 +1,14 @@
 package com.app.amimounstruos.Models;
 
 public class Nivel {
-  private Number id;
-  private Number Numero;
-  private Number CursoId;
+  private Integer id;
+  private Integer numero;
+  private Integer cursoId;
 
-  public Nivel(Number id, Number Numero, Number CursoId) {
+  public Nivel(Integer id, Integer numero, Integer cursoId) {
     this.id = id;
-    this.CursoId = CursoId;
-    this.Numero = Numero;
+    this.cursoId = cursoId;
+    this.numero = numero;
   }
 
   public Number getId() {
@@ -16,10 +16,22 @@ public class Nivel {
   }
 
   public Number getCursoId() {
-    return CursoId;
+    return cursoId;
   }
 
   public Number getNumero() {
-    return Numero;
+    return numero;
+  }
+
+  @Override
+  public String toString() {
+    return "Nivel{" +
+      "id=" + id +
+      ", numero=" + numero +
+      ", cursoId=" + cursoId +
+      '}';
   }
 }
+
+
+

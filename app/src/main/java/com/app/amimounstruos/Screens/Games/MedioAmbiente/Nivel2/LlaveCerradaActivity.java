@@ -27,7 +27,7 @@ public class LlaveCerradaActivity extends AppCompatActivity {
       ImageButton llaveButton = findViewById(R.id.continueArrow);
 
       llaveButton.setOnClickListener(v -> {
-        Intent intent = new Intent(LlaveCerradaActivity.this, LlaveCerradaActivity.class);
+        Intent intent = new Intent(LlaveCerradaActivity.this, AprendisteCerrarActivity.class);
         startActivity(intent);
       });
     }

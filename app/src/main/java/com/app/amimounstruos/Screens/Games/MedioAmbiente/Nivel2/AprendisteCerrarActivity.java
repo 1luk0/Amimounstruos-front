@@ -29,7 +29,7 @@ public class AprendisteCerrarActivity extends AppCompatActivity {
       ImageButton botonContinue = findViewById(R.id.botonContinuar);
 
       botonContinue.setOnClickListener(v -> {
-        Intent intent = new Intent(AprendisteCerrarActivity.this, HistoriaAgua7Activity.class);
+        Intent intent = new Intent(AprendisteCerrarActivity.this, TuberiaActivity.class);
         startActivity(intent);
       });
     }

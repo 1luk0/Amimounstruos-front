@@ -1,7 +1,9 @@
 package com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -14,6 +16,9 @@ import androidx.core.view.WindowInsetsCompat;
 import com.app.amimounstruos.Models.Nivel;
 import com.app.amimounstruos.Models.Progreso;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity;
+import com.app.amimounstruos.Screens.MapActivity;
+import com.app.amimounstruos.Screens.Userinf.UserActivity;
 import com.app.amimounstruos.Services.NivelService;
 import com.app.amimounstruos.Services.ProgresoService;
 
@@ -24,14 +29,14 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NivelesmaActivity extends AppCompatActivity {
-    private static final int CURSO_ID = 11; // ← Cambia esto si tu curso tiene otro ID
+    private static final int CURSO_ID = 21; // ← Cambia esto si tu curso tiene otro ID
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivelesma); // ← Usa el nombre de tu layout XML real
 
-        SharedPreferences prefs = getSharedPreferences("MiAppPrefs", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("amimonstruos_prefs", MODE_PRIVATE);
         int userId = prefs.getInt("user_id", 0);
 
         if (userId == 0) {
@@ -48,40 +53,76 @@ public class NivelesmaActivity extends AppCompatActivity {
         NivelService nivelService = retrofit.create(NivelService.class);
 
         progresoService.getProgresoByUsuarioYCurso(userId, CURSO_ID).enqueue(new Callback<Progreso>() {
-            @Override
-            public void onResponse(Call<Progreso> call, Response<Progreso> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    int nivelId = (int) response.body().getNivelId();
-                    if (nivelId == 0) {
-                        deshabilitarTodosMenos(1);
-                    } else {
-                        nivelService.getNivelById(nivelId).enqueue(new Callback<Nivel>() {
-                            @Override
-                            public void onResponse(Call<Nivel> call, Response<Nivel> response) {
-                                if (response.isSuccessful() && response.body() != null) {
-                                    int numero = (int) response.body().getNumero();
-                                    deshabilitarTodosMenos(numero + 1);
-                                } else {
-                                    deshabilitarTodosMenos(1);
-                                }
-                            }
+          @Override
+          public void onResponse(Call<Progreso> call, Response<Progreso> response) {
+            Log.d("PROGRESO_RESPONSE_RAW", response.raw().toString());
+            Log.d("PROGRESO_RESPONSE_CODE", String.valueOf(response.code()));
 
-                            @Override
-                            public void onFailure(Call<Nivel> call, Throwable t) {
-                                deshabilitarTodosMenos(1);
-                            }
-                        });
-                    }
-                } else {
+            if (response.isSuccessful() && response.body() != null) {
+              Log.d("PROGRESO_RESPONSE_BODY", response.body().toString());
+
+              int nivelId = response.body().getNivelId().intValue();
+
+              nivelService.getNivelById(nivelId).enqueue(new Callback<Nivel>() {
+                @Override
+                public void onResponse(Call<Nivel> call, Response<Nivel> response) {
+                  Log.d("NIVEL_RESPONSE_RAW", response.raw().toString());
+                  Log.d("NIVEL_RESPONSE_CODE", String.valueOf(response.code()));
+
+                  if (response.isSuccessful() && response.body() != null) {
+                    Log.d("NIVEL_RESPONSE_BODY", response.body().toString());
+
+                    int numero = response.body().getNumero().intValue();
+                    deshabilitarTodosMenos(numero + 1);
+                  } else {
+                    Log.e("NIVEL_RESPONSE", "Error en body o código no exitoso");
                     deshabilitarTodosMenos(1);
+                  }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<Progreso> call, Throwable t) {
-                deshabilitarTodosMenos(1);
+                @Override
+                public void onFailure(Call<Nivel> call, Throwable t) {
+                  Log.e("NIVEL_FAILURE", "Error en la llamada: " + t.getMessage());
+                  deshabilitarTodosMenos(1);
+                }
+              });
+
+            } else {
+              Log.e("PROGRESO_RESPONSE", "Error en body o código no exitoso");
+              deshabilitarTodosMenos(1);
             }
+          }
+
+          @Override
+          public void onFailure(Call<Progreso> call, Throwable t) {
+            Log.e("PROGRESO_FAILURE", "Error en la llamada: " + t.getMessage());
+            deshabilitarTodosMenos(1);
+          }
         });
+
+      ImageButton botonMapa = findViewById(R.id.mapButton);
+
+      ImageButton botonPerfil = findViewById(R.id.perfilButton);
+
+      ImageButton botonNivel1 = findViewById(R.id.nivel1);
+
+      botonMapa.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, MapActivity.class);
+        startActivity(intent);
+      });
+
+      botonPerfil.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, UserActivity.class);
+        startActivity(intent);
+      });
+
+      botonNivel1.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, HistoriaAguaActivity.class);
+        startActivity(intent);
+      });
+
+
+
     }
 
     private void deshabilitarTodosMenos(int maxNivelPermitido) {

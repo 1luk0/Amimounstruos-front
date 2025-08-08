@@ -1,139 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+  xmlns:tools="http://schemas.android.com/tools">
+  <!-- 🔐 Permiso para acceso a internet -->
+  <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- 🔐 Permiso para acceso a internet -->
-    <uses-permission android:name="android.permission.INTERNET" />
+  <application
+    android:allowBackup="true"
+    android:dataExtractionRules="@xml/data_extraction_rules"
+    android:fullBackupContent="@xml/backup_rules"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:networkSecurityConfig="@xml/network_security_config"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.Amimounstruos"
+    tools:targetApi="31">
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.PequenoHeroeActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera5Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera4Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera3Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera2Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera1Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.ReparadorAguaActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.TuberiasReparadasActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.TuberiaActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Configurations.CentroAyuda.Notificaciones.NovedadesActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Configurations.CentroAyuda.Notificaciones.RecordatoriosActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Configurations.CentroAyuda.PreguntasFrecuentesActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Userinf.AmigosActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Userinf.UserActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.AprendisteCerrarActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.LlaveCerradaActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.LlaveAbiertaActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua7Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua6Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoPersonasActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoPersonasActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.PreguntaPersonasActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoAnimalesActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoAnimalesActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.PreguntaAnimalesActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoPlantasActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoPlantasActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.PlantasActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua3Activity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.GuardianAguaActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity5"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua4Activity"
+      android:exported="true" /> <!-- <activity -->
+    <!-- android:name=".Screens.MapActivity" -->
+    <!-- android:exported="true" /> -->
+    <activity
+      android:name=".Screens.Login.SelectCharacterActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Configurations.configuracionActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Configurations.CentroAyuda.CentroAyudaActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Configurations.AjustesPrivacidadActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Configurations.CentroAyuda.Notificaciones.NotificacionesActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.MapActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Login.LoginActivity"
+      android:exported="true" />
+    <activity
+      android:name=".Screens.Login.MainActivity"
+      android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Amimounstruos"
-        tools:targetApi="31">
-        <service
-            android:name=".Services.NivelService"
-            android:enabled="true"
-            android:exported="true"></service>
-
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Configurations.CentroAyuda.Notificaciones.NovedadesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Configurations.CentroAyuda.Notificaciones.RecordatoriosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Configurations.CentroAyuda.PreguntasFrecuentesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Userinf.AmigosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Userinf.UserActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Niveles.NivelesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel2.AprendisteCerrarActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel2.LlaveCerradaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel2.LlaveAbiertaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua7Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua6Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoPersonasActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoPersonasActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.PreguntaPersonasActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoAnimalesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoAnimalesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.PreguntaAnimalesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.IncorrectoPlantasActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.CorrectoPlantasActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.PlantasActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua3Activity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.GuardianAguaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity5"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua4Activity"
-            android:exported="true" /> <!-- <activity -->
-        <!-- android:name=".Screens.MapActivity" -->
-        <!-- android:exported="true" /> -->
-        <activity
-            android:name=".Screens.Login.SelectCharacterActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Configurations.configuracionActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Configurations.CentroAyuda.CentroAyudaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Configurations.AjustesPrivacidadActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Configurations.CentroAyuda.Notificaciones.NotificacionesActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.MapActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Login.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Screens.Login.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
 
 </manifest>

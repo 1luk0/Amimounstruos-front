@@ -1,122 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/nivmabk"
-    tools:context=".Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/nivmabk"
+  tools:context=".Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity">
 
-    <ImageButton
-        android:id="@+id/b1"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel1ma"
-        tools:layout_editor_absoluteX="426dp"
-        tools:layout_editor_absoluteY="250dp" />
+  <!-- Botones de niveles -->
 
-    <ImageButton
-        android:id="@+id/b2"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel2ma"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="250dp" />
+  <ImageButton
+    android:id="@+id/nivel1"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_gravity="top|start"
+    android:layout_marginStart="430dp"
+    android:layout_marginTop="250dp"
+    android:background="@drawable/nivel1ma" />
 
-    <ImageButton
-        android:id="@+id/b3"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel3ma"
-        tools:layout_editor_absoluteX="252dp"
-        tools:layout_editor_absoluteY="205dp" />
+  <ImageButton
+    android:id="@+id/b2"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_marginStart="330dp"
+    android:layout_marginTop="250dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/nivel2ma" />
 
-    <ImageButton
-        android:id="@+id/b4"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel4ma"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="147dp" />
+  <ImageButton
+    android:id="@+id/b3"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_marginStart="248dp"
+    android:layout_marginTop="200dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/nivel3ma" />
 
-    <ImageButton
-        android:id="@+id/b5"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel5ma"
-        tools:layout_editor_absoluteX="392dp"
-        tools:layout_editor_absoluteY="147dp" />
+  <ImageButton
+    android:id="@+id/b4"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_marginStart="300dp"
+    android:layout_marginTop="150dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/nivel4ma" />
 
-    <ImageButton
-        android:id="@+id/b6"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel6ma"
-        tools:layout_editor_absoluteX="466dp"
-        tools:layout_editor_absoluteY="147dp" />
+  <ImageButton
+    android:id="@+id/b5"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_gravity="top|start"
+    android:layout_marginStart="380dp"
+    android:layout_marginTop="150dp"
+    android:background="@drawable/nivel5ma" />
 
-    <ImageButton
-        android:id="@+id/b7"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel7ma"
-        tools:layout_editor_absoluteX="543dp"
-        tools:layout_editor_absoluteY="102dp" />
+  <ImageButton
+    android:id="@+id/b6"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_marginStart="460dp"
+    android:layout_marginTop="150dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/nivel6ma" />
 
-    <ImageButton
-        android:id="@+id/b8"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel8ma"
-        tools:layout_editor_absoluteX="449dp"
-        tools:layout_editor_absoluteY="57dp" />
+  <ImageButton
+    android:id="@+id/b7"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_marginStart="525dp"
+    android:layout_marginTop="105dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/nivel7ma" />
 
-    <ImageButton
-        android:id="@+id/b12"
-        android:layout_width="38dp"
-        android:layout_height="29dp"
-        android:background="@drawable/mapbutt"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="350dp" />
+  <ImageButton
+    android:id="@+id/b8"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_marginStart="430dp"
+    android:layout_marginTop="65dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/nivel8ma" />
 
-    <ImageButton
-        android:id="@+id/b9"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:background="@drawable/nivel9ma"
-        tools:layout_editor_absoluteX="357dp"
-        tools:layout_editor_absoluteY="57dp" />
+  <ImageButton
+    android:id="@+id/b9"
+    android:layout_width="47dp"
+    android:layout_height="45dp"
+    android:layout_marginStart="330dp"
+    android:layout_marginTop="65dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/nivel9ma" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="275dp"
-        android:layout_height="53dp"
-        android:background="@drawable/menu"
-        tools:layout_editor_absoluteX="299dp"
-        tools:layout_editor_absoluteY="350dp" />
+  <!-- Botón invisible sobre la llave -->
+  <ImageButton
+    android:id="@+id/btn_llave"
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:layout_marginStart="560dp"
+    android:layout_marginTop="70dp"
+    android:layout_gravity="top|start"
+    android:background="@android:color/transparent"
+    android:contentDescription="Botón invisible para llave" />
 
-    <ImageButton
-        android:id="@+id/m1"
-        android:layout_width="45dp"
-        android:layout_height="43dp"
-        android:background="@drawable/mapbutt"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="352dp" />
+  <!-- Menú inferior -->
 
-    <ImageButton
-        android:id="@+id/m2"
-        android:layout_width="47dp"
-        android:layout_height="43dp"
-        android:background="@drawable/historiabt"
-        tools:layout_editor_absoluteX="411dp"
-        tools:layout_editor_absoluteY="352dp" />
+  <ImageView
+    android:id="@+id/imageView6"
+    android:layout_width="274dp"
+    android:layout_height="57dp"
+    android:layout_gravity="top|start"
+    android:layout_marginStart="300dp"
+    android:layout_marginTop="330dp"
+    android:background="@drawable/menu" />
 
-    <ImageButton
-        android:id="@+id/m3"
-        android:layout_width="47dp"
-        android:layout_height="43dp"
-        android:background="@drawable/perfil"
-        tools:layout_editor_absoluteX="484dp"
-        tools:layout_editor_absoluteY="352dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+  <ImageButton
+    android:id="@+id/mapButton"
+    android:layout_width="45dp"
+    android:layout_height="43dp"
+    android:layout_gravity="top|start"
+    android:layout_marginStart="340dp"
+    android:layout_marginTop="333dp"
+    android:background="@drawable/mapbutt" />
+
+  <ImageButton
+    android:id="@+id/m2"
+    android:layout_width="47dp"
+    android:layout_height="43dp"
+    android:layout_marginStart="420dp"
+    android:layout_marginTop="333dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/historiabt" />
+
+  <ImageButton
+    android:id="@+id/perfilButton"
+    android:layout_width="47dp"
+    android:layout_height="43dp"
+    android:layout_gravity="top|start"
+    android:layout_marginStart="500dp"
+    android:layout_marginTop="333dp"
+    android:background="@drawable/perfil" />
+</FrameLayout>
