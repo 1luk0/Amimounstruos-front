@@ -39,9 +39,9 @@
     <activity
       android:name=".Screens.Games.MedioAmbiente.Nivel2.TuberiasReparadasActivity"
       android:exported="false" />
-<!--    <activity-->
-<!--      android:name=".Screens.Games.MedioAmbiente.Nivel2.TuberiaActivity"-->
-<!--      android:exported="false" />-->
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.TuberiaActivity"
+      android:exported="false" />
     <activity
       android:name=".Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity"
       android:exported="false" />
@@ -144,7 +144,7 @@
       android:name=".Screens.Login.LoginActivity"
       android:exported="true" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.TuberiaActivity"
+      android:name=".Screens.Login.MainActivity"
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
