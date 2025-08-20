@@ -28,21 +28,19 @@
 
     <EditText
         android:id="@+id/nameInput"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="267dp"
+        android:layout_height="49dp"
         android:background="@drawable/inputname"
         android:ems="10"
         android:hint="@string/hint_name"
         android:imeOptions="actionDone"
         android:inputType="textPersonName"
         android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline112"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHeight_percent="0.12"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintWidth_percent="0.3" />
 
     <TextView
@@ -52,8 +50,8 @@
         android:layout_marginTop="46dp"
         android:text="@string/textlogin1"
         android:textColor="#F8F5F5"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline110"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,8 +65,34 @@
         android:layout_marginTop="8dp"
         android:text="@string/textlogin2"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline111"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline110"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline111"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline112"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.84" />
 </androidx.constraintlayout.widget.ConstraintLayout>

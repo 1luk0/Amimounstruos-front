@@ -5,19 +5,34 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  android:background="@drawable/aprendistecerrar"
+    android:background="@drawable/aprendistecerrar"
     tools:context=".Screens.Games.MedioAmbiente.Nivel2.AprendisteCerrarActivity">
 
   <ImageButton
-    android:id="@+id/botonContinuar"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:background="@drawable/continuarbt"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHeight_percent="0.15"
-    app:layout_constraintHorizontal_bias="0.954"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintWidth_percent="0.25"
-    tools:layout_editor_absoluteY="333dp" />
+      android:id="@+id/botonContinuar"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/continuarbt"
+      android:contentDescription="@string/continuar"
+      app:layout_constraintBottom_toTopOf="@+id/guideline114"
+      app:layout_constraintEnd_toStartOf="@+id/guideline115"
+      app:layout_constraintHeight_percent="0.15"
+      app:layout_constraintWidth_percent="0.25" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline114"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.94" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline115"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.93" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

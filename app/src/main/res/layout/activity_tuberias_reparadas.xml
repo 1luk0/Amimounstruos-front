@@ -5,18 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  android:background="@drawable/tuberiasreparadas"
+    android:background="@drawable/tuberiasreparadas"
     tools:context=".Screens.Games.MedioAmbiente.Nivel2.TuberiasReparadasActivity">
 
   <ImageButton
-    android:id="@+id/continueArrow"
-    android:layout_width="83dp"
-    android:layout_height="53dp"
-    android:background="@drawable/flecharoja"
-    app:layout_constraintHeight_percent="0.13"
-    app:layout_constraintWidth_percent="0.13"
-    tools:layout_constraintHeight_percent="0.18"
-    tools:layout_editor_absoluteX="770dp"
-    tools:layout_editor_absoluteY="32dp" />
+      android:id="@+id/continueArrow"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/flecharoja"
+      android:contentDescription="@string/continuar"
+      app:layout_constraintHeight_percent="0.01"
+      app:layout_constraintStart_toStartOf="@+id/guideline174"
+      app:layout_constraintTop_toTopOf="@+id/guideline173"
+      app:layout_constraintWidth_percent="0.08"
+      tools:layout_constraintHeight_percent="0.18" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline173"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.06" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline174"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.87" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

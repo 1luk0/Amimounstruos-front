@@ -45,5 +45,14 @@
   <string name="animales2">se enferman </string>
   <string name="personas1">nos enfermamos</string>
   <string name="personas2">podemos vivir sin agua</string>
+  <string name="anterior">Anterior</string>
+  <string name="siguiente">Siguiente</string>
+  <string name="seleccionar">Seleccionar</string>
+  <string name="derecha">A la derecha</string>
+  <string name="jabon">Jabon</string>
+  <string name="toalla">Toalla</string>
+  <string name="ducha">Ducha</string>
+  <string name="llave">llave de el lavamanos</string>
+  <string name="tuberia">Tuberia</string>
 
 </resources>
