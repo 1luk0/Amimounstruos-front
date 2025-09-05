@@ -14,6 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Services.UserService;
 
@@ -43,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // Retrofit
     Retrofit retrofit = new Retrofit.Builder()
-      .baseUrl("http://10.0.2.2:3333/") // Asegúrate de usar esta IP para localhost en emulador
+      .baseUrl(BuildConfig.BACKEND_URL) // Asegúrate de usar esta IP para localhost en emulador
       .addConverterFactory(GsonConverterFactory.create())
       .build();
 

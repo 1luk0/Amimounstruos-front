@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Services.AmigoService;
 
@@ -32,7 +33,7 @@ public class AmigosActivity extends AppCompatActivity {
     listaAmigos = findViewById(R.id.listaAmigos);
 
     Retrofit retrofit = new Retrofit.Builder()
-      .baseUrl("http://10.0.2.2:3333/") // cambia si estás en dispositivo real
+      .baseUrl(BuildConfig.BACKEND_URL) // cambia si estás en dispositivo real
       .addConverterFactory(GsonConverterFactory.create())
       .build();
 

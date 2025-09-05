@@ -52,12 +52,6 @@ public class MapActivity extends AppCompatActivity {
         startActivity(intent);
       });
 
-
-      botonModales.setOnClickListener(v -> {
-        Intent intent = new Intent(MapActivity.this, AprendamosAguaActivity.class);
-        startActivity(intent);
-      });
-
       botonMedioAmbiente.setOnClickListener(v -> {
         Intent intent = new Intent(MapActivity.this, NivelesmaActivity.class);
         startActivity(intent);
@@ -65,6 +59,11 @@ public class MapActivity extends AppCompatActivity {
 
       botonConfiguracion.setOnClickListener(v -> {
         Intent intent = new Intent(MapActivity.this, configuracionActivity.class);
+        startActivity(intent);
+      });
+
+      botonModales.setOnClickListener(v -> {
+        Intent intent = new Intent(MapActivity.this, AprendamosAguaActivity.class);
         startActivity(intent);
       });
     }

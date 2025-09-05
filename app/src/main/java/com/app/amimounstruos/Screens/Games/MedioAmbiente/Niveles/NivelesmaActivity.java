@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.Models.Nivel;
 import com.app.amimounstruos.Models.Progreso;
 import com.app.amimounstruos.R;
@@ -45,7 +46,7 @@ public class NivelesmaActivity extends AppCompatActivity {
         }
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:3333/") // ← Cambia esto por tu IP real si es dispositivo físico
+                .baseUrl(BuildConfig.BACKEND_URL) // ← Cambia esto por tu IP real si es dispositivo físico
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

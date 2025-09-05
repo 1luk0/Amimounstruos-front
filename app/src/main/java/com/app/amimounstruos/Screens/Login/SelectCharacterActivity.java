@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.Models.User;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.MapActivity;
@@ -79,7 +80,7 @@ public class SelectCharacterActivity extends AppCompatActivity {
     User user = new User(nombre, personajeSeleccionado);
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:3333/") // Reemplaza con tu endpoint real
+            .baseUrl(BuildConfig.BACKEND_URL) // Reemplaza con tu endpoint real
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
