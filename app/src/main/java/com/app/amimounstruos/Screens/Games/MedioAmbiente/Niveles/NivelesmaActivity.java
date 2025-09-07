@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.Models.Nivel;
 import com.app.amimounstruos.Models.Progreso;
@@ -29,7 +30,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class NivelesmaActivity extends AppCompatActivity {
+public class NivelesmaActivity extends BaseActivity {
     private static final int CURSO_ID = 21; // ← Cambia esto si tu curso tiene otro ID
 
     @Override

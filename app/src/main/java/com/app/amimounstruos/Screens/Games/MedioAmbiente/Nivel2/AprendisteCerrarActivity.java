@@ -10,11 +10,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua6Activity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua7Activity;
 
-public class AprendisteCerrarActivity extends AppCompatActivity {
+public class AprendisteCerrarActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

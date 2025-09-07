@@ -12,11 +12,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.util.Log; // Asegúrate de importar esto
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.CentroAyuda.CentroAyudaActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 
-public class TuberiaActivity extends AppCompatActivity {
+public class TuberiaActivity extends BaseActivity {
 
   private ImageButton tuberia1, tuberia2, tuberia3, tuberia4, tuberia5, tuberia6;
   private ImageButton continueArrow;

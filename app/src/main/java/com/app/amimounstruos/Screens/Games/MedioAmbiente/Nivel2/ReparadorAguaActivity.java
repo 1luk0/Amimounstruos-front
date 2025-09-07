@@ -10,9 +10,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 
-public class ReparadorAguaActivity extends AppCompatActivity {
+public class ReparadorAguaActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

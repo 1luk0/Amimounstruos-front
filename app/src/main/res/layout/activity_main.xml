@@ -9,24 +9,23 @@
     tools:context=".Screens.Login.MainActivity">
 
   <ImageButton
-      android:id="@+id/starbt"
-      android:layout_width="206dp"
-      android:layout_height="66dp"
-      android:background="@drawable/starbt"
-      android:contentDescription="@string/login"
-      app:layout_constraintBottom_toTopOf="@+id/guideline113"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHeight_percent="0.1"
-      app:layout_constraintHorizontal_bias="0.5"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintWidth_percent="0.3" />
+    android:id="@+id/starbt"
+    android:layout_width="352dp"
+    android:layout_height="105dp"
+    android:background="@drawable/starbt"
+    android:contentDescription="@string/login"
+    app:layout_constraintBottom_toTopOf="@+id/guideline113"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.1"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintWidth_percent="0.3" />
 
   <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/guideline113"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      app:layout_constraintGuide_begin="0dp"
-      app:layout_constraintGuide_percent="0.95" />
+    android:id="@+id/guideline113"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_end="27dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

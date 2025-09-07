@@ -10,10 +10,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.MapActivity;
 
-public class HistoriaAguaActivity5 extends AppCompatActivity {
+public class HistoriaAguaActivity5 extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

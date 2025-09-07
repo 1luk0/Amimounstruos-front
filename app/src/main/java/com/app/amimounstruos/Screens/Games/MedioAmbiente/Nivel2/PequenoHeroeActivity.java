@@ -10,10 +10,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 
-public class PequenoHeroeActivity extends AppCompatActivity {
+public class PequenoHeroeActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -22,15 +22,15 @@
       app:layout_constraintWidth_percent="0.3" />
 
   <ImageButton
-      android:id="@+id/configurationsButton"
-      android:layout_width="67dp"
-      android:layout_height="48dp"
-      android:background="@drawable/mapbutt"
-      android:contentDescription="@string/mapa"
-      app:layout_constraintBottom_toTopOf="@+id/guideline101"
-      app:layout_constraintHeight_percent="0.1"
-      app:layout_constraintStart_toStartOf="@+id/guideline102"
-      app:layout_constraintWidth_percent="0.06" />
+    android:id="@+id/configurationsButton"
+    android:layout_width="60dp"
+    android:layout_height="50dp"
+    android:background="@drawable/mapbutt"
+    android:contentDescription="@string/mapa"
+    app:layout_constraintBottom_toTopOf="@+id/guideline101"
+    app:layout_constraintHeight_percent="0.1"
+    app:layout_constraintStart_toStartOf="@+id/guideline102"
+    app:layout_constraintWidth_percent="0.06" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline100"

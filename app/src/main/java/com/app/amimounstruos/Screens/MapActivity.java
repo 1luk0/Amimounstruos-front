@@ -10,6 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity;
@@ -17,7 +18,7 @@ import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivi
 import com.app.amimounstruos.Screens.Userinf.AmigosActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
-public class MapActivity extends AppCompatActivity {
+public class MapActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +38,6 @@ public class MapActivity extends AppCompatActivity {
       ImageButton botonModales = findViewById(R.id.modales);
 
       ImageButton botonPerfil = findViewById(R.id.btn_perfil);
-
-      ImageButton botonAmigos = findViewById(R.id.amigos);
-
-      botonAmigos.setOnClickListener(v -> {
-        Intent intent = new Intent(MapActivity.this, AmigosActivity.class);
-        startActivity(intent);
-      });
 
 
 

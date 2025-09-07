@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Services.AmigoService;
@@ -21,7 +22,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class AmigosActivity extends AppCompatActivity {
+public class AmigosActivity extends BaseActivity {
 
   private LinearLayout listaAmigos;
 

@@ -10,12 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
-public class NotificacionesActivity extends AppCompatActivity {
+public class NotificacionesActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

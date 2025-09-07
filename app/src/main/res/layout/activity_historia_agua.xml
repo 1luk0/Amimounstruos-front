@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/hisaguabk"
-    tools:context=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/hisaguabk"
+  tools:context=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity">
 
   <ImageButton
-      android:id="@+id/configurationsButton"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:layout_marginEnd="4dp"
-      android:layout_marginBottom="4dp"
-      android:background="@drawable/mapbutt"
-      android:contentDescription="@string/mapa"
-      app:layout_constraintBottom_toTopOf="@+id/guideline66"
-      app:layout_constraintEnd_toStartOf="@+id/guideline67"
-      app:layout_constraintHeight_percent="0.12"
-      app:layout_constraintWidth_percent="0.07" />
+    android:id="@+id/configurationsButton"
+    android:layout_width="60dp"
+    android:layout_height="50dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/mapbutt"
+    android:contentDescription="@string/mapa"
+    app:layout_constraintBottom_toTopOf="@+id/guideline66"
+    app:layout_constraintEnd_toStartOf="@+id/guideline67"
+    app:layout_constraintHeight_percent="0.12"
+    app:layout_constraintWidth_percent="0.07" />
 
   <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/guideline66"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      app:layout_constraintGuide_begin="0dp"
-      app:layout_constraintGuide_percent="0.15" />
+    android:id="@+id/guideline66"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_end="677dp" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline67"
@@ -38,22 +37,22 @@
     app:layout_constraintGuide_percent="0.97" />
 
   <ImageButton
-      android:id="@+id/botonContinuar"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:background="@drawable/continuarbt"
-      android:contentDescription="@string/continuar"
-      app:layout_constraintBottom_toTopOf="@+id/guideline63"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHeight_percent="0.16"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintWidth_percent="0.25" />
+    android:id="@+id/botonContinuar"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/continuarbt"
+    android:contentDescription="@string/continuar"
+    app:layout_constraintBottom_toTopOf="@+id/guideline63"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.16"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintWidth_percent="0.25" />
 
   <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline63"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="0dp"
-        app:layout_constraintGuide_percent="0.99" />
+    android:id="@+id/guideline63"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="0dp"
+    app:layout_constraintGuide_percent="0.99" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,24 +8,23 @@
     android:background="@drawable/agua3bk"
     tools:context=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAgua3Activity">
 
-    <ImageButton
-        android:id="@+id/configurationsButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/mapbutt"
-        android:contentDescription="@string/mapa"
-        app:layout_constraintBottom_toTopOf="@+id/guideline77"
-        app:layout_constraintEnd_toStartOf="@+id/guideline76"
-        app:layout_constraintHeight_percent="0.12"
-        app:layout_constraintWidth_percent="0.07" />
+  <ImageButton
+    android:id="@+id/configurationsButton"
+    android:layout_width="60dp"
+    android:layout_height="50dp"
+    android:background="@drawable/mapbutt"
+    android:contentDescription="@string/mapa"
+    app:layout_constraintBottom_toTopOf="@+id/guideline77"
+    app:layout_constraintEnd_toStartOf="@+id/guideline76"
+    app:layout_constraintHeight_percent="0.12"
+    app:layout_constraintWidth_percent="0.07" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline77"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="51dp"
-        app:layout_constraintGuide_percent="0.15" />
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline77"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_end="697dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline76"
