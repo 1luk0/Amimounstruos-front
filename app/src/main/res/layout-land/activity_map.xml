@@ -10,14 +10,12 @@
 
   <ImageButton
       android:id="@+id/cultura"
-      android:layout_width="0dp"
+      android:layout_width="243dp"
       android:layout_height="0dp"
       android:background="@drawable/cultura"
       android:contentDescription="@string/desc_boton_amigos"
       app:layout_constraintBottom_toTopOf="@+id/guideline7"
-      app:layout_constraintEnd_toStartOf="@+id/guideline14"
       app:layout_constraintHeight_percent="0.22"
-      app:layout_constraintHorizontal_bias="1.0"
       app:layout_constraintStart_toStartOf="@+id/guideline13"
       app:layout_constraintWidth_percent="0.19" />
 
@@ -162,7 +160,7 @@
       android:layout_height="wrap_content"
       android:orientation="vertical"
       app:layout_constraintGuide_begin="205dp"
-      app:layout_constraintGuide_percent="0.14" />
+      app:layout_constraintGuide_percent="0.19" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline14"
@@ -170,7 +168,7 @@
       android:layout_height="wrap_content"
       android:orientation="vertical"
       app:layout_constraintGuide_end="0dp"
-      app:layout_constraintGuide_percent="0.38" />
+      app:layout_constraintGuide_percent="0.33" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline16"
