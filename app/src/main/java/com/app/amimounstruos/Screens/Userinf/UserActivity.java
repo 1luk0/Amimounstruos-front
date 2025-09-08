@@ -1,8 +1,11 @@
 package com.app.amimounstruos.Screens.Userinf;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,36 +20,64 @@ import com.app.amimounstruos.Screens.MapActivity;
 
 public class UserActivity extends BaseActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_user);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    EdgeToEdge.enable(this);
+    setContentView(R.layout.activity_user);
 
-      ImageButton botonConfiguracion = findViewById(R.id.configurations);
+    // UI
+    TextView nombreUsuario = findViewById(R.id.textView5);
+    ImageView avatarView = findViewById(R.id.avatarView);
 
-      ImageButton botonMapa = findViewById(R.id.configurationsButton);
+    // SharedPreferences
+    SharedPreferences prefs = getSharedPreferences("amimonstruos_prefs", MODE_PRIVATE);
 
-      ImageButton botonAmigos = findViewById(R.id.amigosButton);
+    // Cargar nombre
+    String nombre = prefs.getString("nombre_usuario", "Invitado");
+    nombreUsuario.setText(nombre);
 
-      botonConfiguracion.setOnClickListener(v -> {
-        Intent intent = new Intent(UserActivity.this, configuracionActivity.class);
-        startActivity(intent);
-      });
+    // Cargar avatar
+    int personajeSeleccionado = prefs.getInt("personaje_seleccionado", 0);
 
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(UserActivity.this, MapActivity.class);
-        startActivity(intent);
-      });
-
-      botonAmigos.setOnClickListener(v -> {
-        Intent intent = new Intent(UserActivity.this, AmigosActivity.class);
-        startActivity(intent);
-      });
+    // Mapea personajeSeleccionado con el drawable correspondiente
+    int avatarResId;
+    switch (personajeSeleccionado) {
+      case 1:
+        avatarResId = R.drawable.monster1;
+        break;
+      case 2:
+        avatarResId = R.drawable.monster2;
+        break;
+      case 3:
+        avatarResId = R.drawable.monster3;
+        break;
+      case 4:
+        avatarResId = R.drawable.monster4;
+        break;
+      default:
+        avatarResId = R.drawable.monster1;
+        break;
     }
+
+    avatarView.setImageResource(avatarResId);
+
+    // ---- tus botones ya existentes ----
+    ImageButton botonConfiguracion = findViewById(R.id.configurations);
+    ImageButton botonMapa = findViewById(R.id.configurationsButton);
+    ImageButton botonAmigos = findViewById(R.id.amigosButton);
+
+    botonConfiguracion.setOnClickListener(v -> {
+      startActivity(new Intent(UserActivity.this, configuracionActivity.class));
+    });
+
+    botonMapa.setOnClickListener(v -> {
+      startActivity(new Intent(UserActivity.this, MapActivity.class));
+    });
+
+    botonAmigos.setOnClickListener(v -> {
+      startActivity(new Intent(UserActivity.this, AmigosActivity.class));
+    });
+  }
+
 }
