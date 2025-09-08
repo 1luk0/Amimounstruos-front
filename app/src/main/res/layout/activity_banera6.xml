@@ -13,13 +13,13 @@
     android:id="@+id/continueArrow"
     android:layout_width="0dp"
     android:layout_height="0dp"
-    android:background="@android:color/transparent"
+    android:background="@drawable/flecharoja"
     android:contentDescription="@string/continuar"
-    app:layout_constraintHeight_percent="0.13"
+    app:layout_constraintHeight_percent="0.08"
     app:layout_constraintWidth_percent="0.13"
     tools:layout_constraintHeight_percent="0.18"
     tools:layout_editor_absoluteX="1040dp"
-    tools:layout_editor_absoluteY="475dp" />
+    tools:layout_editor_absoluteY="474dp" />
 
   <ImageButton
     android:id="@+id/mapButton"

@@ -18,7 +18,11 @@ import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.Models.Nivel;
 import com.app.amimounstruos.Models.Progreso;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel3.TuberiaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel4.Banera1Activity;
 import com.app.amimounstruos.Screens.MapActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
 import com.app.amimounstruos.Services.NivelService;
@@ -31,7 +35,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NivelesmaActivity extends BaseActivity {
-    private static final int CURSO_ID = 21; // ← Cambia esto si tu curso tiene otro ID
+    private static final int CURSO_ID = 22; // ← Cambia esto si tu curso tiene otro ID
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +44,6 @@ public class NivelesmaActivity extends BaseActivity {
 
         SharedPreferences prefs = getSharedPreferences("amimonstruos_prefs", MODE_PRIVATE);
         int userId = prefs.getInt("user_id", 0);
-
-        if (userId == 0) {
-            Toast.makeText(this, "ID de usuario no encontrado", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BuildConfig.BACKEND_URL) // ← Cambia esto por tu IP real si es dispositivo físico
@@ -59,11 +58,14 @@ public class NivelesmaActivity extends BaseActivity {
           public void onResponse(Call<Progreso> call, Response<Progreso> response) {
             Log.d("PROGRESO_RESPONSE_RAW", response.raw().toString());
             Log.d("PROGRESO_RESPONSE_CODE", String.valueOf(response.code()));
-
+            Progreso numero2 = response.body();
+            Log.d("Número mk", String.valueOf(numero2));
+            Log.d("Progreso mk", String.valueOf(response.isSuccessful()));
             if (response.isSuccessful() && response.body() != null) {
               Log.d("PROGRESO_RESPONSE_BODY", response.body().toString());
 
               int nivelId = response.body().getNivelId().intValue();
+              Log.d("Nivel mk", String.valueOf(nivelId));
 
               nivelService.getNivelById(nivelId).enqueue(new Callback<Nivel>() {
                 @Override
@@ -71,10 +73,15 @@ public class NivelesmaActivity extends BaseActivity {
                   Log.d("NIVEL_RESPONSE_RAW", response.raw().toString());
                   Log.d("NIVEL_RESPONSE_CODE", String.valueOf(response.code()));
 
+                  int numero1 = response.body().getNumero().intValue();
+                  Log.d("Número mk", String.valueOf(numero1));
+
+
                   if (response.isSuccessful() && response.body() != null) {
                     Log.d("NIVEL_RESPONSE_BODY", response.body().toString());
 
                     int numero = response.body().getNumero().intValue();
+                    Log.d("Numero mk", String.valueOf(numero));
                     deshabilitarTodosMenos(numero + 1);
                   } else {
                     Log.e("NIVEL_RESPONSE", "Error en body o código no exitoso");
@@ -104,12 +111,27 @@ public class NivelesmaActivity extends BaseActivity {
 
       ImageButton botonMapa = findViewById(R.id.mapButton);
 
+      ImageButton botonConfiguracion = findViewById(R.id.configurations);
+
       ImageButton botonPerfil = findViewById(R.id.perfilButton);
 
       ImageButton botonNivel1 = findViewById(R.id.nivel1);
 
+      ImageButton botonNivel2 = findViewById(R.id.nivel2);
+
+      ImageButton botonNivel3 = findViewById(R.id.nivel3);
+
+      ImageButton botonNivel4 = findViewById(R.id.nivel4);
+
+
+
       botonMapa.setOnClickListener(v -> {
         Intent intent = new Intent(NivelesmaActivity.this, MapActivity.class);
+        startActivity(intent);
+      });
+
+      botonConfiguracion.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, configuracionActivity.class);
         startActivity(intent);
       });
 
@@ -123,26 +145,43 @@ public class NivelesmaActivity extends BaseActivity {
         startActivity(intent);
       });
 
+      botonNivel2.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, AprendamosAguaActivity.class);
+        startActivity(intent);
+      });
+
+      botonNivel3.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, TuberiaActivity.class);
+        startActivity(intent);
+      });
+
+      botonNivel4.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, Banera1Activity.class);
+        startActivity(intent);
+      });
+
 
 
     }
 
-    private void deshabilitarTodosMenos(int maxNivelPermitido) {
-        for (int i = 1; i <= 9; i++) { // Cambia a la cantidad total de niveles reales
-            int resID = getResources().getIdentifier("b" + i, "id", getPackageName());
-            ImageButton boton = findViewById(resID);
-            if (boton != null) {
-                if (i > maxNivelPermitido) {
-                    boton.setAlpha(0.7f);
-                    boton.setEnabled(false);
-                    boton.setOnClickListener(v ->
-                            Toast.makeText(this, "Este nivel está bloqueado", Toast.LENGTH_SHORT).show()
-                    );
-                } else {
-                    boton.setAlpha(1.0f);
-                    boton.setEnabled(true);
-                }
-            }
+  private void deshabilitarTodosMenos(int maxNivelPermitido) {
+    for (int i = 1; i <= 9; i++) { // Cambia según tu número real de niveles
+      int resID = getResources().getIdentifier("b" + i, "id", getPackageName());
+      ImageButton boton = findViewById(resID);
+      if (boton != null) {
+        if (i <= 4) {
+          boton.setAlpha(1.0f);
+          boton.setEnabled(true);
+        } else {
+          boton.setAlpha(0.7f);
+          boton.setEnabled(false);
+          boton.setOnClickListener(v ->
+            Toast.makeText(this, "Este nivel está bloqueado", Toast.LENGTH_SHORT).show()
+          );
         }
+      }
     }
+  }
+
+
 }

@@ -29,8 +29,9 @@ public class AguaNoDesperdiciaActivity extends AppCompatActivity {
       ImageButton botonContinue = findViewById(R.id.botonContinuar);
 
       botonContinue.setOnClickListener(v -> {
-        Intent intent = new Intent(CerrasteLlaveActivity.this, NivelesmaActivity.class);
+        Intent intent = new Intent(AguaNoDesperdiciaActivity.this, NivelesmaActivity.class);
         startActivity(intent);
+
       });
     }
 }

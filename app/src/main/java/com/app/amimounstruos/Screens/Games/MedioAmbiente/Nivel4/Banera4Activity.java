@@ -3,6 +3,7 @@ package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel4;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
@@ -26,7 +27,7 @@ public class Banera4Activity extends BaseActivity {
             return insets;
         });
 
-      ImageButton baneraButton = findViewById(R.id.baneraButton);
+      ImageView baneraButton = findViewById(R.id.baneraButton);
       ImageButton botonMapa = findViewById(R.id.mapButton);
 
       baneraButton.setOnClickListener(v -> {

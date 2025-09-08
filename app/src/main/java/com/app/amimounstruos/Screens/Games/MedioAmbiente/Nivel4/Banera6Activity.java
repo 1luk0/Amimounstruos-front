@@ -31,7 +31,7 @@ public class Banera6Activity extends AppCompatActivity {
       ImageButton botonMapa = findViewById(R.id.mapButton);
 
       flechaButton.setOnClickListener(v -> {
-        Intent intent = new Intent(Banera6Activity.this, PequenoHeroeActivity.class);
+        Intent intent = new Intent(Banera6Activity.this, BanarseRapidoActivity.class);
         startActivity(intent);
       });
 

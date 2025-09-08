@@ -71,15 +71,15 @@
 
   <ImageButton
     android:id="@+id/botonContinuar"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
+    android:layout_width="276dp"
+    android:layout_height="102dp"
     android:background="@drawable/btncontinuarazul"
     android:contentDescription="@string/continuar"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHeight_percent="0.08"
-    app:layout_constraintHorizontal_bias="0.749"
+    app:layout_constraintHeight_percent="0.18"
+    app:layout_constraintHorizontal_bias="0.8"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintWidth_percent="0.16"
-    tools:layout_editor_absoluteY="191dp" />
+    app:layout_constraintWidth_percent="0.3"
+    tools:layout_editor_absoluteY="162dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
