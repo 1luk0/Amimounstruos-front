@@ -10,14 +10,14 @@
 
   <ImageButton
       android:id="@+id/continueArrow"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
+      android:layout_width="151dp"
+      android:layout_height="89dp"
       android:background="@drawable/flecharoja"
       android:contentDescription="@string/continuar"
       app:layout_constraintHeight_percent="0.01"
       app:layout_constraintStart_toStartOf="@+id/guideline174"
       app:layout_constraintTop_toTopOf="@+id/guideline173"
-      app:layout_constraintWidth_percent="0.08"
+      app:layout_constraintWidth_percent="0.09"
       tools:layout_constraintHeight_percent="0.18" />
 
   <androidx.constraintlayout.widget.Guideline
@@ -26,7 +26,7 @@
       android:layout_height="wrap_content"
       android:orientation="horizontal"
       app:layout_constraintGuide_begin="0dp"
-      app:layout_constraintGuide_percent="0.06" />
+      app:layout_constraintGuide_percent="0.49" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline174"

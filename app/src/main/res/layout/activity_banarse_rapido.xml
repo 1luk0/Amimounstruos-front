@@ -8,27 +8,52 @@
   android:background="@drawable/banarserapido"
     tools:context=".Screens.Games.MedioAmbiente.Nivel4.BanarseRapidoActivity">
 
-  <ImageButton
-    android:id="@+id/mapButton"
-    android:layout_width="60dp"
-    android:layout_height="50dp"
-    android:background="@drawable/mapbutt"
-    android:contentDescription="@string/mapa"
-    app:layout_constraintHeight_percent="0.1"
-    app:layout_constraintWidth_percent="0.06"
-    tools:layout_editor_absoluteX="1121dp"
-    tools:layout_editor_absoluteY="59dp" />
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline213"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.14" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline215"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.725" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline214"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.97" />
 
   <ImageButton
-    android:id="@+id/botonContinuar"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:background="@drawable/continuarbt"
-    android:contentDescription="@string/continuar"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHeight_percent="0.18"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintWidth_percent="0.3"
-    tools:layout_editor_absoluteY="468dp" />
+      android:id="@+id/mapButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/mapbutt"
+      android:contentDescription="@string/mapa"
+      app:layout_constraintBottom_toTopOf="@+id/guideline213"
+      app:layout_constraintEnd_toStartOf="@+id/guideline214"
+      app:layout_constraintHeight_percent="0.09"
+      app:layout_constraintWidth_percent="0.06" />
+
+  <ImageButton
+      android:id="@+id/botonContinuar"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginBottom="4dp"
+      android:background="@drawable/continuarbt"
+      android:contentDescription="@string/continuar"
+      app:layout_constraintBottom_toTopOf="@+id/guideline215"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHeight_percent="0.18"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintWidth_percent="0.3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

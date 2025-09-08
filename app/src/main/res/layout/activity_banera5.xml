@@ -10,6 +10,22 @@
     tools:context=".Screens.Games.MedioAmbiente.Nivel4.Banera5Activity">
 
   <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline205"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.14" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline207"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.97" />
+
+  <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline142"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -22,7 +38,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="horizontal"
-      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_begin="89dp"
       app:layout_constraintGuide_percent="0.11" />
 
   <androidx.constraintlayout.widget.Guideline
@@ -77,15 +93,15 @@
     app:layout_constraintWidth_percent="0.2" />
 
   <ImageButton
-    android:id="@+id/mapButton"
-    android:layout_width="60dp"
-    android:layout_height="50dp"
-    android:background="@drawable/mapbutt"
-    android:contentDescription="@string/mapa"
-    app:layout_constraintHeight_percent="0.1"
-    app:layout_constraintWidth_percent="0.06"
-    tools:layout_editor_absoluteX="1121dp"
-    tools:layout_editor_absoluteY="59dp" />
+      android:id="@+id/mapButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/mapbutt"
+      android:contentDescription="@string/mapa"
+      app:layout_constraintBottom_toTopOf="@+id/guideline205"
+      app:layout_constraintEnd_toStartOf="@+id/guideline207"
+      app:layout_constraintHeight_percent="0.09"
+      app:layout_constraintWidth_percent="0.06" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

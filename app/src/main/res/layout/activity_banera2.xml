@@ -9,6 +9,22 @@
     tools:context=".Screens.Games.MedioAmbiente.Nivel4.Banera2Activity">
 
   <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline198"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.14" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline200"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.97" />
+
+  <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline122"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -50,14 +66,14 @@
 
 
   <ImageView
-    android:id="@+id/baneraButton"
-    android:layout_width="89dp"
-    android:layout_height="0dp"
-    android:layout_marginTop="16dp"
-    app:layout_constraintHeight_percent="0.45"
-    app:layout_constraintStart_toStartOf="@+id/guideline124"
-    app:layout_constraintTop_toTopOf="@+id/guideline123"
-    app:layout_constraintWidth_percent="0.1" />
+      android:id="@+id/baneraButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintHeight_percent="0.45"
+      app:layout_constraintStart_toStartOf="@+id/guideline124"
+      app:layout_constraintTop_toTopOf="@+id/guideline123"
+      app:layout_constraintWidth_percent="0.1" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline126"
@@ -68,14 +84,14 @@
       app:layout_constraintGuide_percent="0.68" />
 
   <ImageButton
-    android:id="@+id/configurationsButton"
-    android:layout_width="60dp"
-    android:layout_height="50dp"
-    android:background="@drawable/mapbutt"
-    android:contentDescription="@string/mapa"
-    app:layout_constraintHeight_percent="0.1"
-    app:layout_constraintWidth_percent="0.06"
-    tools:layout_editor_absoluteX="1121dp"
-    tools:layout_editor_absoluteY="59dp" />
+      android:id="@+id/configurationsButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/mapbutt"
+      android:contentDescription="@string/mapa"
+      app:layout_constraintBottom_toTopOf="@+id/guideline198"
+      app:layout_constraintEnd_toStartOf="@+id/guideline200"
+      app:layout_constraintHeight_percent="0.09"
+      app:layout_constraintWidth_percent="0.06" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
