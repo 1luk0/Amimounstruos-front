@@ -16,31 +16,43 @@
     android:theme="@style/Theme.Amimounstruos"
     tools:targetApi="31">
     <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel4.BanarseRapidoActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel4.Banera6Activity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel3.AguaNoDesperdiciaActivity"
+      android:exported="false" />
+    <activity
+      android:name=".Screens.Games.MedioAmbiente.Nivel2.CerrasteLlaveActivity"
+      android:exported="false" />
+    <activity
       android:name=".Screens.Games.MedioAmbiente.Nivel2.PequenoHeroeActivity"
       android:exported="false" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera5Activity"
+      android:name=".Screens.Games.MedioAmbiente.Nivel4.Banera5Activity"
       android:exported="false" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera4Activity"
+      android:name=".Screens.Games.MedioAmbiente.Nivel4.Banera4Activity"
       android:exported="false" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera3Activity"
+      android:name=".Screens.Games.MedioAmbiente.Nivel4.Banera3Activity"
       android:exported="false" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera2Activity"
+      android:name=".Screens.Games.MedioAmbiente.Nivel4.Banera2Activity"
       android:exported="false" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.Banera1Activity"
+      android:name=".Screens.Games.MedioAmbiente.Nivel4.Banera1Activity"
       android:exported="false" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.ReparadorAguaActivity"
+      android:name=".Screens.Games.MedioAmbiente.Nivel3.ReparadorAguaActivity"
       android:exported="false" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.TuberiasReparadasActivity"
+      android:name=".Screens.Games.MedioAmbiente.Nivel3.TuberiasReparadasActivity"
       android:exported="false" />
     <activity
-      android:name=".Screens.Games.MedioAmbiente.Nivel2.TuberiaActivity"
+      android:name=".Screens.Games.MedioAmbiente.Nivel3.TuberiaActivity"
       android:exported="false" />
     <activity
       android:name=".Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity"

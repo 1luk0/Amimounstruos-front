@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2;
+package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel3;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -14,8 +13,6 @@ import android.util.Log; // Asegúrate de importar esto
 
 import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
-import com.app.amimounstruos.Screens.Configurations.CentroAyuda.CentroAyudaActivity;
-import com.app.amimounstruos.Screens.MapActivity;
 
 public class TuberiaActivity extends BaseActivity {
 

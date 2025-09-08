@@ -23,7 +23,7 @@
       app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
-      android:id="@+id/b2"
+      android:id="@+id/nivel2"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"
@@ -35,7 +35,7 @@
       app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
-      android:id="@+id/b3"
+      android:id="@+id/nivel3"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"
@@ -47,7 +47,7 @@
       app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
-      android:id="@+id/b4"
+      android:id="@+id/nivel4"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"
@@ -149,7 +149,7 @@
       app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
-      android:id="@+id/m2"
+      android:id="@+id/configurations"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"

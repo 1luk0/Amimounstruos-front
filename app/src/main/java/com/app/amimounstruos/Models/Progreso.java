@@ -8,8 +8,7 @@ public class Progreso {
   private Number nivelId;
   private String estado;
 
-  public Progreso(Number id, Number usuarioId, Number cursoId, Number nivelId, String estado) {
-    this.id = id;
+  public Progreso(Number usuarioId, Number cursoId, Number nivelId, String estado) {
     this.usuarioId = usuarioId;
     this.cursoId = cursoId;
     this.nivelId = nivelId;

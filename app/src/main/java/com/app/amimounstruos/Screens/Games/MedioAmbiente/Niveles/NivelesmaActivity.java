@@ -18,7 +18,11 @@ import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.Models.Nivel;
 import com.app.amimounstruos.Models.Progreso;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel3.TuberiaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel4.Banera1Activity;
 import com.app.amimounstruos.Screens.MapActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
 import com.app.amimounstruos.Services.NivelService;
@@ -107,10 +111,23 @@ public class NivelesmaActivity extends BaseActivity {
 
       ImageButton botonPerfil = findViewById(R.id.perfilButton);
 
+      ImageButton botonConfiguracion = findViewById(R.id.configurations);
+
       ImageButton botonNivel1 = findViewById(R.id.nivel1);
+
+      ImageButton botonNivel2 = findViewById(R.id.nivel2);
+
+      ImageButton botonNivel3 = findViewById(R.id.nivel3);
+
+      ImageButton botonNivel4 = findViewById(R.id.nivel4);
 
       botonMapa.setOnClickListener(v -> {
         Intent intent = new Intent(NivelesmaActivity.this, MapActivity.class);
+        startActivity(intent);
+      });
+
+      botonConfiguracion.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, configuracionActivity.class);
         startActivity(intent);
       });
 
@@ -121,6 +138,21 @@ public class NivelesmaActivity extends BaseActivity {
 
       botonNivel1.setOnClickListener(v -> {
         Intent intent = new Intent(NivelesmaActivity.this, HistoriaAguaActivity.class);
+        startActivity(intent);
+      });
+
+      botonNivel2.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, AprendamosAguaActivity.class);
+        startActivity(intent);
+      });
+
+      botonNivel3.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, TuberiaActivity.class);
+        startActivity(intent);
+      });
+
+      botonNivel4.setOnClickListener(v -> {
+        Intent intent = new Intent(NivelesmaActivity.this, Banera1Activity.class);
         startActivity(intent);
       });
 

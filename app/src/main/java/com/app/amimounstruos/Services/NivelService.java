@@ -9,4 +9,6 @@ import retrofit2.http.Path;
 public interface NivelService {
     @GET("/niveles/{id}")
     Call<Nivel> getNivelById(@Path("id") int id);
+
+
 }

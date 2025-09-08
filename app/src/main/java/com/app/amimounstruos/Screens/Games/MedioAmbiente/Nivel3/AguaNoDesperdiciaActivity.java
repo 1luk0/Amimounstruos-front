@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2;
+package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel3;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,26 +10,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.CerrasteLlaveActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 
-public class LlaveCerradaActivity extends BaseActivity {
+public class AguaNoDesperdiciaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_llave_cerrada);
+        setContentView(R.layout.activity_agua_no_desperdicia);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-      ImageButton llaveButton = findViewById(R.id.continueArrow);
+      ImageButton botonContinue = findViewById(R.id.botonContinuar);
 
-      llaveButton.setOnClickListener(v -> {
-        Intent intent = new Intent(LlaveCerradaActivity.this, CerrasteLlaveActivity.class);
+      botonContinue.setOnClickListener(v -> {
+        Intent intent = new Intent(AguaNoDesperdiciaActivity.this, NivelesmaActivity.class);
         startActivity(intent);
+
       });
     }
 }

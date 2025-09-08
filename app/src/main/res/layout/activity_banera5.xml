@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/banerabk5"
     android:contentDescription="@string/jabon"
-    tools:context=".Screens.Games.MedioAmbiente.Nivel2.Banera5Activity">
+    tools:context=".Screens.Games.MedioAmbiente.Nivel4.Banera5Activity">
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline142"
@@ -66,47 +66,26 @@
       app:layout_constraintGuide_percent="0.84" />
 
   <ImageView
-      android:id="@+id/baneraButton"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:background="@drawable/banera"
-      android:contentDescription="@string/ducha"
-      app:layout_constraintHeight_percent="0.45"
-      app:layout_constraintStart_toStartOf="@+id/guideline144"
-      app:layout_constraintTop_toTopOf="@+id/guideline143"
-      app:layout_constraintWidth_percent="0.1" />
-
-  <ImageView
-      android:id="@+id/jabonButton"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:background="@drawable/jabonbanera"
-      app:layout_constraintHeight_percent="0.18"
-      app:layout_constraintStart_toStartOf="@+id/guideline145"
-      app:layout_constraintTop_toTopOf="@+id/guideline143"
-      app:layout_constraintWidth_percent="0.1" />
-
-  <ImageView
-      android:id="@+id/toallaButton"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:background="@drawable/toallabanera"
-      android:contentDescription="@string/toalla"
-      app:layout_constraintHeight_percent="0.3"
-      app:layout_constraintStart_toStartOf="@+id/guideline146"
-      app:layout_constraintTop_toTopOf="@+id/guideline142"
-      app:layout_constraintWidth_percent="0.2" />
+    android:id="@+id/toallaButton"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="44dp"
+    android:contentDescription="@string/toalla"
+    app:layout_constraintHeight_percent="0.3"
+    app:layout_constraintStart_toStartOf="@+id/guideline146"
+    app:layout_constraintTop_toTopOf="@+id/guideline142"
+    app:layout_constraintWidth_percent="0.2" />
 
   <ImageButton
-      android:id="@+id/continueArrow"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:background="@drawable/flecharoja"
-      android:contentDescription="@string/continuar"
-      app:layout_constraintHeight_percent="0.13"
-      app:layout_constraintStart_toStartOf="@+id/guideline147"
-      app:layout_constraintTop_toTopOf="@+id/guideline149"
-      app:layout_constraintWidth_percent="0.13"
-      tools:layout_constraintHeight_percent="0.18" />
+    android:id="@+id/mapButton"
+    android:layout_width="60dp"
+    android:layout_height="50dp"
+    android:background="@drawable/mapbutt"
+    android:contentDescription="@string/mapa"
+    app:layout_constraintHeight_percent="0.1"
+    app:layout_constraintWidth_percent="0.06"
+    tools:layout_editor_absoluteX="1121dp"
+    tools:layout_editor_absoluteY="59dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
