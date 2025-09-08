@@ -25,6 +25,14 @@
       android:layout_height="wrap_content"
       android:orientation="horizontal"
       app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.14" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline15"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_begin="0dp"
       app:layout_constraintGuide_percent="0.6" />
 
   <androidx.constraintlayout.widget.Guideline
@@ -35,13 +43,23 @@
       app:layout_constraintGuide_begin="0dp"
       app:layout_constraintGuide_percent="0.215" />
 
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline191"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.97" />
+
   <ImageButton
-    android:id="@+id/configurationsButton"
-    android:layout_width="60dp"
-    android:layout_height="50dp"
-    android:background="@drawable/mapbutt"
-    android:contentDescription="@string/mapa"
-    app:layout_constraintHeight_percent="0.1"
-    app:layout_constraintWidth_percent="0.06" />
+      android:id="@+id/configurationsButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/mapbutt"
+      android:contentDescription="@string/mapa"
+      app:layout_constraintBottom_toTopOf="@+id/guideline148"
+      app:layout_constraintEnd_toStartOf="@+id/guideline191"
+      app:layout_constraintHeight_percent="0.09"
+      app:layout_constraintWidth_percent="0.06" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
