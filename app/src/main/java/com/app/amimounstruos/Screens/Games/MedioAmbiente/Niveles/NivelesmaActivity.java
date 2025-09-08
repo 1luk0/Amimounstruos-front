@@ -75,6 +75,7 @@ public class NivelesmaActivity extends BaseActivity {
                     Log.d("NIVEL_RESPONSE_BODY", response.body().toString());
 
                     int numero = response.body().getNumero().intValue();
+
                     deshabilitarTodosMenos(numero + 1);
                   } else {
                     Log.e("NIVEL_RESPONSE", "Error en body o código no exitoso");
