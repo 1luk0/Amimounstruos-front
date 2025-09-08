@@ -12,12 +12,16 @@
     android:id="@+id/imageView3"
     android:layout_width="0dp"
     android:layout_height="0dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHeight_percent="2"
+    android:scaleType="fitXY"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/guideline20"
-    app:layout_constraintWidth_percent="2"
+    app:layout_constraintEnd_toEndOf="parent"
     app:srcCompat="@drawable/opcidad" />
+
+
+
+
 
   <ImageView
         android:id="@+id/imageView4"
@@ -325,5 +329,18 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="0dp"
         app:layout_constraintGuide_percent="0.5" />
+
+  <ImageView
+    android:id="@+id/avatarView"
+    android:layout_width="230dp"
+    android:layout_height="244dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/monster1"
+    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+    app:layout_constraintEnd_toEndOf="@+id/imageView4"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/imageView4"
+    app:layout_constraintTop_toTopOf="@+id/imageView4"
+    app:layout_constraintVertical_bias="0.091" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
