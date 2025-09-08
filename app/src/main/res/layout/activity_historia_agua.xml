@@ -9,32 +9,33 @@
   tools:context=".Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity">
 
   <ImageButton
-    android:id="@+id/configurationsButton"
-    android:layout_width="60dp"
-    android:layout_height="50dp"
-    android:layout_marginEnd="4dp"
-    android:layout_marginBottom="4dp"
-    android:background="@drawable/mapbutt"
-    android:contentDescription="@string/mapa"
-    app:layout_constraintBottom_toTopOf="@+id/guideline66"
-    app:layout_constraintEnd_toStartOf="@+id/guideline67"
-    app:layout_constraintHeight_percent="0.12"
-    app:layout_constraintWidth_percent="0.07" />
+      android:id="@+id/configurationsButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginEnd="4dp"
+      android:layout_marginBottom="4dp"
+      android:background="@drawable/mapbutt"
+      android:contentDescription="@string/mapa"
+      app:layout_constraintBottom_toTopOf="@+id/guideline66"
+      app:layout_constraintEnd_toStartOf="@+id/guideline67"
+      app:layout_constraintHeight_percent="0.09"
+      app:layout_constraintWidth_percent="0.06" />
 
   <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline66"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_end="677dp" />
+      android:id="@+id/guideline66"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_end="0dp"
+      app:layout_constraintGuide_percent="0.14" />
 
   <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline67"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="573dp"
-    app:layout_constraintGuide_percent="0.97" />
+      android:id="@+id/guideline67"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="0dp"
+      app:layout_constraintGuide_percent="0.97" />
 
   <ImageButton
     android:id="@+id/botonContinuar"
