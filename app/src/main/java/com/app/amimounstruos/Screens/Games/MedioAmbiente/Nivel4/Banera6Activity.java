@@ -1,4 +1,4 @@
-package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2;
+package com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel4;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,16 +10,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.PequenoHeroeActivity;
+import com.app.amimounstruos.Screens.MapActivity;
 
-public class Banera5Activity extends BaseActivity {
+public class Banera6Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_banera5);
+        setContentView(R.layout.activity_banera6);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -27,9 +28,15 @@ public class Banera5Activity extends BaseActivity {
         });
 
       ImageButton flechaButton = findViewById(R.id.continueArrow);
+      ImageButton botonMapa = findViewById(R.id.mapButton);
 
       flechaButton.setOnClickListener(v -> {
-        Intent intent = new Intent(Banera5Activity.this, PequenoHeroeActivity.class);
+        Intent intent = new Intent(Banera6Activity.this, PequenoHeroeActivity.class);
+        startActivity(intent);
+      });
+
+      botonMapa.setOnClickListener(v -> {
+        Intent intent = new Intent(Banera6Activity.this, MapActivity.class);
         startActivity(intent);
       });
     }

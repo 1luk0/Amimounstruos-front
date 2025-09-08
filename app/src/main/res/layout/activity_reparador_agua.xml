@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/reparadoragua"
-    tools:context=".Screens.Games.MedioAmbiente.Nivel2.ReparadorAguaActivity">
+    tools:context=".Screens.Games.MedioAmbiente.Nivel3.ReparadorAguaActivity">
 
   <ImageButton
       android:id="@+id/mapButton"

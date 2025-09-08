@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/reparartuberia"
-    tools:context=".Screens.Games.MedioAmbiente.Nivel2.TuberiaActivity">
+    tools:context=".Screens.Games.MedioAmbiente.Nivel3.TuberiaActivity">
 
 
   <androidx.constraintlayout.widget.Guideline
