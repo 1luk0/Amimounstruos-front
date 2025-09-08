@@ -54,5 +54,14 @@
   <string name="ducha">Ducha</string>
   <string name="llave">llave de el lavamanos</string>
   <string name="tuberia">Tuberia</string>
+  <string name="nivel1">Nivel 1</string>
+  <string name="nivel2">Nivel 2</string>
+  <string name="nivel3">Nivel 3</string>
+  <string name="nivel4">Nivel 4</string>
+  <string name="nivel5">Nivel 5</string>
+  <string name="nivel6">Nivel 6</string>
+  <string name="nivel7">Nivel 7</string>
+  <string name="nivel8">Nivel 8</string>
+  <string name="nivel9">Nivel 9</string>
 
 </resources>
