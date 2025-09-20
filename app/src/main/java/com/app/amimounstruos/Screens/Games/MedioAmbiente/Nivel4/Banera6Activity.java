@@ -10,11 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.PequenoHeroeActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 
-public class Banera6Activity extends AppCompatActivity {
+public class Banera6Activity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +30,15 @@ public class Banera6Activity extends AppCompatActivity {
         });
 
       ImageButton flechaButton = findViewById(R.id.continueArrow);
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonNiveles = findViewById(R.id.mapButton);
 
       flechaButton.setOnClickListener(v -> {
         Intent intent = new Intent(Banera6Activity.this, BanarseRapidoActivity.class);
         startActivity(intent);
       });
 
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(Banera6Activity.this, MapActivity.class);
+      botonNiveles.setOnClickListener(v -> {
+        Intent intent = new Intent(Banera6Activity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
     }

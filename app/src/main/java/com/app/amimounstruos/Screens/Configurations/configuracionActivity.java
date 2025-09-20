@@ -1,6 +1,7 @@
 package com.app.amimounstruos.Screens.Configurations;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
@@ -15,6 +16,7 @@ import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.CentroAyuda.CentroAyudaActivity;
 import com.app.amimounstruos.Screens.Configurations.CentroAyuda.Notificaciones.NotificacionesActivity;
 import com.app.amimounstruos.Screens.MapActivity;
+import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
 public class configuracionActivity extends BaseActivity {
 
@@ -33,6 +35,7 @@ public class configuracionActivity extends BaseActivity {
       ImageButton botonNotificaciones = findViewById(R.id.btn_notificaciones);
       ImageButton botonCentroAyuda = findViewById(R.id.btn_ayuda);
       ImageButton botonMapa = findViewById(R.id.configurationsButton);
+      ImageButton botonPerfil = findViewById(R.id.btn_perfil);
 
       botonCentroAyuda.setOnClickListener(v -> {
         Intent intent = new Intent(configuracionActivity.this, CentroAyudaActivity.class);
@@ -51,6 +54,38 @@ public class configuracionActivity extends BaseActivity {
 
       botonMapa.setOnClickListener(v -> {
         Intent intent = new Intent(configuracionActivity.this, MapActivity.class);
+        startActivity(intent);
+      });
+
+
+      SharedPreferences prefs = getSharedPreferences("amimonstruos_prefs", MODE_PRIVATE);
+      int personajeSeleccionado = prefs.getInt("personaje_seleccionado", -1); // -1 por si no hay
+
+      // Mapea personajeSeleccionado con el drawable correspondiente (botón)
+      int avatarBtnResId;
+      switch (personajeSeleccionado) {
+        case 1:
+          avatarBtnResId = R.drawable.monster1btn;
+          break;
+        case 2:
+          avatarBtnResId = R.drawable.monster2btn;
+          break;
+        case 3:
+          avatarBtnResId = R.drawable.monster3btn;
+          break;
+        case 4:
+          avatarBtnResId = R.drawable.monster4btn;
+          break;
+        default:
+          avatarBtnResId = R.drawable.monster1btn;
+          break;
+      }
+
+
+      botonPerfil.setImageResource(avatarBtnResId);
+
+      botonPerfil.setOnClickListener(v -> {
+        Intent intent = new Intent(configuracionActivity.this, UserActivity.class);
         startActivity(intent);
       });
 

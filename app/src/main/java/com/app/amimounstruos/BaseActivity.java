@@ -16,8 +16,11 @@ public abstract class BaseActivity extends AppCompatActivity {
   @Override
   public void startActivity(Intent intent) {
     super.startActivity(intent);
-    // animación al abrir nueva activity
-    overridePendingTransition(R.anim.zoom_fade_in, R.anim.zoom_fade_out);
+    if (usarAnimacionTransicion()) {
+      overridePendingTransition(R.anim.zoom_fade_in, R.anim.zoom_fade_out);
+    } else {
+      overridePendingTransition(0, 0); // 🚫 sin animación (ni personalizada ni del sistema)
+    }
   }
 
   @Override
@@ -37,6 +40,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         | View.SYSTEM_UI_FLAG_FULLSCREEN
     );
+  }
+
+  protected boolean usarAnimacionTransicion() {
+    return true; // por defecto todas las activities usan animación
   }
 
   @Override

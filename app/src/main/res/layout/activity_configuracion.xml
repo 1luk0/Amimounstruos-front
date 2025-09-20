@@ -91,18 +91,20 @@
         app:layout_constraintHeight_percent="0.08"
         app:layout_constraintWidth_percent="0.04" />
 
-    <ImageButton
-        android:id="@+id/imageButton20"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="40dp"
-        android:background="@drawable/perfil"
-        app:layout_constraintBottom_toBottomOf="@+id/configurationsButton"
-        app:layout_constraintHeight_percent="0.08"
-        app:layout_constraintStart_toEndOf="@+id/configurationsButton"
-        app:layout_constraintTop_toTopOf="@+id/configurationsButton"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.04" />
+  <ImageButton
+    android:id="@+id/btn_perfil"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginStart="40dp"
+    android:background="@null"
+  android:src="@drawable/perfil"
+  android:scaleType="fitCenter"
+  app:layout_constraintBottom_toBottomOf="@+id/configurationsButton"
+  app:layout_constraintHeight_percent="0.08"
+  app:layout_constraintStart_toEndOf="@+id/configurationsButton"
+  app:layout_constraintTop_toTopOf="@+id/configurationsButton"
+  app:layout_constraintVertical_bias="0.0"
+  app:layout_constraintWidth_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline54"

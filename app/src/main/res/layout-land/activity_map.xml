@@ -92,6 +92,7 @@
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:background="@drawable/perfil"
+    android:scaleType="fitCenter"
       android:contentDescription="@string/desc_boton_amigos"
       app:layout_constraintBottom_toTopOf="@+id/guideline19"
       app:layout_constraintEnd_toStartOf="@+id/guideline190"

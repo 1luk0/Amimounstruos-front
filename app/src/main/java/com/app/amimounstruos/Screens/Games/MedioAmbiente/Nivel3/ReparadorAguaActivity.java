@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel4.Banera1Activity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 
 public class ReparadorAguaActivity extends BaseActivity {
 
@@ -26,10 +27,10 @@ public class ReparadorAguaActivity extends BaseActivity {
             return insets;
         });
 
-      ImageButton mapButton = findViewById(R.id.mapButton);
+      ImageButton botonNiveles = findViewById(R.id.mapButton);
 
-      mapButton.setOnClickListener(v -> {
-        Intent intent = new Intent(ReparadorAguaActivity.this, Banera1Activity.class);
+      botonNiveles.setOnClickListener(v -> {
+        Intent intent = new Intent(ReparadorAguaActivity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
 

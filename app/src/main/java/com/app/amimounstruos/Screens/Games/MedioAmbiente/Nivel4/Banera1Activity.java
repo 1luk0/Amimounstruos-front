@@ -6,6 +6,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.CorrectoPlantasActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 
 public class Banera1Activity extends BaseActivity {
@@ -28,7 +30,7 @@ public class Banera1Activity extends BaseActivity {
             return insets;
         });
       ImageButton continuarButton = findViewById(R.id.botonContinuar);
-      ImageButton botonMapa = findViewById(R.id.configurationsButton);
+      ImageButton botonNiveles = findViewById(R.id.configurationsButton);
 
       continuarButton.setOnClickListener(v -> {
         Intent intent = new Intent(Banera1Activity.this, Banera2Activity.class);
@@ -36,9 +38,12 @@ public class Banera1Activity extends BaseActivity {
       });
 
 
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(Banera1Activity.this, MapActivity.class);
+      botonNiveles.setOnClickListener(v -> {
+        Intent intent = new Intent(Banera1Activity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
     }
+  protected boolean usarAnimacionTransicion() {
+    return false; // por defecto todas las activities usan animación
+  }
 }

@@ -1,6 +1,7 @@
 package com.app.amimounstruos.Screens;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
@@ -29,6 +30,9 @@ public class MapActivity extends BaseActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+
+
+
         });
 
       ImageButton botonConfiguracion = findViewById(R.id.configurations);
@@ -39,6 +43,31 @@ public class MapActivity extends BaseActivity {
 
       ImageButton botonPerfil = findViewById(R.id.btn_perfil);
 
+      SharedPreferences prefs = getSharedPreferences("amimonstruos_prefs", MODE_PRIVATE);
+      int personajeSeleccionado = prefs.getInt("personaje_seleccionado", -1); // -1 por si no hay
+
+      // Mapea personajeSeleccionado con el drawable correspondiente (botón)
+      int avatarBtnResId;
+      switch (personajeSeleccionado) {
+        case 1:
+          avatarBtnResId = R.drawable.monster1btn;
+          break;
+        case 2:
+          avatarBtnResId = R.drawable.monster2btn;
+          break;
+        case 3:
+          avatarBtnResId = R.drawable.monster3btn;
+          break;
+        case 4:
+          avatarBtnResId = R.drawable.monster4btn;
+          break;
+        default:
+          avatarBtnResId = R.drawable.monster1btn;
+          break;
+      }
+
+
+      botonPerfil.setImageResource(avatarBtnResId);
 
 
       botonPerfil.setOnClickListener(v -> {

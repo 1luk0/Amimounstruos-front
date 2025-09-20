@@ -10,13 +10,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.CorrectoAnimalesActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.PreguntaPersonasActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 
-public class BanarseRapidoActivity extends AppCompatActivity {
+public class BanarseRapidoActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +31,15 @@ public class BanarseRapidoActivity extends AppCompatActivity {
         });
 
       ImageButton botonContinue = findViewById(R.id.botonContinuar);
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonNiveles = findViewById(R.id.mapButton);
 
       botonContinue.setOnClickListener(v -> {
         Intent intent = new Intent(BanarseRapidoActivity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
 
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(BanarseRapidoActivity.this, MapActivity.class);
+      botonNiveles.setOnClickListener(v -> {
+        Intent intent = new Intent(BanarseRapidoActivity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
     }

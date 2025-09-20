@@ -64,7 +64,8 @@
         android:text="@string/hint_name"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline32"
-        app:layout_constraintEnd_toStartOf="@+id/guideline30" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline30"
+      android:fontFamily="@font/comfortaabold"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -73,7 +74,8 @@
         android:text="@string/cursos"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintEnd_toStartOf="@+id/guideline37" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline37"
+      android:fontFamily="@font/comfortaabold"/>
 
     <ImageButton
         android:id="@+id/imageButton8"
@@ -93,7 +95,8 @@
         android:text="@string/amigos"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintEnd_toStartOf="@+id/guideline38" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline38"
+      android:fontFamily="@font/comfortaabold"/>
 
     <ImageButton
         android:id="@+id/amigosButton"
@@ -114,7 +117,8 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline39"
-        app:layout_constraintStart_toStartOf="@+id/guideline36" />
+        app:layout_constraintStart_toStartOf="@+id/guideline36"
+      android:fontFamily="@font/comfortaabold"/>
 
     <ImageButton
         android:id="@+id/imageButton10"
@@ -334,7 +338,7 @@
     android:id="@+id/avatarView"
     android:layout_width="230dp"
     android:layout_height="244dp"
-    android:scaleType="centerCrop"
+    android:scaleType="fitCenter"
     android:src="@drawable/monster1"
     app:layout_constraintBottom_toBottomOf="@+id/imageView4"
     app:layout_constraintEnd_toEndOf="@+id/imageView4"

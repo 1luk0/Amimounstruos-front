@@ -6,15 +6,19 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 
 public class Banera4Activity extends BaseActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +32,21 @@ public class Banera4Activity extends BaseActivity {
         });
 
       ImageView baneraButton = findViewById(R.id.baneraButton);
-      ImageButton botonMapa = findViewById(R.id.mapButton);
+      ImageButton botonNiveles = findViewById(R.id.mapButton);
 
       baneraButton.setOnClickListener(v -> {
         Intent intent = new Intent(Banera4Activity.this, Banera5Activity.class);
         startActivity(intent);
       });
 
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(Banera4Activity.this, MapActivity.class);
+      botonNiveles.setOnClickListener(v -> {
+        Intent intent = new Intent(Banera4Activity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
 
     }
+
+  protected boolean usarAnimacionTransicion() {
+    return false; // por defecto todas las activities usan animación
+  }
 }

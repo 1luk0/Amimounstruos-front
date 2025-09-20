@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 
 public class PlantasActivity extends BaseActivity {
@@ -28,7 +29,7 @@ public class PlantasActivity extends BaseActivity {
         });
       ImageButton botonCorrecto = findViewById(R.id.opcion1);
       ImageButton botonInCorrecto = findViewById(R.id.opcion2);
-      ImageButton botonMapa = findViewById(R.id.configurationsButton);
+      ImageButton botonNiveles = findViewById(R.id.configurationsButton);
 
       botonCorrecto.setOnClickListener(v -> {
         Intent intent = new Intent(PlantasActivity.this, CorrectoPlantasActivity.class);
@@ -40,8 +41,8 @@ public class PlantasActivity extends BaseActivity {
         startActivity(intent);
       });
 
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(PlantasActivity.this, MapActivity.class);
+      botonNiveles.setOnClickListener(v -> {
+        Intent intent = new Intent(PlantasActivity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
     }

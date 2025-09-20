@@ -9,15 +9,16 @@
     tools:context=".Screens.Games.MedioAmbiente.Nivel2.LlaveAbiertaActivity">
 
   <ImageButton
-      android:id="@+id/llave"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:background="@android:color/transparent"
-      android:contentDescription="@string/llave"
-      app:layout_constraintHeight_percent="0.12"
-      app:layout_constraintStart_toStartOf="@+id/guideline150"
-      app:layout_constraintTop_toTopOf="@+id/guideline148"
-      app:layout_constraintWidth_percent="0.1" />
+    android:id="@+id/llave"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="380dp"
+    android:background="@android:color/transparent"
+    android:contentDescription="@string/llave"
+    app:layout_constraintHeight_percent="0.12"
+    app:layout_constraintStart_toStartOf="@+id/guideline150"
+    app:layout_constraintTop_toTopOf="@+id/guideline148"
+    app:layout_constraintWidth_percent="0.1" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline148"
@@ -36,12 +37,11 @@
       app:layout_constraintGuide_percent="0.6" />
 
   <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/guideline150"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      app:layout_constraintGuide_begin="0dp"
-      app:layout_constraintGuide_percent="0.215" />
+    android:id="@+id/guideline150"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_end="1042dp" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline191"

@@ -2,6 +2,9 @@ package com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageButton;
@@ -121,6 +124,32 @@ public class NivelesmaActivity extends BaseActivity {
 
       ImageButton botonNivel4 = findViewById(R.id.nivel4);
 
+      SharedPreferences prefs1 = getSharedPreferences("amimonstruos_prefs", MODE_PRIVATE);
+      int personajeSeleccionado = prefs1.getInt("personaje_seleccionado", -1); // -1 por si no hay
+
+      // Mapea personajeSeleccionado con el drawable correspondiente (botón)
+      int avatarBtnResId;
+      switch (personajeSeleccionado) {
+        case 1:
+          avatarBtnResId = R.drawable.monster1btn;
+          break;
+        case 2:
+          avatarBtnResId = R.drawable.monster2btn;
+          break;
+        case 3:
+          avatarBtnResId = R.drawable.monster3btn;
+          break;
+        case 4:
+          avatarBtnResId = R.drawable.monster4btn;
+          break;
+        default:
+          avatarBtnResId = R.drawable.monster1btn;
+          break;
+      }
+
+
+      botonPerfil.setImageResource(avatarBtnResId);
+
       botonMapa.setOnClickListener(v -> {
         Intent intent = new Intent(NivelesmaActivity.this, MapActivity.class);
         startActivity(intent);
@@ -160,23 +189,38 @@ public class NivelesmaActivity extends BaseActivity {
 
     }
 
-    private void deshabilitarTodosMenos(int maxNivelPermitido) {
-        for (int i = 1; i <= 9; i++) { // Cambia a la cantidad total de niveles reales
-            int resID = getResources().getIdentifier("b" + i, "id", getPackageName());
-            ImageButton boton = findViewById(resID);
-            if (boton != null) {
-                if (i > maxNivelPermitido) {
-                    boton.setAlpha(0.7f);
-                    boton.setEnabled(false);
-                    boton.setOnClickListener(v ->
-                            Toast.makeText(this, "Este nivel está bloqueado", Toast.LENGTH_SHORT).show()
-                    );
-                } else {
-                    boton.setAlpha(1.0f);
-                    boton.setEnabled(true);
-                }
-            }
+  private void deshabilitarTodosMenos(int maxNivelPermitido) {
+    // Matriz para blanco y negro
+    ColorMatrix matrix = new ColorMatrix();
+    matrix.setSaturation(0);
+    final ColorMatrixColorFilter filter = new ColorMatrixColorFilter(matrix);
+
+    for (int i = 1; i <= 9; i++) { // Cambia a la cantidad total de niveles reales
+      int resID = getResources().getIdentifier("b" + i, "id", getPackageName());
+      ImageButton boton = findViewById(resID);
+      if (boton != null) {
+        if (i > maxNivelPermitido) {
+          // aplicar filtro al background
+          Drawable drawable = boton.getBackground();
+          if (drawable != null) {
+            drawable.mutate().setColorFilter(filter);
+          }
+          boton.setEnabled(false);
+          boton.setOnClickListener(v ->
+            Toast.makeText(this, "Este nivel está bloqueado", Toast.LENGTH_SHORT).show()
+          );
+        } else {
+          // quitar filtro
+          Drawable drawable = boton.getBackground();
+          if (drawable != null) {
+            drawable.clearColorFilter();
+          }
+          boton.setEnabled(true);
         }
+      }
     }
+  }
+
+
 
 }

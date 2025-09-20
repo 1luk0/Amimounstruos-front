@@ -43,7 +43,7 @@ public class HistoriaAgua7Activity extends BaseActivity {
     });
 
     ImageButton botonContinue = findViewById(R.id.botonContinuar);
-    ImageButton botonMapa = findViewById(R.id.configurationsButton);
+    ImageButton botonNiveles = findViewById(R.id.configurationsButton);
 
     botonContinue.setOnClickListener(v -> {
       // Recuperar el usuarioId guardado
@@ -86,8 +86,8 @@ public class HistoriaAgua7Activity extends BaseActivity {
       startActivity(intent);
     }); // <-- Cierro el listener de botonContinue
 
-    botonMapa.setOnClickListener(v -> {
-      Intent intent = new Intent(HistoriaAgua7Activity.this, MapActivity.class);
+    botonNiveles.setOnClickListener(v -> {
+      Intent intent = new Intent(HistoriaAgua7Activity.this, NivelesmaActivity.class);
       startActivity(intent);
     });
   }

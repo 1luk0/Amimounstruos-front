@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.app.amimounstruos.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel1.HistoriaAguaActivity;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 
 public class AprendamosAguaActivity extends BaseActivity {
@@ -27,15 +28,15 @@ public class AprendamosAguaActivity extends BaseActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-      ImageButton botonMapa = findViewById(R.id.configurationsButton);
+      ImageButton botonNiveles = findViewById(R.id.configurationsButton);
       ImageButton botonContinuar = findViewById(R.id.continueArrow);
 
       botonContinuar.setOnClickListener(v -> {
         Intent intent = new Intent(AprendamosAguaActivity.this, LlaveAbiertaActivity.class);
         startActivity(intent);
       });
-      botonMapa.setOnClickListener(v -> {
-        Intent intent = new Intent(AprendamosAguaActivity.this, MapActivity.class);
+      botonNiveles.setOnClickListener(v -> {
+        Intent intent = new Intent(AprendamosAguaActivity.this, NivelesmaActivity.class);
         startActivity(intent);
       });
     }
