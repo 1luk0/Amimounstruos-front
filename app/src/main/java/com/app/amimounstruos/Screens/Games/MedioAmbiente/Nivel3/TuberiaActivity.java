@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.util.Log; // Asegúrate de importar esto
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.R;
 
 public class TuberiaActivity extends BaseActivity {

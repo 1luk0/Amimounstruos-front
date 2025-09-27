@@ -33,10 +33,10 @@
     app:layout_constraintGuide_percent="0.955" />
 
   <ImageButton
-    android:id="@+id/configurationsButton"
+    android:id="@+id/salirButton"
     android:layout_width="60dp"
     android:layout_height="50dp"
-    android:background="@drawable/mapbutt"
+    android:background="@drawable/salirbtn"
     android:contentDescription="@string/mapa"
     app:layout_constraintBottom_toTopOf="@+id/guideline90"
     app:layout_constraintEnd_toStartOf="@+id/guideline89"

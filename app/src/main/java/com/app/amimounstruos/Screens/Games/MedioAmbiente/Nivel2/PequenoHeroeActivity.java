@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 

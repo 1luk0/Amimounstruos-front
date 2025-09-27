@@ -9,7 +9,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel3.TuberiaActivity;
 

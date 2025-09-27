@@ -7,9 +7,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.Models.User;
 import com.app.amimounstruos.R;

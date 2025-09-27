@@ -8,17 +8,17 @@
     android:background="@drawable/apraguabk"
     tools:context=".Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity">
 
-    <ImageButton
-        android:id="@+id/configurationsButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/mapbutt"
-        android:contentDescription="@string/mapa"
-        app:layout_constraintBottom_toTopOf="@+id/guideline41"
-        app:layout_constraintEnd_toStartOf="@+id/guideline42"
-        app:layout_constraintHeight_percent="0.09"
-        app:layout_constraintWidth_percent="0.06" />
+  <ImageButton
+    android:id="@+id/salirButton"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/salirbtn"
+    android:contentDescription="@string/mapa"
+    app:layout_constraintBottom_toTopOf="@+id/guideline41"
+    app:layout_constraintEnd_toStartOf="@+id/guideline42"
+    app:layout_constraintHeight_percent="0.09"
+    app:layout_constraintWidth_percent="0.06" />
 
     <ImageButton
         android:id="@+id/continueArrow"

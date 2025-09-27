@@ -50,7 +50,7 @@
     app:srcCompat="@drawable/menu" />
 
   <ImageButton
-    android:id="@+id/configurationsButton"
+    android:id="@+id/salirButton"
     android:layout_width="59dp"
     android:layout_height="50dp"
     android:layout_marginStart="303dp"

@@ -33,15 +33,15 @@
       app:layout_constraintGuide_percent="0.97" />
 
   <ImageButton
-      android:id="@+id/mapButton"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:background="@drawable/mapbutt"
-      android:contentDescription="@string/mapa"
-      app:layout_constraintBottom_toTopOf="@+id/guideline213"
-      app:layout_constraintEnd_toStartOf="@+id/guideline214"
-      app:layout_constraintHeight_percent="0.09"
-      app:layout_constraintWidth_percent="0.06" />
+    android:id="@+id/mapButton"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/salirbtn"
+    android:contentDescription="@string/mapa"
+    app:layout_constraintBottom_toTopOf="@+id/guideline213"
+    app:layout_constraintEnd_toStartOf="@+id/guideline214"
+    app:layout_constraintHeight_percent="0.09"
+    app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
       android:id="@+id/botonContinuar"

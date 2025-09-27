@@ -5,15 +5,14 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
+import com.app.amimounstruos.Components.DialogPopUpActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
-import com.app.amimounstruos.Screens.MapActivity;
 
 public class HistoriaAgua4Activity extends BaseActivity {
 
@@ -28,16 +27,16 @@ public class HistoriaAgua4Activity extends BaseActivity {
             return insets;
         });
       ImageButton botonContinue = findViewById(R.id.botonContinuar);
-      ImageButton botonNiveles = findViewById(R.id.configurationsButton);
+      ImageButton botonSalir = findViewById(R.id.salirButton);
 
       botonContinue.setOnClickListener(v -> {
         Intent intent = new Intent(HistoriaAgua4Activity.this, HistoriaAguaActivity5.class);
         startActivity(intent);
       });
 
-      botonNiveles.setOnClickListener(v -> {
-        Intent intent = new Intent(HistoriaAgua4Activity.this, NivelesmaActivity.class);
-        startActivity(intent);
+      botonSalir.setOnClickListener(v -> {
+        DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(NivelesmaActivity.class);
+        dialog.show(getSupportFragmentManager(), "confirmacion_salida_menu");
       });
     }
 }

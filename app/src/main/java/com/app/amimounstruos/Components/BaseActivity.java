@@ -1,9 +1,11 @@
-package com.app.amimounstruos;
+package com.app.amimounstruos.Components;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.app.amimounstruos.R;
 
 public abstract class BaseActivity extends AppCompatActivity {
 

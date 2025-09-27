@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
@@ -30,7 +29,7 @@ public class RecordatoriosActivity extends BaseActivity {
 
       ImageButton botonRegreso = findViewById(R.id.returnButton);
 
-      ImageButton botonAjustes = findViewById(R.id.configurationsButton);
+      ImageButton botonAjustes = findViewById(R.id.salirButton);
 
       ImageButton botonPerfil = findViewById(R.id.perfilButton);
 

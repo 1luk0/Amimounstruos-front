@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.BuildConfig;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Services.AmigoService;

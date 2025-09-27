@@ -5,15 +5,14 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
+import com.app.amimounstruos.Components.DialogPopUpActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
-import com.app.amimounstruos.Screens.MapActivity;
 
 public class IncorrectoPersonasActivity extends BaseActivity {
 
@@ -28,16 +27,16 @@ public class IncorrectoPersonasActivity extends BaseActivity {
             return insets;
         });
       ImageButton botonVolverAIntentar = findViewById(R.id.volverAIntentar);
-      ImageButton botonNiveles = findViewById(R.id.configurationsButton);
+      ImageButton botonSalir = findViewById(R.id.salirButton);
 
       botonVolverAIntentar.setOnClickListener(v -> {
         Intent intent = new Intent(IncorrectoPersonasActivity.this, PreguntaPersonasActivity.class);
         startActivity(intent);
       });
 
-      botonNiveles.setOnClickListener(v -> {
-        Intent intent = new Intent(IncorrectoPersonasActivity.this, NivelesmaActivity.class);
-        startActivity(intent);
+      botonSalir.setOnClickListener(v -> {
+        DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(NivelesmaActivity.class);
+        dialog.show(getSupportFragmentManager(), "confirmacion_salida_menu");
       });
     }
 }

@@ -13,12 +13,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.BuildConfig;
+import com.app.amimounstruos.Components.DialogPopUpActivity;
 import com.app.amimounstruos.Models.Progreso;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
-import com.app.amimounstruos.Screens.MapActivity;
 import com.app.amimounstruos.Services.ProgresoService;
 import com.google.gson.Gson;
 
@@ -43,7 +43,7 @@ public class HistoriaAgua7Activity extends BaseActivity {
     });
 
     ImageButton botonContinue = findViewById(R.id.botonContinuar);
-    ImageButton botonNiveles = findViewById(R.id.configurationsButton);
+    ImageButton botonSalir = findViewById(R.id.salirButton);
 
     botonContinue.setOnClickListener(v -> {
       // Recuperar el usuarioId guardado
@@ -86,9 +86,9 @@ public class HistoriaAgua7Activity extends BaseActivity {
       startActivity(intent);
     }); // <-- Cierro el listener de botonContinue
 
-    botonNiveles.setOnClickListener(v -> {
-      Intent intent = new Intent(HistoriaAgua7Activity.this, NivelesmaActivity.class);
-      startActivity(intent);
+    botonSalir.setOnClickListener(v -> {
+      DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(NivelesmaActivity.class);
+      dialog.show(getSupportFragmentManager(), "confirmacion_salida_menu");
     });
   }
 }

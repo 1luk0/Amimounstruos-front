@@ -6,17 +6,15 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.configuracionActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel2.AprendamosAguaActivity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
-import com.app.amimounstruos.Screens.Userinf.AmigosActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
 public class MapActivity extends BaseActivity {
@@ -38,8 +36,6 @@ public class MapActivity extends BaseActivity {
       ImageButton botonConfiguracion = findViewById(R.id.configurations);
 
       ImageButton botonMedioAmbiente = findViewById(R.id.medioAmbiente);
-
-      ImageButton botonModales = findViewById(R.id.modales);
 
       ImageButton botonPerfil = findViewById(R.id.btn_perfil);
 
@@ -82,11 +78,6 @@ public class MapActivity extends BaseActivity {
 
       botonConfiguracion.setOnClickListener(v -> {
         Intent intent = new Intent(MapActivity.this, configuracionActivity.class);
-        startActivity(intent);
-      });
-
-      botonModales.setOnClickListener(v -> {
-        Intent intent = new Intent(MapActivity.this, AprendamosAguaActivity.class);
         startActivity(intent);
       });
     }

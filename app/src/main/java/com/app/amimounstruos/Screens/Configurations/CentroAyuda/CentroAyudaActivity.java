@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.MapActivity;
 
@@ -26,7 +25,7 @@ public class CentroAyudaActivity extends BaseActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-      ImageButton botonMapa = findViewById(R.id.configurationsButton);
+      ImageButton botonMapa = findViewById(R.id.salirButton);
 
       botonMapa.setOnClickListener(v -> {
         Intent intent = new Intent(CentroAyudaActivity.this, MapActivity.class);

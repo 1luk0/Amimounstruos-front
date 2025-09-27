@@ -9,7 +9,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.app.amimounstruos.BaseActivity;
+import com.app.amimounstruos.Components.BaseActivity;
+import com.app.amimounstruos.Components.DialogPopUpActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Nivel4.Banera1Activity;
 import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
@@ -27,11 +28,11 @@ public class ReparadorAguaActivity extends BaseActivity {
             return insets;
         });
 
-      ImageButton botonNiveles = findViewById(R.id.mapButton);
+      ImageButton botonSalir = findViewById(R.id.mapButton);
 
-      botonNiveles.setOnClickListener(v -> {
-        Intent intent = new Intent(ReparadorAguaActivity.this, NivelesmaActivity.class);
-        startActivity(intent);
+      botonSalir.setOnClickListener(v -> {
+        DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(NivelesmaActivity.class);
+        dialog.show(getSupportFragmentManager(), "confirmacion_salida_menu");
       });
 
       ImageButton botonContinuar = findViewById(R.id.botonContinuar);
