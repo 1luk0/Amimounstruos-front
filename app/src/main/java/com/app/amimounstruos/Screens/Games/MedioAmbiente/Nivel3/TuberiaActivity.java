@@ -12,7 +12,9 @@ import androidx.core.view.WindowInsetsCompat;
 import android.util.Log; // Asegúrate de importar esto
 
 import com.app.amimounstruos.Components.BaseActivity;
+import com.app.amimounstruos.Components.DialogPopUpActivity;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 
 public class TuberiaActivity extends BaseActivity {
 
@@ -33,6 +35,16 @@ public class TuberiaActivity extends BaseActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+    ImageButton botonSalir = findViewById(R.id.salirButton);
+
+    botonSalir.setOnClickListener(v -> {
+      DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(
+        NivelesmaActivity.class,      // Clase de destino
+        R.drawable.salirbk            // Imagen de "Estás seguro que deseas salir?"
+      );
+      dialog.show(getSupportFragmentManager(), "confirmacion_salida_nivel");
+    });
 
     tuberia1 = findViewById(R.id.tuberia1Button);
     tuberia2 = findViewById(R.id.tuberia2Button);
@@ -96,9 +108,4 @@ public class TuberiaActivity extends BaseActivity {
     Log.d("TUBERIA_VALIDACION", "¡Todas las tuberías están en la posición correcta!");
     continueArrow.setVisibility(View.VISIBLE);
   }
-
-
-
-
-
 }

@@ -34,22 +34,23 @@
 
   <ImageButton
     android:id="@+id/salirButton"
-    android:layout_width="60dp"
-    android:layout_height="50dp"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginEnd="4dp"
     android:background="@drawable/salirbtn"
     android:contentDescription="@string/mapa"
     app:layout_constraintBottom_toTopOf="@+id/guideline90"
     app:layout_constraintEnd_toStartOf="@+id/guideline89"
-    app:layout_constraintHeight_percent="0.12"
-    app:layout_constraintWidth_percent="0.07" />
+    app:layout_constraintHeight_percent="0.09"
+    app:layout_constraintWidth_percent="0.06" />
 
   <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/guideline90"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      app:layout_constraintGuide_begin="38dp"
-      app:layout_constraintGuide_percent="0.15" />
+    android:id="@+id/guideline90"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="38dp"
+    app:layout_constraintGuide_percent="0.14" />
 
   <ImageButton
       android:id="@+id/opcion2"

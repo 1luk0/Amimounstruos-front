@@ -31,8 +31,11 @@ public class ReparadorAguaActivity extends BaseActivity {
       ImageButton botonSalir = findViewById(R.id.mapButton);
 
       botonSalir.setOnClickListener(v -> {
-        DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(NivelesmaActivity.class);
-        dialog.show(getSupportFragmentManager(), "confirmacion_salida_menu");
+        DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(
+          NivelesmaActivity.class,      // Clase de destino
+          R.drawable.salirbk            // Imagen de "Estás seguro que deseas salir?"
+        );
+        dialog.show(getSupportFragmentManager(), "confirmacion_salida_nivel");
       });
 
       ImageButton botonContinuar = findViewById(R.id.botonContinuar);

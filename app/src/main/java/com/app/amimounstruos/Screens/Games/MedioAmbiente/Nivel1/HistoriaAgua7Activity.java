@@ -96,8 +96,11 @@ public class HistoriaAgua7Activity extends BaseActivity {
     });
 
     botonSalir.setOnClickListener(v -> {
-      DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(NivelesmaActivity.class);
-      dialog.show(getSupportFragmentManager(), "confirmacion_salida_menu");
+      DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(
+        NivelesmaActivity.class,      // Clase de destino
+        R.drawable.salirbk            // Imagen de "Estás seguro que deseas salir?"
+      );
+      dialog.show(getSupportFragmentManager(), "confirmacion_salida_nivel");
     });
   }
 }

@@ -46,10 +46,13 @@ public class AprendisteCerrarActivity extends BaseActivity {
 
     ImageButton botonContinue = findViewById(R.id.botonContinuar);
 
+
     botonContinue.setOnClickListener(v -> {
       updateProgresoAndNavigate();
     });
   }
+
+
 
   private void updateProgresoAndNavigate() {
     SharedPreferences prefs = getSharedPreferences("amimonstruos_prefs", MODE_PRIVATE);

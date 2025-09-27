@@ -10,7 +10,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.Components.BaseActivity;
+import com.app.amimounstruos.Components.DialogPopUpActivity;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 
 public class LlaveCerradaActivity extends BaseActivity {
 
@@ -29,6 +31,16 @@ public class LlaveCerradaActivity extends BaseActivity {
       llaveButton.setOnClickListener(v -> {
         Intent intent = new Intent(LlaveCerradaActivity.this, CerrasteLlaveActivity.class);
         startActivity(intent);
+      });
+
+      ImageButton botonSalir = findViewById(R.id.salirButton);
+
+      botonSalir.setOnClickListener(v -> {
+        DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(
+          NivelesmaActivity.class,      // Clase de destino
+          R.drawable.salirbk            // Imagen de "Estás seguro que deseas salir?"
+        );
+        dialog.show(getSupportFragmentManager(), "confirmacion_salida_nivel");
       });
     }
 }

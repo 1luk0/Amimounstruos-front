@@ -10,7 +10,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.Components.BaseActivity;
+import com.app.amimounstruos.Components.DialogPopUpActivity;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Games.MedioAmbiente.Niveles.NivelesmaActivity;
 
 public class TuberiasReparadasActivity extends BaseActivity {
 
@@ -26,6 +28,16 @@ public class TuberiasReparadasActivity extends BaseActivity {
         });
 
       ImageButton flechaButton = findViewById(R.id.continueArrow);
+
+      ImageButton botonSalir = findViewById(R.id.salirButton);
+
+      botonSalir.setOnClickListener(v -> {
+        DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(
+          NivelesmaActivity.class,      // Clase de destino
+          R.drawable.salirbk            // Imagen de "Estás seguro que deseas salir?"
+        );
+        dialog.show(getSupportFragmentManager(), "confirmacion_salida_nivel");
+      });
 
       flechaButton.setOnClickListener(v -> {
         Intent intent = new Intent(TuberiasReparadasActivity.this, AguaNoDesperdiciaActivity.class);

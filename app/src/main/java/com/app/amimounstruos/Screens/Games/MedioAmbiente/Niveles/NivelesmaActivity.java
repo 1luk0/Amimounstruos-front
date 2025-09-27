@@ -6,7 +6,9 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.app.amimounstruos.Components.BaseActivity;
@@ -39,6 +41,7 @@ public class NivelesmaActivity extends BaseActivity {
 
   // Mapa para asociar números de nivel con sus clases de actividad
   private final Map<Integer, Class<?>> nivelActivities = new HashMap<>();
+  private final Map<Integer, Integer> basurasPorNivel = new HashMap<>();
 
   // Variables de sesión
   private SharedPreferences prefs;
@@ -57,7 +60,33 @@ public class NivelesmaActivity extends BaseActivity {
     nivelActivities.put(2, AprendamosAguaActivity.class);
     nivelActivities.put(3, TuberiaActivity.class);
     nivelActivities.put(4, Banera1Activity.class);
-    // ... Agrega los demás niveles aquí
+
+    // Nivel 1 Completado
+    basurasPorNivel.put(R.id.basura1, 1);
+    basurasPorNivel.put(R.id.basura2, 1);
+
+    // Nivel 2 Completado
+    basurasPorNivel.put(R.id.basura3, 2);
+    basurasPorNivel.put(R.id.basura5, 2);
+
+    // Nivel 3 Completado
+    basurasPorNivel.put(R.id.basura9, 3);
+    basurasPorNivel.put(R.id.basura10, 3);
+
+    // Nivel 4 Completado
+    basurasPorNivel.put(R.id.basura11, 4);
+    basurasPorNivel.put(R.id.basura12, 4);
+
+    // Puedes seguir agregando más pares (basura, nivel) aquí:
+    basurasPorNivel.put(R.id.basura13, 5);
+    basurasPorNivel.put(R.id.basura18, 5);
+
+    // ... (Agrega el resto de basuras y sus niveles correspondientes aquí) ...
+    basurasPorNivel.put(R.id.basura19, 6);
+    basurasPorNivel.put(R.id.basura20, 6);
+    basurasPorNivel.put(R.id.basura21, 7);
+    basurasPorNivel.put(R.id.basura22, 7);
+    basurasPorNivel.put(R.id.basura23, 8);
 
     prefs = getSharedPreferences("amimonstruos_prefs", MODE_PRIVATE);
     userId = prefs.getInt("user_id", 0);
@@ -99,9 +128,6 @@ public class NivelesmaActivity extends BaseActivity {
       public void onResponse(Call<Progreso> call, Response<Progreso> response) {
         if (response.isSuccessful() && response.body() != null) {
           Progreso progreso = response.body();
-
-          // PASO CLAVE 2: Usar el campo 'numero' directamente del objeto Progreso
-          // Asume que Progreso.getNumero() devuelve el número del nivel (ej. 1, 2, 3)
           Integer nivelActualNumero = (Integer) progreso.getNumero();
 
           Log.d(TAG, "API Exitosa. Nivel 'numero' recibido: " + nivelActualNumero);
@@ -116,12 +142,14 @@ public class NivelesmaActivity extends BaseActivity {
           // Si el progreso dice Nivel 1 (en curso), desbloqueamos el Nivel 2.
           int nivelesADesbloquear = nivelActualNumero + 1;
           habilitarNivelesHasta(nivelesADesbloquear);
+          ocultarBasurasHasta(nivelActualNumero);
           Log.d(TAG, "Niveles desbloqueados hasta: " + nivelesADesbloquear);
 
         } else {
           // Si la API devuelve 404 o falla (ej. sin registro)
           Log.e(TAG, "Error en API de Progreso. Código: " + response.code() + ". Mensaje: " + response.message());
           habilitarNivelesHasta(1);
+          ocultarBasurasHasta(0);
           Log.w(TAG, "Desbloqueando solo Nivel 1 por fallo de API.");
         }
       }
@@ -176,11 +204,8 @@ public class NivelesmaActivity extends BaseActivity {
    */
   private void habilitarNivelesHasta(int maxNivelPermitido) {
     ColorMatrix matrix = new ColorMatrix();
-    matrix.setSaturation(0); // Configura el filtro a blanco y negro
+    matrix.setSaturation(0);
     final ColorMatrixColorFilter filter = new ColorMatrixColorFilter(matrix);
-
-    Log.d(TAG, "--- Ejecutando habilitarNivelesHasta con maxNivelPermitido: " + maxNivelPermitido + " ---");
-
 
     for (int i = 1; i <= 9; i++) {
       int resId = getResources().getIdentifier("nivel" + i, "id", getPackageName());
@@ -188,10 +213,8 @@ public class NivelesmaActivity extends BaseActivity {
 
       if (boton != null) {
         if (i <= maxNivelPermitido) {
-          // Nivel habilitado (Quita el filtro)
           boton.setColorFilter(null);
           boton.setEnabled(true);
-
           final int nivelActual = i;
           boton.setOnClickListener(v -> {
             Class<?> activityClass = nivelActivities.get(nivelActual);
@@ -202,15 +225,25 @@ public class NivelesmaActivity extends BaseActivity {
             }
           });
         } else {
-          // Nivel deshabilitado (Aplica el filtro)
           boton.setColorFilter(filter);
           boton.setEnabled(false);
           boton.setOnClickListener(v ->
             Toast.makeText(this, "Este nivel está bloqueado", Toast.LENGTH_SHORT).show()
           );
         }
-      } else {
-        Log.w(TAG, "No se encontró el botón nivel" + i);
+      }
+    }
+  }
+
+  private void ocultarBasurasHasta(int nivelCompletado) {
+    for (Map.Entry<Integer, Integer> entry : basurasPorNivel.entrySet()) {
+      ImageView basura = findViewById(entry.getKey());
+      if (basura != null) {
+        if (entry.getValue() <= nivelCompletado) {
+          basura.setVisibility(View.INVISIBLE);
+        } else {
+          basura.setVisibility(View.VISIBLE);
+        }
       }
     }
   }
