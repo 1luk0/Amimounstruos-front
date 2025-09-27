@@ -1,9 +1,13 @@
 package com.app.amimounstruos.Models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Nivel {
   private Integer id;
-  private Integer numero;
   private Integer cursoId;
+
+  @SerializedName("numero")
+  private Integer numero;
 
   public Nivel(Integer id, Integer numero, Integer cursoId) {
     this.id = id;

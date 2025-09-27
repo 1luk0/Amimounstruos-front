@@ -9,6 +9,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ProgresoService {
@@ -20,4 +21,6 @@ public interface ProgresoService {
   @GET("/progresos/usuario/{usuarioId}/curso/{cursoId}")
   Call<Progreso> getProgresoByUsuarioYCurso(@Path("usuarioId") int usuarioId, @Path("cursoId") int cursoId);
 
+  @PUT("/progresos/{usuarioId}")
+  Call<Progreso> updateProgreso(@Path("usuarioId") int usuarioId, @Body Progreso progreso);
 }
