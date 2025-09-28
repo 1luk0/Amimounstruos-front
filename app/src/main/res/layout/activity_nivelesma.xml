@@ -60,7 +60,7 @@
       tools:contentDescription="@string/nivel4" />
 
   <ImageButton
-      android:id="@+id/b5"
+      android:id="@+id/nivel5"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"
@@ -72,7 +72,7 @@
       app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
-      android:id="@+id/b6"
+      android:id="@+id/nivel6"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"
@@ -84,7 +84,7 @@
       app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
-      android:id="@+id/b7"
+      android:id="@+id/nivel7"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"
@@ -100,7 +100,7 @@
   <!-- Menú inferior -->
 
   <ImageButton
-      android:id="@+id/b8"
+      android:id="@+id/nivel8"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"
@@ -112,7 +112,7 @@
       app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
-      android:id="@+id/b9"
+      android:id="@+id/nivel9"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:layout_gravity="top|start"
