@@ -33,12 +33,12 @@
       app:layout_constraintGuide_percent="0.97" />
 
   <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/guideline155"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      app:layout_constraintGuide_begin="0dp"
-      app:layout_constraintGuide_percent="0.14" />
+    android:id="@+id/guideline155"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="0dp"
+    app:layout_constraintGuide_percent="0.12" />
 
   <ImageButton
       android:id="@+id/continueArrow"

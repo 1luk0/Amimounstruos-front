@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.util.Log; // Asegúrate de tener este import para logging
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,13 +23,39 @@ import java.io.Serializable;
 
 public class DialogPopUpActivity extends DialogFragment {
 
+  private static final String TAG = "DialogPopUpActivity";
   private static final String KEY_DESTINATION_ACTIVITY = "destination_activity";
-  private Class<?> destinationClass;
+  private static final String KEY_IMAGE_RES_ID = "image_res_id";
+  private static final String KEY_CALLBACK = "callback";
 
-  public static DialogPopUpActivity newInstance(Class<?> destinationActivityClass) {
+  // 1. Interfaz de Callback para acciones personalizadas (como Logout)
+  public interface DialogActionCallback extends Serializable {
+    void onActionConfirmed();
+  }
+
+  private Class<?> destinationClass;
+  private int imageResId = -1;
+  private DialogActionCallback callback; // Será null para el caso "Salir a Niveles"
+
+  /**
+   * Constructor genérico para Salir a Niveles (sin acción de limpieza).
+   */
+  public static DialogPopUpActivity newInstance(Class<?> destinationActivityClass, int drawableResId) {
+    return newInstance(destinationActivityClass, drawableResId, null);
+  }
+
+  /**
+   * Constructor para Cerrar Sesión (con acción de limpieza).
+   */
+  public static DialogPopUpActivity newInstance(Class<?> destinationActivityClass, int drawableResId, @Nullable DialogActionCallback callback) {
     DialogPopUpActivity fragment = new DialogPopUpActivity();
     Bundle args = new Bundle();
     args.putSerializable(KEY_DESTINATION_ACTIVITY, destinationActivityClass);
+    args.putInt(KEY_IMAGE_RES_ID, drawableResId);
+
+    if (callback != null) {
+      args.putSerializable(KEY_CALLBACK, callback);
+    }
     fragment.setArguments(args);
     return fragment;
   }
@@ -43,6 +72,13 @@ public class DialogPopUpActivity extends DialogFragment {
       if (serializableClass instanceof Class) {
         destinationClass = (Class<?>) serializableClass;
       }
+      imageResId = getArguments().getInt(KEY_IMAGE_RES_ID, -1);
+
+      // Recuperar el callback (será null si no se envió)
+      Serializable serializableCallback = getArguments().getSerializable(KEY_CALLBACK);
+      if (serializableCallback instanceof DialogActionCallback) {
+        callback = (DialogActionCallback) serializableCallback;
+      }
     }
   }
 
@@ -51,15 +87,38 @@ public class DialogPopUpActivity extends DialogFragment {
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.activity_dialog_pop_up, container, false);
 
+    ImageView popupImage = view.findViewById(R.id.deseassalir);
+    if (popupImage != null && imageResId != -1) {
+      popupImage.setImageResource(imageResId);
+    } else if (popupImage != null) {
+      popupImage.setImageResource(R.drawable.salirbk);
+    }
+
     ImageButton yesButton = view.findViewById(R.id.yesButton);
     ImageButton noButton = view.findViewById(R.id.noButton);
 
     if (yesButton != null) {
       yesButton.setOnClickListener(v -> {
+        // EJECUCIÓN CLAVE: Si hay un callback (Logout), se ejecuta la limpieza.
+        if (callback != null) {
+          Log.d(TAG, "Ejecutando callback de acción (Logout).");
+          callback.onActionConfirmed();
+        }
+
         if (destinationClass != null && getActivity() != null) {
           Intent intent = new Intent(getActivity(), destinationClass);
+
+          // Lógica para Logout: Si hay un callback, significa que estamos cerrando sesión
+          if (callback != null) {
+            Log.d(TAG, "Cerrando sesión, limpiando stack de Activities.");
+            // Limpia la pila de Activities para asegurar que no puedan regresar
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+          } else {
+            // Lógica normal para Salir a Niveles: no limpia el stack
+            Log.d(TAG, "Saliendo a Niveles, manteniendo stack.");
+          }
+
           startActivity(intent);
-          getActivity().finish();
         }
         dismiss();
       });
@@ -79,7 +138,6 @@ public class DialogPopUpActivity extends DialogFragment {
     super.onStart();
     Window window = getDialog().getWindow();
     if (window != null) {
-      // Establece el fondo como transparente y ajusta el tamaño
       window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
       window.setLayout(
         ViewGroup.LayoutParams.MATCH_PARENT,
@@ -95,7 +153,6 @@ public class DialogPopUpActivity extends DialogFragment {
           | View.SYSTEM_UI_FLAG_FULLSCREEN
       );
 
-      // Elimina la sombra oscura detrás del diálogo
       window.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
     }
   }

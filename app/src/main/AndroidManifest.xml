@@ -19,9 +19,6 @@
             android:name=".Components.DialogPopUpActivity"
             android:exported="false" />
         <activity
-            android:name=".Screens.Games.MedioAmbiente.Nivel1.pruebaActivity"
-            android:exported="false" />
-        <activity
             android:name=".Screens.Games.MedioAmbiente.Nivel4.BanarseRapidoActivity"
             android:exported="false" />
         <activity

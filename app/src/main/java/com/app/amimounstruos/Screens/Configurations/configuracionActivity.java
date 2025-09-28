@@ -11,9 +11,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.Components.BaseActivity;
+import com.app.amimounstruos.Components.DialogPopUpActivity;
 import com.app.amimounstruos.R;
 import com.app.amimounstruos.Screens.Configurations.CentroAyuda.CentroAyudaActivity;
 import com.app.amimounstruos.Screens.Configurations.CentroAyuda.Notificaciones.NotificacionesActivity;
+import com.app.amimounstruos.Screens.Login.MainActivity;
 import com.app.amimounstruos.Screens.MapActivity;
 import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
@@ -35,6 +37,16 @@ public class configuracionActivity extends BaseActivity {
       ImageButton botonCentroAyuda = findViewById(R.id.btn_ayuda);
       ImageButton botonMapa = findViewById(R.id.salirButton);
       ImageButton botonPerfil = findViewById(R.id.btn_perfil);
+      ImageButton botonCerrarSesion = findViewById(R.id.cerrarsesionButton);
+
+      botonCerrarSesion.setOnClickListener(v -> {
+        // Simula que quieres ir a la pantalla de Login (LoginActivity.class)
+        DialogPopUpActivity dialog = DialogPopUpActivity.newInstance(
+          MainActivity.class,          // Clase de destino (Login)
+          R.drawable.cerrarsesionbk  // Imagen de "Estás seguro que deseas cerrar sesión?"
+        );
+        dialog.show(getSupportFragmentManager(), "confirmacion_cerrar_sesion");
+      });
 
       botonCentroAyuda.setOnClickListener(v -> {
         Intent intent = new Intent(configuracionActivity.this, CentroAyudaActivity.class);

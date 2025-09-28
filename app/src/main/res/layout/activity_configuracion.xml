@@ -57,7 +57,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <ImageButton
-        android:id="@+id/imageButton17"
+        android:id="@+id/cerrarsesionButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/cerrarsesion"

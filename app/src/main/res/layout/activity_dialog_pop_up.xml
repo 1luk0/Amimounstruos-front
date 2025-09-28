@@ -38,12 +38,14 @@
     android:id="@+id/deseassalir"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:src="@drawable/salirbk"
-    app:layout_constraintStart_toStartOf="@id/guideline_vertical_center"
-    app:layout_constraintEnd_toEndOf="@id/guideline_vertical_center"
-    app:layout_constraintTop_toTopOf="@id/guideline_horizontal_center"
-    app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_center"
-    android:contentDescription="Pop-up de Confirmación" />
+
+    android:src="@null"
+
+  app:layout_constraintStart_toStartOf="@id/guideline_vertical_center"
+  app:layout_constraintEnd_toEndOf="@id/guideline_vertical_center"
+  app:layout_constraintTop_toTopOf="@id/guideline_horizontal_center"
+  app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_center"
+  android:contentDescription="Pop-up dinámico" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline_vertical_button_center"
