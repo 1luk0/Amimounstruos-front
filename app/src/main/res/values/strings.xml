@@ -2,6 +2,7 @@
     <string name="app_name">Amimounstruos</string>
     <string name="login">login</string>
     <string name="hint_name">Nombre</string>
+  <string name="hint_friend">Nombre o usuario</string>
     <string name="textlogin1">¿Cuál es tu nombre amimonstruoso?</string>
     <string name="textlogin2">Para comenzar, ingresa tu nombre</string>
     <string name="slc1">Elige un amimonstruo para ti</string>
