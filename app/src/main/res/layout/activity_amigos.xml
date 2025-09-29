@@ -32,6 +32,8 @@
       android:layout_gravity="center_horizontal"
       android:layout_marginBottom="12dp"/>
 
+
+
     <!-- Contenedor de items -->
     <LinearLayout
       android:id="@+id/listaAmigos"
@@ -39,4 +41,32 @@
       android:layout_height="wrap_content"
       android:orientation="vertical"/>
   </LinearLayout>
+
+  <ImageButton
+    android:id="@+id/AgregarAmigosButton"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_gravity="top|start"
+    android:background="@drawable/agregaramigosbtn"
+    android:contentDescription="@string/mapa"
+    app:layout_constraintHeight_percent="0.06"
+    app:layout_constraintStart_toStartOf="@+id/guideline179"
+    app:layout_constraintTop_toTopOf="@+id/guideline188"
+    app:layout_constraintWidth_percent="0.4" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline179"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="0dp"
+    app:layout_constraintGuide_percent="0.29" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline188"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="0dp"
+    app:layout_constraintGuide_percent="0.86" />
 </androidx.constraintlayout.widget.ConstraintLayout>

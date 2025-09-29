@@ -29,7 +29,7 @@ android {
     buildConfigField(
       "String",
       "BACKEND_URL",
-      "\"${localProperties.getProperty("backend.url", "http://192.168.1.112:3333/")}\""
+      "\"${localProperties.getProperty("backend.url", "http://192.168.215.26:3333/")}\""
     )
   }
 

@@ -1,8 +1,10 @@
 package com.app.amimounstruos.Screens.Userinf;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.app.amimounstruos.Components.BaseActivity;
@@ -28,6 +30,10 @@ public class AmigosActivity extends BaseActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_amigos);
+
+    ImageButton AgregarAmigosButton = findViewById(R.id.AgregarAmigosButton);
+
+    AgregarAmigosButton.setOnClickListener(v -> startActivity(new Intent(this, AnadirAmigoActivity.class)));
 
     listaAmigos = findViewById(R.id.listaAmigos);
 
