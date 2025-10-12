@@ -39,18 +39,18 @@
     android:background="@android:color/transparent"/>
 
   <ImageButton
-    android:id="@+id/nivel3"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_gravity="top|start"
-    android:src="@drawable/nivel3ma"
-    android:scaleType="fitCenter"
-    android:contentDescription="@string/nivel3"
-    app:layout_constraintHeight_percent="0.08"
-    app:layout_constraintStart_toStartOf="@+id/guideline175"
-    app:layout_constraintTop_toTopOf="@+id/guideline186"
-    app:layout_constraintWidth_percent="0.06"
-    android:background="@android:color/transparent"/>
+      android:id="@+id/nivel3"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_gravity="top|start"
+      android:background="@android:color/transparent"
+      android:contentDescription="@string/nivel3"
+      android:scaleType="fitCenter"
+      android:src="@drawable/nivel6ma"
+      app:layout_constraintHeight_percent="0.08"
+      app:layout_constraintStart_toStartOf="@+id/guideline175"
+      app:layout_constraintTop_toTopOf="@+id/guideline186"
+      app:layout_constraintWidth_percent="0.06" />
 
   <ImageButton
     android:id="@+id/nivel4"
@@ -96,18 +96,18 @@
     android:background="@android:color/transparent"/>
 
   <ImageButton
-    android:id="@+id/nivel7"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_gravity="top|start"
-    android:src="@drawable/nivel7ma"
-    android:scaleType="fitCenter"
-    android:contentDescription="@string/nivel7"
-    app:layout_constraintHeight_percent="0.08"
-    app:layout_constraintStart_toStartOf="@+id/guideline178"
-    app:layout_constraintTop_toTopOf="@+id/guideline183"
-    app:layout_constraintWidth_percent="0.06"
-    android:background="@android:color/transparent"/>
+      android:id="@+id/nivel7"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_gravity="top|start"
+      android:background="@android:color/transparent"
+      android:contentDescription="@string/nivel7"
+      android:scaleType="fitCenter"
+      android:src="@drawable/nivel4ma"
+      app:layout_constraintHeight_percent="0.08"
+      app:layout_constraintStart_toStartOf="@+id/guideline178"
+      app:layout_constraintTop_toTopOf="@+id/guideline183"
+      app:layout_constraintWidth_percent="0.06" />
 
   <!-- Botón invisible sobre la llave -->
 

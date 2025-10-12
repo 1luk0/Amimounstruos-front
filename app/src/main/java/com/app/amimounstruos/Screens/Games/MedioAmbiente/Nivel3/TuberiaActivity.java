@@ -64,7 +64,7 @@ public class TuberiaActivity extends BaseActivity {
     setRotateListener(tuberia6, 5, 90);
 
     continueArrow.setOnClickListener(v -> {
-      Intent intent = new Intent(TuberiaActivity.this, TuberiasReparadasActivity.class);
+      Intent intent = new Intent(TuberiaActivity.this, AguaNoDesperdiciaActivity.class);
       startActivity(intent);
     });
 
