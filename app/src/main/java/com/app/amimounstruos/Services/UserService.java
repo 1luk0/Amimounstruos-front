@@ -17,4 +17,7 @@ public interface UserService {
   Call<ResponseBody> verificarNombre(@Path("nombre") String nombre);
   @GET("/usuarios/{id}")
   Call<ResponseBody> obtenerusuario(@Path("id") int id);
+
+  @GET("/usuarios/nombre/{nombre}")
+  Call<User> obtenerusuarioByName(@Path("nombre") String id);
 }

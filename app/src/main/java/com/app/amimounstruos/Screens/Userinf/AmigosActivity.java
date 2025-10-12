@@ -80,9 +80,6 @@ public class AmigosActivity extends BaseActivity {
 
     AmigoService amigoService = retrofit.create(AmigoService.class);
     int userId = prefs.getInt("user_id", -1);  // ← Usa la misma clave: "user_id"
-
-
-
     amigoService.getAmigoByUserId(userId).enqueue(new Callback<ResponseBody>() {
       @Override
       public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

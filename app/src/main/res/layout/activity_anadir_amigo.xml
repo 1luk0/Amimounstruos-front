@@ -9,6 +9,13 @@
   tools:context=".Screens.Userinf.AnadirAmigoActivity">
 
   <!-- Fondo opaco -->
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline219"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_end="747dp" />
+
   <ImageView
     android:id="@+id/imageView3"
     android:layout_width="0dp"
@@ -20,9 +27,114 @@
     app:layout_constraintTop_toTopOf="parent"
     app:srcCompat="@drawable/opcidad" />
 
+  <ImageView
+    android:id="@+id/recuadroAmigos"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/recblanco"
+    app:layout_constraintBottom_toTopOf="@+id/guideline24"
+    app:layout_constraintEnd_toStartOf="@+id/guideline23"
+    app:layout_constraintHeight_percent="0.75"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/guideline22"
+    app:layout_constraintTop_toTopOf="@+id/guideline21"
+    app:layout_constraintVertical_bias="0.666"
+    app:layout_constraintWidth_percent="0.88" />
+
+  <!-- Campo de búsqueda -->
+
+  <!-- Contenedor invisible para mostrar resultados -->
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/inputContainer"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/recnombreusuario"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.12"
+    app:layout_constraintBottom_toBottomOf="@id/guideline222"
+    app:layout_constraintStart_toStartOf="@+id/guideline224"
+    app:layout_constraintWidth_percent="0.88">
+
+    <ImageView
+      android:id="@+id/iconLupa"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="16dp"
+      android:src="@drawable/lupabtn"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintDimensionRatio="1:1"
+      app:layout_constraintHeight_percent="0.65"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+      android:id="@+id/nameInput"
+      android:layout_width="972dp"
+      android:layout_height="63dp"
+      android:layout_marginStart="13dp"
+      android:layout_marginBottom="16dp"
+      android:background="@null"
+      android:fontFamily="@font/comfortaabold"
+      android:hint="@string/hint_friend"
+      android:imeOptions="actionDone"
+      android:inputType="text"
+      android:paddingStart="12dp"
+
+      android:paddingEnd="20dp"
+      android:textSize="30sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/iconLupa" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/contenedorScrollBusqueda"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@android:color/transparent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.7"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/inputContainer"
+    app:layout_constraintWidth_percent="0.9">
+
+    <ScrollView
+      android:id="@+id/scrollResultados"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@android:color/transparent"
+      android:importantForAccessibility="no"
+      android:scrollbars="none">
+
+      <LinearLayout
+        android:id="@+id/listaResultados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="fill_horizontal"
+        android:orientation="vertical"
+        android:padding="0dp" />
+    </ScrollView>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <!-- Contenedor oculto para lista de amigos (no depende de listaResultados) -->
+  <LinearLayout
+    android:id="@+id/friendListContainer"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/contenedorScrollBusqueda" />
 
 
-  <!-- Menú inferior y otros elementos (sin cambios) -->
+  <!-- Menú inferior -->
   <ImageView
     android:id="@+id/imageView6"
     android:layout_width="0dp"
@@ -67,8 +179,8 @@
     android:layout_height="0dp"
     android:layout_gravity="top|start"
     android:background="@drawable/perfil"
-    android:scaleType="fitCenter"
     android:contentDescription="@string/amigos"
+    android:scaleType="fitCenter"
     app:layout_constraintEnd_toStartOf="@+id/guideline180"
     app:layout_constraintHeight_percent="0.08"
     app:layout_constraintTop_toTopOf="@+id/guideline188"
@@ -90,23 +202,14 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.941" />
 
-  <ImageView
-    android:id="@+id/listaAmigos"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:background="@drawable/recblanco"
-    app:layout_constraintBottom_toTopOf="@+id/guideline24"
-    app:layout_constraintEnd_toStartOf="@+id/guideline23"
-    app:layout_constraintHeight_percent="0.65"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="@+id/guideline22"
-    app:layout_constraintTop_toTopOf="@+id/guideline21"
-    app:layout_constraintVertical_bias="0.666"
-    app:layout_constraintWidth_percent="0.6" />
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline188"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="0dp"
+    app:layout_constraintGuide_percent="0.86" />
 
-  <!-- Elementos eliminados: imageView5 y imageView7, y nameInput original -->
-
-  <!-- GUIDELINES (sin cambios) -->
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline187"
     android:layout_width="wrap_content"
@@ -114,14 +217,6 @@
     android:orientation="horizontal"
     app:layout_constraintGuide_begin="0dp"
     app:layout_constraintGuide_percent="0.851" />
-
-  <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline179"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="0dp"
-    app:layout_constraintGuide_percent="0.375" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline180"
@@ -132,12 +227,20 @@
     app:layout_constraintGuide_percent="0.625" />
 
   <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline188"
+    android:id="@+id/guideline179"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     app:layout_constraintGuide_begin="0dp"
-    app:layout_constraintGuide_percent="0.86" />
+    app:layout_constraintGuide_percent="0.375" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline224"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="0dp"
+    app:layout_constraintGuide_percent="0.012" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline24"
@@ -152,78 +255,48 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:layout_constraintGuide_begin="0dp"
-    app:layout_constraintGuide_percent="0.8" />
+    app:layout_constraintGuide_end="130dp" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline22"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:layout_constraintGuide_begin="0dp"
-    app:layout_constraintGuide_percent="0.2" />
+    app:layout_constraintGuide_end="1195dp" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline220"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_end="1155dp" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline21"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    app:layout_constraintGuide_begin="0dp"
-    app:layout_constraintGuide_percent="0.1" />
+    app:layout_constraintGuide_end="727dp" />
 
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline221"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="40dp" />
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/inputContainer"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:background="@drawable/recnombreusuario"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHeight_percent="0.12"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.105"
-    app:layout_constraintWidth_percent="0.6">
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline222"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="95dp" />
 
-    <!-- ÍCONO DE LUPA (Controlado por porcentaje) -->
-    <ImageView
-      android:id="@+id/iconLupa"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:layout_marginStart="16dp"
-      android:contentDescription="@string/hint_friend"
-
-      android:src="@drawable/lupabtn"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintDimensionRatio="1:1"
-      app:layout_constraintHeight_percent="0.65"
-
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- INPUT DE TEXTO REAL (Sin fondo, anclado al icono) -->
-    <EditText
-      android:id="@+id/nameInput"
-      android:layout_width="0dp"
-      android:layout_height="match_parent"
-      android:background="@null"
-      android:ems="10"
-      android:fontFamily="@font/comfortaabold"
-      android:hint="@string/hint_friend"
-      android:inputType="text"
-
-      android:paddingStart="12dp"
-      android:paddingEnd="20dp"
-      android:textSize="30sp"
-
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toEndOf="@+id/iconLupa"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.0" />
-
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline223"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

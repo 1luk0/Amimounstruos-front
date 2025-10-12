@@ -5,8 +5,7 @@ public class Amigo {
   private Number usuarioId;
   private Number amigoId;
 
-  public Amigo(Number id, Number usuarioId, Number amigoId) {
-    this.id = id;
+  public Amigo(Number usuarioId, Number amigoId) {
     this.usuarioId = usuarioId;
     this.amigoId = amigoId;
   }
