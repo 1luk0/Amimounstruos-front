@@ -103,11 +103,14 @@
 
     <ScrollView
       android:id="@+id/scrollResultados"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_width="1122dp"
+      android:layout_height="444dp"
+      android:layout_marginEnd="8dp"
       android:background="@android:color/transparent"
       android:importantForAccessibility="no"
-      android:scrollbars="none">
+      android:scrollbars="none"
+      app:layout_constraintEnd_toEndOf="parent"
+      tools:layout_editor_absoluteY="-9dp">
 
       <LinearLayout
         android:id="@+id/listaResultados"
@@ -118,20 +121,26 @@
         android:orientation="vertical"
         android:padding="0dp" />
     </ScrollView>
-  </androidx.constraintlayout.widget.ConstraintLayout>
 
-  <!-- Contenedor oculto para lista de amigos (no depende de listaResultados) -->
-  <LinearLayout
-    android:id="@+id/friendListContainer"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:orientation="vertical"
-    android:padding="8dp"
-    android:visibility="gone"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/contenedorScrollBusqueda" />
+    <TextView
+      android:id="@+id/buscarAmigo"
+      android:layout_width="622dp"
+      android:layout_height="127dp"
+      android:layout_marginBottom="200dp"
+      android:fontFamily="@font/comfortaabold"
+      android:gravity="center"
+      android:text="@string/buscaamigos"
+      android:textColor="#7A7A7A"
+      android:textSize="35sp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:visibility="visible" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
 
   <!-- Menú inferior -->
@@ -276,7 +285,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    app:layout_constraintGuide_end="727dp" />
+    app:layout_constraintGuide_end="647dp" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline221"
@@ -290,7 +299,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    app:layout_constraintGuide_begin="95dp" />
+    app:layout_constraintGuide_begin="140dp" />
 
   <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline223"

@@ -18,10 +18,10 @@
     <string name="centroayuda">Centro de Ayuda</string>
     <string name="preguntasfrec">Preguntas frecuentes</string>
     <string name="ajuspriv">Ajustes de Privacidad</string>
-    <string name="ap1">Recoleccion de informacinón</string>
+    <string name="ap1">Recoleccion de información</string>
     <string name="ap2">Permitir recolección de datos para análisis </string>
-    <string name="ap3">Funcionalidades de localizacion</string>
-    <string name="ap4">Permitir el uso de localizacion para las funcionalidades de amimounstruos</string>
+    <string name="ap3">Funcionalidades de localización</string>
+    <string name="ap4">Permitir el uso de localización para las funcionalidades de amimounstruos</string>
     <string name="desc_boton_amigos">Botón para ver amigos</string>
     <string name="preguntafrec1">¿Cómo cambio mi nombre de usuario o mi dirección de correo electrónico?</string>
     <string name="preguntafrec2">¿Cómo elimino o reinicio un curso?</string>
@@ -65,5 +65,7 @@
     <string name="nivel8">Nivel 8</string>
     <string name="nivel9">Nivel 9</string>
   <string name="textfriends">Amigos</string>
+    <string name="agregaamigos">¡Aún no tienes amigos! Toca el botón para añadir uno</string>
+  <string name="buscaamigos">Escribe el nombre de tu amigo para agregarlo</string>
 
 </resources>

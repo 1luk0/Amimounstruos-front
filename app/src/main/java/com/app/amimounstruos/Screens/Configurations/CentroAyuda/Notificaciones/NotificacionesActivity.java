@@ -21,32 +21,12 @@ public class NotificacionesActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_notificaciones);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
       ImageButton botonRegreso = findViewById(R.id.returnButton);
 
       ImageButton botonAjustes = findViewById(R.id.salirButton);
 
       ImageButton botonPerfil = findViewById(R.id.perfilButton);
-
-      ImageButton botonNovedades = findViewById(R.id.novedadesButton);
-
-      ImageButton botonRecordatorios = findViewById(R.id.recordatoriosButton);
-
-
-      botonRecordatorios.setOnClickListener(v -> {
-        Intent intent = new Intent(NotificacionesActivity.this, RecordatoriosActivity.class);
-        startActivity(intent);
-      });
-
-      botonNovedades.setOnClickListener(v -> {
-        Intent intent = new Intent(NotificacionesActivity.this, NovedadesActivity.class);
-        startActivity(intent);
-      });
 
 
       botonPerfil.setOnClickListener(v -> {

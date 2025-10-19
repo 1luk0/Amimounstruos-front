@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.BuildConfig;
@@ -42,6 +45,7 @@ public class AmigosActivity extends BaseActivity {
     ImageButton botonPerfil = findViewById(R.id.perfilButton);
     ImageButton botonConfiguracion = findViewById(R.id.configurations);
     ImageButton botonReturn = findViewById(R.id.returnButton);
+    TextView textoSinAmigos = findViewById(R.id.buscarAmigo);
 
     int personajeSeleccionado = prefs.getInt("personaje_seleccionado", -1);
     int avatarBtnResId;
@@ -63,6 +67,9 @@ public class AmigosActivity extends BaseActivity {
         break;
     }
     botonPerfil.setImageResource(avatarBtnResId);
+
+
+
 
     // Listeners de Navegación (sin cambios)
     botonMapa.setOnClickListener(v -> startActivity(new Intent(this, MapActivity.class)));
@@ -92,36 +99,46 @@ public class AmigosActivity extends BaseActivity {
           String json = response.body().string();
           JSONArray amigos = new JSONArray(json);
 
-          for (int i = 0; i < amigos.length(); i++) {
-            JSONObject obj = amigos.getJSONObject(i);
-            String nombre = obj.getString("nombre");
-            int amimounstruo = obj.getInt("amimounstruo");
+          // 🔹 Obtenemos la referencia al texto amistoso
+          TextView textoSinAmigos = findViewById(R.id.buscarAmigo);
 
+          if (amigos.length() == 0) {
+            // 🟢 No hay amigos → mostramos el texto y salimos
             runOnUiThread(() -> {
-              AmigoItem item = new AmigoItem(AmigosActivity.this);
-              item.setNombre(nombre);
-              item.setNumero(amimounstruo);
-
-              // Ancho para que ocupe TODO el espacio disponible.
-              LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, // <-- ¡Este es el cambio!
-                LinearLayout.LayoutParams.WRAP_CONTENT
-              );
-
-// Opcional: puedes ajustar los márgenes si quieres un poco de espacio vertical
-// entre los items, pero los márgenes horizontales deberían ser 0.
-              params.setMargins(0, 8, 0, 8); // (izquierda, arriba, derecha, abajo)
-
-              item.setLayoutParams(params);
-
-              listaAmigos.addView(item);
+              textoSinAmigos.setVisibility(View.VISIBLE);
+              listaAmigos.removeAllViews(); // limpiar por si acaso
             });
+          } else {
+            // 🔵 Hay amigos → ocultamos el texto y mostramos la lista
+            runOnUiThread(() -> textoSinAmigos.setVisibility(View.GONE));
 
+            for (int i = 0; i < amigos.length(); i++) {
+              JSONObject obj = amigos.getJSONObject(i);
+              String nombre = obj.getString("nombre");
+              int amimounstruo = obj.getInt("amimounstruo");
+
+              runOnUiThread(() -> {
+                AmigoItem item = new AmigoItem(AmigosActivity.this);
+                item.setNombre(nombre);
+                item.setNumero(amimounstruo);
+
+                // Configurar el ancho completo
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                  LinearLayout.LayoutParams.MATCH_PARENT,
+                  LinearLayout.LayoutParams.WRAP_CONTENT
+                );
+                params.setMargins(0, 8, 0, 8);
+
+                item.setLayoutParams(params);
+                listaAmigos.addView(item);
+              });
+            }
           }
 
         } catch (Exception e) {
           Log.e("Amigos", "Error procesando JSON", e);
         }
+
       }
 
       @Override
@@ -131,11 +148,4 @@ public class AmigosActivity extends BaseActivity {
     });
   }
 
-
-  private void agregarAmigo(String nombre, int numero) {
-    AmigoItem item = new AmigoItem(this);
-    item.setNombre(nombre);
-    item.setNumero(numero);
-//    listaAmigos.addView(item);
-  }
 }

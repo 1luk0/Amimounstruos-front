@@ -26,15 +26,15 @@ public class TuberiaActivity extends BaseActivity {
 
 
   @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tuberia);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    EdgeToEdge.enable(this);
+    setContentView(R.layout.activity_tuberia);
+    ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+      Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+      v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+      return insets;
+    });
 
     ImageButton botonSalir = findViewById(R.id.salirButton);
 
@@ -84,26 +84,46 @@ public class TuberiaActivity extends BaseActivity {
   private void checkAllCorrect() {
     StringBuilder estado = new StringBuilder("Rotaciones actuales: ");
 
+    // Suponemos que la solución para Tubería 2 es 90 grados,
+    // y 270 grados es la posición alternativa que también funciona.
+    final int SOLUCION_PRINCIPAL_T2 = correctAngles[1];
+    final int SOLUCION_ALTERNATIVA_T2 = 270;
+
     for (int i = 0; i < correctAngles.length; i++) {
       estado.append("T").append(i + 1).append(": ").append(currentAngles[i]).append("° ");
+      int anguloActual = currentAngles[i];
 
-      // Caso especial: tubería 3 (índice 2) acepta cualquier múltiplo de 45
       if (i == 2) {
-        if (currentAngles[i] % 45 != 0) {
+        // Caso 1: Tubería 3 (índice 2) - acepta cualquier múltiplo de 45°
+        if (anguloActual % 45 != 0) {
           continueArrow.setVisibility(View.INVISIBLE);
-          Log.d("TUBERIA_VALIDACION", "Tubería 3 inválida: " + currentAngles[i] + "°");
+          Log.d("TUBERIA_VALIDACION", "Tubería 3 inválida (no es múltiplo de 45): " + anguloActual + "°");
           return;
         }
-      } else {
-        // Comparación normal para el resto
-        if (currentAngles[i] != correctAngles[i]) {
+      }
+
+      else if (i == 1) {
+        // Caso 2: Tubería 2 (índice 1) - acepta la solución principal O 270°
+        boolean isCorrect = (anguloActual == SOLUCION_PRINCIPAL_T2) || (anguloActual == SOLUCION_ALTERNATIVA_T2);
+
+        if (!isCorrect) {
           continueArrow.setVisibility(View.INVISIBLE);
-          Log.d("TUBERIA_VALIDACION", "No coincide la tubería " + (i + 1));
+          Log.d("TUBERIA_VALIDACION", "Tubería 2 inválida: " + anguloActual + "°. Debe ser " + SOLUCION_PRINCIPAL_T2 + "° o " + SOLUCION_ALTERNATIVA_T2 + "°");
+          return;
+        }
+      }
+
+      else {
+        // Caso 3: Resto de tuberías (1, 4, 5, 6) - solo acepta el ángulo exacto de la solución
+        if (anguloActual != correctAngles[i]) {
+          continueArrow.setVisibility(View.INVISIBLE);
+          Log.d("TUBERIA_VALIDACION", "No coincide la tubería " + (i + 1) + ". Se esperaba " + correctAngles[i] + "°.");
           return;
         }
       }
     }
 
+    // Si el bucle termina sin retornar, ¡todas las tuberías son correctas!
     Log.d("TUBERIA_VALIDACION", estado.toString());
     Log.d("TUBERIA_VALIDACION", "¡Todas las tuberías están en la posición correcta!");
     continueArrow.setVisibility(View.VISIBLE);

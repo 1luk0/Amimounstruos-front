@@ -11,6 +11,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.app.amimounstruos.Components.BaseActivity;
 import com.app.amimounstruos.R;
+import com.app.amimounstruos.Screens.Configurations.CentroAyuda.CentroAyudaActivity;
+import com.app.amimounstruos.Screens.MapActivity;
+import com.app.amimounstruos.Screens.Userinf.UserActivity;
 
 public class AjustesPrivacidadActivity extends BaseActivity {
 
@@ -19,16 +22,23 @@ public class AjustesPrivacidadActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_ajustes_privacidad);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
-      ImageButton botonConfiguracion = findViewById(R.id.configurations);
 
-      botonConfiguracion.setOnClickListener(v -> {
+      ImageButton botonMapa = findViewById(R.id.salirButton);
+      ImageButton botonRegreso = findViewById(R.id.returnButton);
+      ImageButton botonPerfil = findViewById(R.id.perfilButton);
+
+      botonMapa.setOnClickListener(v -> {
+        Intent intent = new Intent(AjustesPrivacidadActivity.this, MapActivity.class);
+        startActivity(intent);
+      });
+      botonRegreso.setOnClickListener(v -> {
         Intent intent = new Intent(AjustesPrivacidadActivity.this, configuracionActivity.class);
+        startActivity(intent);
+      });
+
+      botonPerfil.setOnClickListener(v -> {
+        Intent intent = new Intent(AjustesPrivacidadActivity.this, UserActivity.class);
         startActivity(intent);
       });
     }

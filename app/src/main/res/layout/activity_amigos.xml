@@ -138,6 +138,8 @@
     app:layout_constraintStart_toStartOf="@id/recuadroAmigos"
     app:layout_constraintEnd_toEndOf="@id/recuadroAmigos">
 
+
+
     <ScrollView
       android:id="@+id/scrollAmigos"
       android:layout_width="0dp"
@@ -161,6 +163,23 @@
         android:orientation="vertical"
         android:padding="0dp" />
     </ScrollView>
+
+    <TextView
+      android:id="@+id/buscarAmigo"
+      android:layout_width="622dp"
+      android:layout_height="127dp"
+      android:fontFamily="@font/comfortaabold"
+      android:gravity="center"
+      android:text="@string/agregaamigos"
+      android:textColor="#7A7A7A"
+      android:textSize="35sp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+
+      tools:visibility="visible" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 
   <!-- ⚙️ Contenedor invisible solo para forzar reconocimiento de item_amigo -->

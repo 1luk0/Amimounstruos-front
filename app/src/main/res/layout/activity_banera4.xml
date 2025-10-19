@@ -89,8 +89,8 @@
 
   <ImageView
     android:id="@+id/baneraButton"
-    android:layout_width="99dp"
-    android:layout_height="431dp"
+    android:layout_width="157dp"
+    android:layout_height="448dp"
     android:layout_marginTop="4dp"
     app:layout_constraintHeight_percent="0.18"
     app:layout_constraintStart_toStartOf="@+id/guideline137"
